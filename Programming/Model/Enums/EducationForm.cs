@@ -3,8 +3,8 @@ namespace Programming.Model
     public enum EducationForm
     {
         FullTime,
-        PartTime,
+        Extramural,
         Evening,
-        Remote
+        Distance
     }
 }

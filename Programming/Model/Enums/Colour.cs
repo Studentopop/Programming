@@ -6,6 +6,7 @@ namespace Programming.Model.Enums
         Black,
         Red,
         Green,
+        Orange,
         Blue,
         Yellow
     }

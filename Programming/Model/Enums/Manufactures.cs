@@ -5,6 +5,9 @@ namespace Programming.Model
         Samsung,
         Apple,
         Honor,
-        Poco
+        Poco,
+        Nokia,
+        Huawei,
+        Oppo
     }
 }
