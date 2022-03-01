@@ -15,6 +15,8 @@ namespace Programming
 {
     public partial class MainForm : Form
     {
+        private int parsedType;
+
         public MainForm()
         {
             InitializeComponent();
@@ -74,21 +76,23 @@ namespace Programming
             var item = ValuesListBox.SelectedItem;
             IntBox.Text = ((int)item).ToString();
         }
+
+
+
         private void ParseButton_Click(object sender, EventArgs e)
         {
-            var text = ParseInput.Text;
-            Weekday day;
-
-            if (Enum.TryParse(text, out day))
+            if (Enum.TryParse(ParseInput.Text, out Weekday day))
             {
-                OutLabel.Text = $"Это день недели ({day} = {(int)day})";
+                OutLabel.Text = $"Это день недели { day } - {(int)day}";
             }
             else
             {
-                OutLabel.Text = "Нет такого дня недели!";
+                OutLabel.Text = "Нет такого дня недели";
             }
         }
 
+
+ 
         private void GoButton_Click(object sender, EventArgs e)
         {
             var item = ChooseSeasonComboBox.SelectedItem;
@@ -96,12 +100,14 @@ namespace Programming
             switch (item)
             {
                 case Seasons.Winter:
+                    SeasonHandleGroupBox.BackColor = Color.White;
                     MessageBox.Show("Бррр! Холодно!", "Погода", MessageBoxButtons.OK);
                     break;
                 case Seasons.Spring:
                     SeasonHandleGroupBox.BackColor = Color.LightGreen;
                     break;
                 case Seasons.Summer:
+                    SeasonHandleGroupBox.BackColor = Color.White;
                     MessageBox.Show("Ура! Солнце!", "Погода", MessageBoxButtons.OK);
                     break;
                 case Seasons.Autumn:
@@ -138,6 +144,21 @@ namespace Programming
         }
 
         private void EnumerationsGroupBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainForm_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IntBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SeasonHandleGroupBox_Enter(object sender, EventArgs e)
         {
 
         }
