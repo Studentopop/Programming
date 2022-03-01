@@ -33,12 +33,12 @@ namespace Programming
             this.EnumPage = new System.Windows.Forms.TabPage();
             this.SeasonHandleGroupBox = new System.Windows.Forms.GroupBox();
             this.GoButton = new System.Windows.Forms.Button();
-            this.ChooseSeasonComboBox = new System.Windows.Forms.ComboBox();
+            this.ChooseSeasonBox = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.WeekdayParsingGroupBox = new System.Windows.Forms.GroupBox();
             this.OutLabel = new System.Windows.Forms.Label();
             this.ParseButton = new System.Windows.Forms.Button();
-            this.ParseInput = new System.Windows.Forms.TextBox();
+            this.ParseTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.EnumerationsGroupBox = new System.Windows.Forms.GroupBox();
             this.IntBox = new System.Windows.Forms.TextBox();
@@ -72,7 +72,7 @@ namespace Programming
             // SeasonHandleGroupBox
             // 
             this.SeasonHandleGroupBox.Controls.Add(this.GoButton);
-            this.SeasonHandleGroupBox.Controls.Add(this.ChooseSeasonComboBox);
+            this.SeasonHandleGroupBox.Controls.Add(this.ChooseSeasonBox);
             this.SeasonHandleGroupBox.Controls.Add(this.label5);
             this.SeasonHandleGroupBox.Location = new System.Drawing.Point(424, 295);
             this.SeasonHandleGroupBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -95,14 +95,14 @@ namespace Programming
             this.GoButton.UseVisualStyleBackColor = true;
             this.GoButton.Click += new System.EventHandler(this.GoButton_Click);
             // 
-            // ChooseSeasonComboBox
+            // ChooseSeasonBox
             // 
-            this.ChooseSeasonComboBox.FormattingEnabled = true;
-            this.ChooseSeasonComboBox.Location = new System.Drawing.Point(30, 69);
-            this.ChooseSeasonComboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ChooseSeasonComboBox.Name = "ChooseSeasonComboBox";
-            this.ChooseSeasonComboBox.Size = new System.Drawing.Size(221, 28);
-            this.ChooseSeasonComboBox.TabIndex = 1;
+            this.ChooseSeasonBox.FormattingEnabled = true;
+            this.ChooseSeasonBox.Location = new System.Drawing.Point(30, 69);
+            this.ChooseSeasonBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ChooseSeasonBox.Name = "ChooseSeasonBox";
+            this.ChooseSeasonBox.Size = new System.Drawing.Size(221, 28);
+            this.ChooseSeasonBox.TabIndex = 1;
             // 
             // label5
             // 
@@ -118,7 +118,7 @@ namespace Programming
             // 
             this.WeekdayParsingGroupBox.Controls.Add(this.OutLabel);
             this.WeekdayParsingGroupBox.Controls.Add(this.ParseButton);
-            this.WeekdayParsingGroupBox.Controls.Add(this.ParseInput);
+            this.WeekdayParsingGroupBox.Controls.Add(this.ParseTextBox);
             this.WeekdayParsingGroupBox.Controls.Add(this.label4);
             this.WeekdayParsingGroupBox.Location = new System.Drawing.Point(11, 295);
             this.WeekdayParsingGroupBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -149,14 +149,14 @@ namespace Programming
             this.ParseButton.UseVisualStyleBackColor = true;
             this.ParseButton.Click += new System.EventHandler(this.ParseButton_Click);
             // 
-            // ParseInput
+            // ParseTextBox
             // 
-            this.ParseInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ParseInput.Location = new System.Drawing.Point(25, 71);
-            this.ParseInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ParseInput.Name = "ParseInput";
-            this.ParseInput.Size = new System.Drawing.Size(222, 27);
-            this.ParseInput.TabIndex = 1;
+            this.ParseTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ParseTextBox.Location = new System.Drawing.Point(25, 71);
+            this.ParseTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ParseTextBox.Name = "ParseTextBox";
+            this.ParseTextBox.Size = new System.Drawing.Size(222, 27);
+            this.ParseTextBox.TabIndex = 1;
             // 
             // label4
             // 
@@ -298,11 +298,11 @@ namespace Programming
         private System.Windows.Forms.GroupBox WeekdayParsingGroupBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button ParseButton;
-        private System.Windows.Forms.TextBox ParseInput;
+        private System.Windows.Forms.TextBox ParseTextBox;
         private System.Windows.Forms.Label OutLabel;
         private System.Windows.Forms.GroupBox SeasonHandleGroupBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button GoButton;
-        private System.Windows.Forms.ComboBox ChooseSeasonComboBox;
+        private System.Windows.Forms.ComboBox ChooseSeasonBox;
     }
 }

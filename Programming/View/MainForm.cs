@@ -15,7 +15,6 @@ namespace Programming
 {
     public partial class MainForm : Form
     {
-        private int parsedType;
 
         public MainForm()
         {
@@ -31,7 +30,7 @@ namespace Programming
 
             foreach (var value in values)
             {
-                ChooseSeasonComboBox.Items.Add(value);
+                ChooseSeasonBox.Items.Add(value);
             }
         }
         private void EnumsListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -81,7 +80,7 @@ namespace Programming
 
         private void ParseButton_Click(object sender, EventArgs e)
         {
-            if (Enum.TryParse(ParseInput.Text, out Weekday day))
+            if (Enum.TryParse(ParseTextBox.Text, out Weekday day))
             {
                 OutLabel.Text = $"Это день недели { day } - {(int)day}";
             }
@@ -95,7 +94,7 @@ namespace Programming
  
         private void GoButton_Click(object sender, EventArgs e)
         {
-            var item = ChooseSeasonComboBox.SelectedItem;
+            var item = ChooseSeasonBox.SelectedItem;
 
             switch (item)
             {
