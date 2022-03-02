@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Programming.Model;
-using Programming.View;
+using Programming.Model.Enums;
 
-namespace Programming
+namespace Programming.View
+
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+       public MainForm()
         {
             InitializeComponent();
 
@@ -101,50 +101,6 @@ namespace Programming
                     SeasonHandleGroupBox.BackColor = Color.Orange;
                     break;
             }
-        }
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void EnumerationsGroupBox_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MainForm_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void IntBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SeasonHandleGroupBox_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿
-namespace Programming
+namespace Programming.View
 {
     partial class MainForm
     {
@@ -82,7 +82,6 @@ namespace Programming
             this.SeasonHandleGroupBox.TabIndex = 2;
             this.SeasonHandleGroupBox.TabStop = false;
             this.SeasonHandleGroupBox.Text = "Season Handle";
-            this.SeasonHandleGroupBox.Enter += new System.EventHandler(this.SeasonHandleGroupBox_Enter);
             // 
             // GoButton
             // 
@@ -184,7 +183,6 @@ namespace Programming
             this.EnumerationsGroupBox.TabIndex = 0;
             this.EnumerationsGroupBox.TabStop = false;
             this.EnumerationsGroupBox.Text = "Enumerations";
-            this.EnumerationsGroupBox.Enter += new System.EventHandler(this.EnumerationsGroupBox_Enter);
             // 
             // IntBox
             // 
@@ -195,7 +193,6 @@ namespace Programming
             this.IntBox.Name = "IntBox";
             this.IntBox.Size = new System.Drawing.Size(162, 27);
             this.IntBox.TabIndex = 5;
-            this.IntBox.TextChanged += new System.EventHandler(this.IntBox_TextChanged);
             // 
             // label3
             // 
@@ -272,7 +269,6 @@ namespace Programming
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Programming demo";
-            this.Load += new System.EventHandler(this.MainForm_Load_1);
             this.EnumPage.ResumeLayout(false);
             this.SeasonHandleGroupBox.ResumeLayout(false);
             this.SeasonHandleGroupBox.PerformLayout();
