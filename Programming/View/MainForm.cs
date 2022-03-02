@@ -4,11 +4,10 @@ using System.Windows.Forms;
 using Programming.Model.Enums;
 
 namespace Programming.View
-
 {
     public partial class MainForm : Form
     {
-       public MainForm()
+        public MainForm()
         {
             InitializeComponent();
 
@@ -25,6 +24,7 @@ namespace Programming.View
                 ChooseSeasonBox.Items.Add(value);
             }
         }
+
         private void EnumsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             ValuesListBox.Items.Clear();

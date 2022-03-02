@@ -85,7 +85,7 @@ namespace Programming.View
             // 
             // GoButton
             // 
-            this.GoButton.Location = new System.Drawing.Point(242, 45);
+            this.GoButton.Location = new System.Drawing.Point(247, 45);
             this.GoButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GoButton.Name = "GoButton";
             this.GoButton.Size = new System.Drawing.Size(101, 32);
@@ -139,7 +139,7 @@ namespace Programming.View
             // 
             // ParseButton
             // 
-            this.ParseButton.Location = new System.Drawing.Point(241, 47);
+            this.ParseButton.Location = new System.Drawing.Point(246, 47);
             this.ParseButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ParseButton.Name = "ParseButton";
             this.ParseButton.Size = new System.Drawing.Size(93, 31);
