@@ -85,7 +85,7 @@ namespace Programming.View
             // 
             // GoButton
             // 
-            this.GoButton.Location = new System.Drawing.Point(273, 66);
+            this.GoButton.Location = new System.Drawing.Point(242, 60);
             this.GoButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GoButton.Name = "GoButton";
             this.GoButton.Size = new System.Drawing.Size(101, 32);
@@ -97,7 +97,7 @@ namespace Programming.View
             // ChooseSeasonBox
             // 
             this.ChooseSeasonBox.FormattingEnabled = true;
-            this.ChooseSeasonBox.Location = new System.Drawing.Point(30, 69);
+            this.ChooseSeasonBox.Location = new System.Drawing.Point(13, 63);
             this.ChooseSeasonBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ChooseSeasonBox.Name = "ChooseSeasonBox";
             this.ChooseSeasonBox.Size = new System.Drawing.Size(221, 28);
@@ -106,7 +106,7 @@ namespace Programming.View
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(30, 46);
+            this.label5.Location = new System.Drawing.Point(8, 36);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(110, 20);
@@ -139,7 +139,7 @@ namespace Programming.View
             // 
             // ParseButton
             // 
-            this.ParseButton.Location = new System.Drawing.Point(287, 68);
+            this.ParseButton.Location = new System.Drawing.Point(241, 63);
             this.ParseButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ParseButton.Name = "ParseButton";
             this.ParseButton.Size = new System.Drawing.Size(93, 31);
@@ -151,7 +151,7 @@ namespace Programming.View
             // ParseTextBox
             // 
             this.ParseTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ParseTextBox.Location = new System.Drawing.Point(25, 71);
+            this.ParseTextBox.Location = new System.Drawing.Point(11, 66);
             this.ParseTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ParseTextBox.Name = "ParseTextBox";
             this.ParseTextBox.Size = new System.Drawing.Size(222, 27);
@@ -160,7 +160,7 @@ namespace Programming.View
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 46);
+            this.label4.Location = new System.Drawing.Point(8, 36);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(158, 20);
@@ -188,7 +188,7 @@ namespace Programming.View
             // 
             this.IntBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.IntBox.Enabled = false;
-            this.IntBox.Location = new System.Drawing.Point(553, 80);
+            this.IntBox.Location = new System.Drawing.Point(426, 80);
             this.IntBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.IntBox.Name = "IntBox";
             this.IntBox.Size = new System.Drawing.Size(162, 27);
@@ -197,7 +197,7 @@ namespace Programming.View
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(554, 55);
+            this.label3.Location = new System.Drawing.Point(426, 55);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 20);
@@ -208,7 +208,7 @@ namespace Programming.View
             // 
             this.ValuesListBox.FormattingEnabled = true;
             this.ValuesListBox.ItemHeight = 20;
-            this.ValuesListBox.Location = new System.Drawing.Point(280, 80);
+            this.ValuesListBox.Location = new System.Drawing.Point(218, 80);
             this.ValuesListBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ValuesListBox.Name = "ValuesListBox";
             this.ValuesListBox.Size = new System.Drawing.Size(187, 164);
@@ -218,7 +218,7 @@ namespace Programming.View
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(282, 55);
+            this.label2.Location = new System.Drawing.Point(218, 55);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 20);
@@ -242,9 +242,9 @@ namespace Programming.View
             this.label1.Location = new System.Drawing.Point(11, 55);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 20);
+            this.label1.Size = new System.Drawing.Size(149, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Choose enumerations:";
+            this.label1.Text = "Choose enumeration:";
             // 
             // TabEnums
             // 
