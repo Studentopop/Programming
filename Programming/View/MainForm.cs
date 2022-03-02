@@ -1,21 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Programming.Model;
-using Programming.Model.Enums;
 using Programming.View;
 
 namespace Programming
 {
     public partial class MainForm : Form
     {
-
         public MainForm()
         {
             InitializeComponent();
@@ -76,8 +68,6 @@ namespace Programming
             IntBox.Text = ((int)item).ToString();
         }
 
-
-
         private void ParseButton_Click(object sender, EventArgs e)
         {
             if (Enum.TryParse(ParseTextBox.Text, out Weekday day))
@@ -90,8 +80,6 @@ namespace Programming
             }
         }
 
-
- 
         private void GoButton_Click(object sender, EventArgs e)
         {
             var item = ChooseSeasonBox.SelectedItem;
@@ -112,7 +100,6 @@ namespace Programming
                 case Seasons.Autumn:
                     SeasonHandleGroupBox.BackColor = Color.Orange;
                     break;
-
             }
         }
         private void MainForm_Load(object sender, EventArgs e)
@@ -124,8 +111,6 @@ namespace Programming
         {
 
         }
-
-        
 
         private void tabPage1_Click(object sender, EventArgs e)
         {
