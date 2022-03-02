@@ -85,7 +85,7 @@ namespace Programming.View
             // 
             // GoButton
             // 
-            this.GoButton.Location = new System.Drawing.Point(242, 42);
+            this.GoButton.Location = new System.Drawing.Point(242, 45);
             this.GoButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GoButton.Name = "GoButton";
             this.GoButton.Size = new System.Drawing.Size(101, 32);
@@ -97,7 +97,7 @@ namespace Programming.View
             // ChooseSeasonBox
             // 
             this.ChooseSeasonBox.FormattingEnabled = true;
-            this.ChooseSeasonBox.Location = new System.Drawing.Point(13, 46);
+            this.ChooseSeasonBox.Location = new System.Drawing.Point(13, 48);
             this.ChooseSeasonBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ChooseSeasonBox.Name = "ChooseSeasonBox";
             this.ChooseSeasonBox.Size = new System.Drawing.Size(221, 28);
@@ -139,7 +139,7 @@ namespace Programming.View
             // 
             // ParseButton
             // 
-            this.ParseButton.Location = new System.Drawing.Point(241, 46);
+            this.ParseButton.Location = new System.Drawing.Point(241, 47);
             this.ParseButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ParseButton.Name = "ParseButton";
             this.ParseButton.Size = new System.Drawing.Size(93, 31);
@@ -160,7 +160,7 @@ namespace Programming.View
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 25);
+            this.label4.Location = new System.Drawing.Point(8, 25);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(158, 20);
@@ -197,7 +197,7 @@ namespace Programming.View
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(425, 25);
+            this.label3.Location = new System.Drawing.Point(426, 25);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 20);
