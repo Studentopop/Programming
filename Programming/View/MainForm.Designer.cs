@@ -64,7 +64,7 @@ namespace Programming.View
             this.EnumPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EnumPage.Name = "EnumPage";
             this.EnumPage.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.EnumPage.Size = new System.Drawing.Size(840, 417);
+            this.EnumPage.Size = new System.Drawing.Size(840, 482);
             this.EnumPage.TabIndex = 0;
             this.EnumPage.Text = "Enums";
             this.EnumPage.UseVisualStyleBackColor = true;
@@ -78,14 +78,14 @@ namespace Programming.View
             this.SeasonHandleGroupBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SeasonHandleGroupBox.Name = "SeasonHandleGroupBox";
             this.SeasonHandleGroupBox.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.SeasonHandleGroupBox.Size = new System.Drawing.Size(403, 114);
+            this.SeasonHandleGroupBox.Size = new System.Drawing.Size(403, 177);
             this.SeasonHandleGroupBox.TabIndex = 2;
             this.SeasonHandleGroupBox.TabStop = false;
             this.SeasonHandleGroupBox.Text = "Season Handle";
             // 
             // GoButton
             // 
-            this.GoButton.Location = new System.Drawing.Point(247, 45);
+            this.GoButton.Location = new System.Drawing.Point(246, 62);
             this.GoButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GoButton.Name = "GoButton";
             this.GoButton.Size = new System.Drawing.Size(101, 32);
@@ -97,7 +97,7 @@ namespace Programming.View
             // ChooseSeasonBox
             // 
             this.ChooseSeasonBox.FormattingEnabled = true;
-            this.ChooseSeasonBox.Location = new System.Drawing.Point(13, 48);
+            this.ChooseSeasonBox.Location = new System.Drawing.Point(8, 66);
             this.ChooseSeasonBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ChooseSeasonBox.Name = "ChooseSeasonBox";
             this.ChooseSeasonBox.Size = new System.Drawing.Size(221, 28);
@@ -106,7 +106,7 @@ namespace Programming.View
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 25);
+            this.label5.Location = new System.Drawing.Point(8, 41);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(110, 20);
@@ -123,7 +123,7 @@ namespace Programming.View
             this.WeekdayParsingGroupBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.WeekdayParsingGroupBox.Name = "WeekdayParsingGroupBox";
             this.WeekdayParsingGroupBox.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.WeekdayParsingGroupBox.Size = new System.Drawing.Size(405, 114);
+            this.WeekdayParsingGroupBox.Size = new System.Drawing.Size(405, 177);
             this.WeekdayParsingGroupBox.TabIndex = 1;
             this.WeekdayParsingGroupBox.TabStop = false;
             this.WeekdayParsingGroupBox.Text = "Weekday Parsing";
@@ -139,7 +139,7 @@ namespace Programming.View
             // 
             // ParseButton
             // 
-            this.ParseButton.Location = new System.Drawing.Point(246, 47);
+            this.ParseButton.Location = new System.Drawing.Point(241, 62);
             this.ParseButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ParseButton.Name = "ParseButton";
             this.ParseButton.Size = new System.Drawing.Size(93, 31);
@@ -151,7 +151,7 @@ namespace Programming.View
             // ParseTextBox
             // 
             this.ParseTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ParseTextBox.Location = new System.Drawing.Point(11, 50);
+            this.ParseTextBox.Location = new System.Drawing.Point(11, 66);
             this.ParseTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ParseTextBox.Name = "ParseTextBox";
             this.ParseTextBox.Size = new System.Drawing.Size(222, 27);
@@ -160,7 +160,7 @@ namespace Programming.View
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 25);
+            this.label4.Location = new System.Drawing.Point(8, 41);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(158, 20);
@@ -175,11 +175,11 @@ namespace Programming.View
             this.EnumerationsGroupBox.Controls.Add(this.label2);
             this.EnumerationsGroupBox.Controls.Add(this.EnumsListBox);
             this.EnumerationsGroupBox.Controls.Add(this.label1);
-            this.EnumerationsGroupBox.Location = new System.Drawing.Point(11, 9);
+            this.EnumerationsGroupBox.Location = new System.Drawing.Point(11, 10);
             this.EnumerationsGroupBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EnumerationsGroupBox.Name = "EnumerationsGroupBox";
             this.EnumerationsGroupBox.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.EnumerationsGroupBox.Size = new System.Drawing.Size(816, 276);
+            this.EnumerationsGroupBox.Size = new System.Drawing.Size(816, 275);
             this.EnumerationsGroupBox.TabIndex = 0;
             this.EnumerationsGroupBox.TabStop = false;
             this.EnumerationsGroupBox.Text = "Enumerations";
@@ -188,7 +188,7 @@ namespace Programming.View
             // 
             this.IntBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.IntBox.Enabled = false;
-            this.IntBox.Location = new System.Drawing.Point(425, 55);
+            this.IntBox.Location = new System.Drawing.Point(426, 62);
             this.IntBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.IntBox.Name = "IntBox";
             this.IntBox.Size = new System.Drawing.Size(162, 27);
@@ -197,7 +197,7 @@ namespace Programming.View
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(426, 25);
+            this.label3.Location = new System.Drawing.Point(426, 37);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 20);
@@ -208,7 +208,7 @@ namespace Programming.View
             // 
             this.ValuesListBox.FormattingEnabled = true;
             this.ValuesListBox.ItemHeight = 20;
-            this.ValuesListBox.Location = new System.Drawing.Point(218, 55);
+            this.ValuesListBox.Location = new System.Drawing.Point(218, 62);
             this.ValuesListBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ValuesListBox.Name = "ValuesListBox";
             this.ValuesListBox.Size = new System.Drawing.Size(187, 164);
@@ -218,7 +218,7 @@ namespace Programming.View
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(218, 25);
+            this.label2.Location = new System.Drawing.Point(218, 37);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 20);
@@ -229,7 +229,7 @@ namespace Programming.View
             // 
             this.EnumsListBox.FormattingEnabled = true;
             this.EnumsListBox.ItemHeight = 20;
-            this.EnumsListBox.Location = new System.Drawing.Point(11, 55);
+            this.EnumsListBox.Location = new System.Drawing.Point(11, 62);
             this.EnumsListBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EnumsListBox.Name = "EnumsListBox";
             this.EnumsListBox.Size = new System.Drawing.Size(187, 164);
@@ -239,7 +239,7 @@ namespace Programming.View
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 25);
+            this.label1.Location = new System.Drawing.Point(8, 37);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(149, 20);
@@ -254,14 +254,14 @@ namespace Programming.View
             this.TabEnums.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TabEnums.Name = "TabEnums";
             this.TabEnums.SelectedIndex = 0;
-            this.TabEnums.Size = new System.Drawing.Size(848, 450);
+            this.TabEnums.Size = new System.Drawing.Size(848, 515);
             this.TabEnums.TabIndex = 0;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(848, 450);
+            this.ClientSize = new System.Drawing.Size(848, 515);
             this.Controls.Add(this.TabEnums);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -269,6 +269,7 @@ namespace Programming.View
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Programming demo";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.EnumPage.ResumeLayout(false);
             this.SeasonHandleGroupBox.ResumeLayout(false);
             this.SeasonHandleGroupBox.PerformLayout();

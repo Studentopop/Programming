@@ -70,13 +70,17 @@ namespace Programming.View
 
         private void ParseButton_Click(object sender, EventArgs e)
         {
-            if (Enum.TryParse(ParseTextBox.Text, out Weekday day))
+          
+            var text = ParseTextBox.Text;
+            Weekday day;
+
+            if (Enum.TryParse(text, out day))
             {
-                OutLabel.Text = $"Это день недели { day } - {(int)day}";
+                OutLabel.Text = $"Это день недели ({day} = {(int)day})";
             }
             else
             {
-                OutLabel.Text = "Нет такого дня недели";
+                OutLabel.Text = "Нет такого дня недели!";
             }
         }
 
@@ -101,6 +105,11 @@ namespace Programming.View
                     SeasonHandleGroupBox.BackColor = Color.Orange;
                     break;
             }
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
