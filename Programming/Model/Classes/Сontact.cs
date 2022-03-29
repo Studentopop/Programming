@@ -37,9 +37,12 @@ namespace Programming.Model.Classes
                 _number = value;
             }
         }
-        
+
         public string Name { get; set; }
-        
-        public string Surname { get; set; 
+
+        public string Surname
+        {
+            get; set;
+        }
     }
 }
