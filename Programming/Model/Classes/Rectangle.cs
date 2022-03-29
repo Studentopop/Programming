@@ -5,14 +5,17 @@ namespace Programming.Model.Classes
     public class Rectangle
     {
         private double _length;
+
         private double _width;
-        public Rectangle(){ }
-        public Rectangle(double lenght, double widht, string color)
+
+        public Rectangle() { }
+        public Rectangle(double lenght, double width, string color)
         {
             Length = lenght;
-            Width = widht;
+            Width = width;
             Color = color;
         }
+
         public double Length
         {
             get
@@ -48,3 +51,4 @@ namespace Programming.Model.Classes
         public string Color { get; set; }
     }
 }
+

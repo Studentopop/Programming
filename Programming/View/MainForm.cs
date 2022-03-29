@@ -9,13 +9,14 @@ namespace Programming.View
 {
     public partial class MainForm : Form
     {
-        private string[] _colors = { "Red", "Black", "Green", "Yellow", "Orange" };
+        private string[] _colors = { "Black", "Red", "Green", "Pink", "Yellow" };
+        private int _rectanglesAmount = 5;
+        private int _moviesAmount = 5;
         private Rectangle[] _rectangles;
         private Rectangle _currentRectangle;
         private Movie[] _movies;
         private Movie _currentMovie;
-        private int _rectanglesAmount = 5;
-        private int _moviesAmount = 5;
+        
         private int FindRectangleWithMaxWidth(Rectangle[] rectangles)
         {
             int indexOfMaxWidth = 0;
@@ -72,9 +73,21 @@ namespace Programming.View
                 RectanglesListBox.Items.Add("Rectangle " + (i + 1));
             }
             RectanglesListBox.SelectedIndex = 0;
+            _movies = new Movie[5]
+            {
+                new Movie("Spider-Man: No Way Home", 159, 2021, "Fantasy", 8.6),
+                new Movie("The Batman", 176, 2022, "Fantasy", 8.4),
+                new Movie("Free Guy", 115 , 2021, "Fantasy", 7.4),
+                new Movie("Klaus", 96, 2019, "Сartoon", 8.7),
+                new Movie("It", 135 , 2017  , "Horror", 7.3),
+            };
 
+            foreach (var movie in _movies)
+            {
+                MoviesListBox.Items.Add(movie.Name);
+            }
+            MoviesListBox.SelectedIndex = 0;
         }
-
         private void EnumsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             ValuesListBox.Items.Clear();
@@ -156,20 +169,112 @@ namespace Programming.View
                     break;
             }
         }
-
-        private void MainForm_Load(object sender, EventArgs e)
+        private void RectanglesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            var selectedRectangle = RectanglesListBox.SelectedIndex;
+            _currentRectangle = _rectangles[selectedRectangle];
+            LenghtTextBox.Text = _currentRectangle.Length.ToString();
+            WidthTextBox.Text = _currentRectangle.Width.ToString();
+            ColorTextBox.Text = _currentRectangle.Color;
+        }
+        private void LenghtTextBox_TextChanged(object sender, EventArgs e)
+        {
+            LenghtTextBox.BackColor = ColorTranslator.FromHtml("White");
+            try
+            {
+                _currentRectangle.Length = Convert.ToDouble(LenghtTextBox.Text);
+            }
+            catch
+            {
+                LenghtTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+            }
+        }
+        private void WidthTextBox_TextChanged(object sender, EventArgs e)
+        {
+            WidthTextBox.BackColor = ColorTranslator.FromHtml("White");
+            try
+            {
+                _currentRectangle.Width = Convert.ToDouble(WidthTextBox.Text);
+            }
+            catch
+            {
+                WidthTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+            }
+        }
+        private void ColorTextBox_TextChanged(object sender, EventArgs e)
+        {
+            _currentRectangle.Color = ColorTextBox.Text;
         }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
+        private void FindRectangleButton_Click(object sender, EventArgs e)
         {
-
+            int indexFindRectangle = FindRectangleWithMaxWidth(_rectangles);
+            RectanglesListBox.SelectedIndex = indexFindRectangle;
+        }
+        private void MoviesListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var selectedMovie = MoviesListBox.SelectedIndex;
+            _currentMovie = _movies[selectedMovie];
+            MovieNameTextBox.Text = _currentMovie.Name;
+            MovieGenreTextBox.Text = _currentMovie.Genre;
+            MovieDurationTextBox.Text = _currentMovie.DurationMinutes.ToString();
+            MovieReleaseTextBox.Text = _currentMovie.ReleaseYear.ToString();
+            MovieRatingTextBox.Text = _currentMovie.Rating.ToString();
         }
 
-        private void label10_Click(object sender, EventArgs e)
+        private void MovieNameTextBox_TextChanged(object sender, EventArgs e)
         {
+            _currentMovie.Name = MovieNameTextBox.Text;
+        }
 
+        private void MovieGenreTextBox_TextChanged(object sender, EventArgs e)
+        {
+            _currentMovie.Genre = MovieGenreTextBox.Text;
+        }
+
+        private void MovieDuretionTextBox_TextChanged(object sender, EventArgs e)
+        {
+            MovieDurationTextBox.BackColor = ColorTranslator.FromHtml("White");
+            try
+            {
+                _currentMovie.DurationMinutes = Convert.ToInt32(MovieDurationTextBox.Text);
+            }
+            catch
+            {
+                MovieDurationTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+            }
+        }
+        private void MovieReleaseTextBox_TextChanged(object sender, EventArgs e)
+        {
+            MovieReleaseTextBox.BackColor = ColorTranslator.FromHtml("White");
+            try
+            {
+                _currentMovie.ReleaseYear = Convert.ToInt32(MovieReleaseTextBox.Text);
+            }
+            catch
+            {
+                MovieReleaseTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+            }
+        }
+
+        private void MovieRatingTextBox_TextChanged(object sender, EventArgs e)
+        {
+            MovieRatingTextBox.BackColor = ColorTranslator.FromHtml("White");
+            try
+            {
+                _currentMovie.Rating = Convert.ToDouble(MovieRatingTextBox.Text);
+            }
+            catch
+            {
+                MovieRatingTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+            }
+        }
+
+        private void FindMovieButton_Click(object sender, EventArgs e)
+        {
+            int indexFindMovie = FindMovieWithMaxRating(_movies);
+            MoviesListBox.SelectedIndex = indexFindMovie;
         }
     }
 }
+   
