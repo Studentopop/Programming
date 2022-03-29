@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using Programming.Model.Enums;
 using Programming.Model.Classes;
+using Programming.Model.Enums;
 using Rectangle = Programming.Model.Classes.Rectangle;
 
 namespace Programming.View
@@ -10,13 +10,13 @@ namespace Programming.View
     public partial class MainForm : Form
     {
         private string[] _colors = { "Black", "Red", "Green", "Pink", "Yellow" };
-        private int _rectanglesAmount = 5;
-        private int _moviesAmount = 5;
         private Rectangle[] _rectangles;
         private Rectangle _currentRectangle;
         private Movie[] _movies;
         private Movie _currentMovie;
-        
+        private int _rectanglesAmount = 5;
+        private int _moviesAmount = 5;
+
         private int FindRectangleWithMaxWidth(Rectangle[] rectangles)
         {
             int indexOfMaxWidth = 0;
@@ -49,19 +49,12 @@ namespace Programming.View
         {
             InitializeComponent();
 
-            foreach (Enums enumsValues in Enum.GetValues(typeof(Enums)))
-            {
-                EnumsListBox.Items.Add(enumsValues);
-            }
-
+            // first page
+            EnumsListBox.DataSource = Enum.GetValues(typeof(Enums));
+            SeasonComboBox.DataSource = Enum.GetValues(typeof(Seasons));
             EnumsListBox.SelectedIndex = 0;
-            var values = Enum.GetValues(typeof(Seasons));
 
-            foreach (var value in values)
-            {
-                ChooseSeasonBox.Items.Add(value);
-            }
-            //second page
+            // second page
             _rectangles = new Rectangle[_rectanglesAmount];
             var rand = new Random();
             double length, width;
@@ -72,7 +65,9 @@ namespace Programming.View
                 _rectangles[i] = new Rectangle(length, width, _colors[rand.Next(_colors.Length)]);
                 RectanglesListBox.Items.Add("Rectangle " + (i + 1));
             }
+
             RectanglesListBox.SelectedIndex = 0;
+
             _movies = new Movie[5]
             {
                 new Movie("Spider-Man: No Way Home", 159, 2021, "Fantasy", 8.6),
@@ -88,6 +83,7 @@ namespace Programming.View
             }
             MoviesListBox.SelectedIndex = 0;
         }
+
         private void EnumsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             ValuesListBox.Items.Clear();
@@ -128,47 +124,47 @@ namespace Programming.View
         private void ValuesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var item = ValuesListBox.SelectedItem;
-            IntBox.Text = ((int)item).ToString();
+            IntTextBox.Text = ((int)item).ToString();
         }
-
         private void ParseButton_Click(object sender, EventArgs e)
         {
-          
-            var text = ParseTextBox.Text;
+
+            var text = ValueParsing.Text;
             Weekday day;
 
             if (Enum.TryParse(text, out day))
             {
-                OutLabel.Text = $"Это день недели ({day} = {(int)day})";
+                ParsingFlag.Text = $"Это день недели ({day} = {(int)day})";
             }
             else
             {
-                OutLabel.Text = "Нет такого дня недели!";
+                ParsingFlag.Text = "Нет такого дня недели!";
             }
         }
 
-        private void GoButton_Click(object sender, EventArgs e)
+        private void SeasonButton_Click(object sender, EventArgs e)
         {
-            var item = ChooseSeasonBox.SelectedItem;
+            var item = SeasonComboBox.SelectedItem;
 
             switch (item)
             {
                 case Seasons.Winter:
-                    SeasonHandleGroupBox.BackColor = Color.White;
+                    SeasonGroupBox.BackColor = Color.White;
                     MessageBox.Show("Бррр! Холодно!", "Погода", MessageBoxButtons.OK);
                     break;
                 case Seasons.Spring:
-                    SeasonHandleGroupBox.BackColor = Color.LightGreen;
+                    SeasonGroupBox.BackColor = Color.LightGreen;
                     break;
                 case Seasons.Summer:
-                    SeasonHandleGroupBox.BackColor = Color.White;
+                    SeasonGroupBox.BackColor = Color.White;
                     MessageBox.Show("Ура! Солнце!", "Погода", MessageBoxButtons.OK);
                     break;
                 case Seasons.Autumn:
-                    SeasonHandleGroupBox.BackColor = Color.Orange;
+                    SeasonGroupBox.BackColor = Color.Orange;
                     break;
             }
         }
+
         private void RectanglesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var selectedRectangle = RectanglesListBox.SelectedIndex;
@@ -277,4 +273,3 @@ namespace Programming.View
         }
     }
 }
-   
