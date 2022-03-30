@@ -12,14 +12,7 @@ namespace Programming.Model.Classes
 
         public Movie()
         { }
-        public Movie(string name, int durationminutes, int releaseyear, string genre, double rating)
-        {
-            Name = name;
-            DurationMinutes = durationminutes;
-            ReleaseYear = releaseyear;
-            Genre = genre;
-            Rating = rating;
-        }
+      
         public string Name { get; set; }
         public int DurationMinutes
         {
@@ -69,6 +62,14 @@ namespace Programming.Model.Classes
                 }
                 _rating = value;
             }
+        }
+        public Movie(string name, int durationminutes, int releaseyear, string genre, double rating)
+        {
+            Name = name;
+            DurationMinutes = durationminutes;
+            ReleaseYear = releaseyear;
+            Genre = genre;
+            Rating = rating;
         }
     }
 }
