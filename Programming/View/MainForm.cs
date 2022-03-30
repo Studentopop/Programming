@@ -48,13 +48,13 @@ namespace Programming.View
         public MainForm()
         {
             InitializeComponent();
-
-            // first page
+            
+            // Первая страница
             EnumsListBox.DataSource = Enum.GetValues(typeof(Enums));
             SeasonComboBox.DataSource = Enum.GetValues(typeof(Seasons));
             EnumsListBox.SelectedIndex = 0;
 
-            // second page
+            // вторая страница
             _rectangles = new Rectangle[_rectanglesAmount];
             var rand = new Random();
             double length, width;
@@ -68,13 +68,14 @@ namespace Programming.View
 
             RectanglesListBox.SelectedIndex = 0;
 
-            _movies = new Movie[5]
+            _movies = new Movie[6]
             {
-                new Movie("Spider-Man: No Way Home", 159, 2021, "Fantasy", 8.6),
-                new Movie("The Batman", 176, 2022, "Fantasy", 8.4),
-                new Movie("Free Guy", 115 , 2021, "Fantasy", 7.4),
-                new Movie("Klaus", 96, 2019, "Сartoon", 8.7),
-                new Movie("It", 135 , 2017  , "Horror", 7.3),
+                new Movie("The Batman",176,2022,"Fantasy",8.4),
+                new Movie("Free Guy",115,2021,"Fantasy",7.4),
+                new Movie("Klaus",96,2019,"Сartoon",8.7),
+                new Movie("It",135,2017,"Horror", 7.3),
+                new Movie("Home Alone",103,1990,"Comedy",8.3),
+                new Movie("The Green Mile",189,1999,"Drama",9.1),
             };
 
             foreach (var movie in _movies)

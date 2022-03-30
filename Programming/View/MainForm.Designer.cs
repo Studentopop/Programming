@@ -329,7 +329,7 @@ namespace Programming.View
             // 
             // MovieRatingTextBox
             // 
-            this.MovieRatingTextBox.Location = new System.Drawing.Point(185, 329);
+            this.MovieRatingTextBox.Location = new System.Drawing.Point(184, 281);
             this.MovieRatingTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MovieRatingTextBox.Name = "MovieRatingTextBox";
             this.MovieRatingTextBox.Size = new System.Drawing.Size(160, 27);
@@ -339,7 +339,7 @@ namespace Programming.View
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(185, 302);
+            this.label8.Location = new System.Drawing.Point(185, 256);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 20);
@@ -348,7 +348,7 @@ namespace Programming.View
             // 
             // MovieReleaseTextBox
             // 
-            this.MovieReleaseTextBox.Location = new System.Drawing.Point(185, 260);
+            this.MovieReleaseTextBox.Location = new System.Drawing.Point(185, 224);
             this.MovieReleaseTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MovieReleaseTextBox.Name = "MovieReleaseTextBox";
             this.MovieReleaseTextBox.Size = new System.Drawing.Size(160, 27);
@@ -358,7 +358,7 @@ namespace Programming.View
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(187, 234);
+            this.label7.Location = new System.Drawing.Point(185, 199);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(95, 20);
@@ -369,7 +369,7 @@ namespace Programming.View
             // 
             this.MovieDurationTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.MovieDurationTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.MovieDurationTextBox.Location = new System.Drawing.Point(185, 191);
+            this.MovieDurationTextBox.Location = new System.Drawing.Point(184, 167);
             this.MovieDurationTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MovieDurationTextBox.Name = "MovieDurationTextBox";
             this.MovieDurationTextBox.Size = new System.Drawing.Size(160, 27);
@@ -379,7 +379,7 @@ namespace Programming.View
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(187, 166);
+            this.label6.Location = new System.Drawing.Point(185, 142);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(142, 20);
@@ -388,7 +388,7 @@ namespace Programming.View
             // 
             // MovieGenreTextBox
             // 
-            this.MovieGenreTextBox.Location = new System.Drawing.Point(185, 122);
+            this.MovieGenreTextBox.Location = new System.Drawing.Point(185, 112);
             this.MovieGenreTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MovieGenreTextBox.Name = "MovieGenreTextBox";
             this.MovieGenreTextBox.Size = new System.Drawing.Size(160, 27);
@@ -398,7 +398,7 @@ namespace Programming.View
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(187, 99);
+            this.label5.Location = new System.Drawing.Point(185, 87);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 20);
@@ -426,7 +426,7 @@ namespace Programming.View
             // 
             // FindMovieButton
             // 
-            this.FindMovieButton.Location = new System.Drawing.Point(185, 388);
+            this.FindMovieButton.Location = new System.Drawing.Point(184, 326);
             this.FindMovieButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FindMovieButton.Name = "FindMovieButton";
             this.FindMovieButton.Size = new System.Drawing.Size(100, 29);
@@ -442,7 +442,7 @@ namespace Programming.View
             this.MoviesListBox.Location = new System.Drawing.Point(8, 31);
             this.MoviesListBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MoviesListBox.Name = "MoviesListBox";
-            this.MoviesListBox.Size = new System.Drawing.Size(168, 384);
+            this.MoviesListBox.Size = new System.Drawing.Size(168, 324);
             this.MoviesListBox.TabIndex = 0;
             this.MoviesListBox.SelectedIndexChanged += new System.EventHandler(this.MoviesListBox_SelectedIndexChanged);
             // 
@@ -468,7 +468,7 @@ namespace Programming.View
             // 
             // FindRectangleButton
             // 
-            this.FindRectangleButton.Location = new System.Drawing.Point(185, 388);
+            this.FindRectangleButton.Location = new System.Drawing.Point(185, 326);
             this.FindRectangleButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FindRectangleButton.Name = "FindRectangleButton";
             this.FindRectangleButton.Size = new System.Drawing.Size(100, 29);
@@ -479,7 +479,7 @@ namespace Programming.View
             // 
             // ColorTextBox
             // 
-            this.ColorTextBox.Location = new System.Drawing.Point(185, 191);
+            this.ColorTextBox.Location = new System.Drawing.Point(187, 167);
             this.ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ColorTextBox.Name = "ColorTextBox";
             this.ColorTextBox.Size = new System.Drawing.Size(160, 27);
@@ -489,7 +489,7 @@ namespace Programming.View
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(185, 166);
+            this.label3.Location = new System.Drawing.Point(187, 142);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 20);
@@ -498,7 +498,7 @@ namespace Programming.View
             // 
             // WidthTextBox
             // 
-            this.WidthTextBox.Location = new System.Drawing.Point(185, 122);
+            this.WidthTextBox.Location = new System.Drawing.Point(187, 112);
             this.WidthTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.WidthTextBox.Name = "WidthTextBox";
             this.WidthTextBox.Size = new System.Drawing.Size(160, 27);
@@ -508,7 +508,7 @@ namespace Programming.View
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(187, 99);
+            this.label2.Location = new System.Drawing.Point(185, 87);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 20);
@@ -517,7 +517,7 @@ namespace Programming.View
             // 
             // LenghtTextBox
             // 
-            this.LenghtTextBox.Location = new System.Drawing.Point(185, 55);
+            this.LenghtTextBox.Location = new System.Drawing.Point(187, 55);
             this.LenghtTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LenghtTextBox.Name = "LenghtTextBox";
             this.LenghtTextBox.Size = new System.Drawing.Size(160, 27);
@@ -541,7 +541,7 @@ namespace Programming.View
             this.RectanglesListBox.Location = new System.Drawing.Point(8, 31);
             this.RectanglesListBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RectanglesListBox.Name = "RectanglesListBox";
-            this.RectanglesListBox.Size = new System.Drawing.Size(168, 384);
+            this.RectanglesListBox.Size = new System.Drawing.Size(168, 324);
             this.RectanglesListBox.TabIndex = 0;
             this.RectanglesListBox.SelectedIndexChanged += new System.EventHandler(this.RectanglesListBox_SelectedIndexChanged);
             // 
