@@ -9,9 +9,10 @@ namespace Programming.Model.Classes
         private double _width;
 
         public Rectangle() { }
-        public Rectangle(double lenght, double width, string color)
+
+        public Rectangle(double length, double width, string color)
         {
-            Length = lenght;
+            Length = length;
             Width = width;
             Color = color;
         }

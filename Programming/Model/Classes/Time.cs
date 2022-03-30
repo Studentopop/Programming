@@ -46,7 +46,7 @@ namespace Programming.Model.Classes
             }
             set
             {
-                if (value < 0 || value > 60)
+                if (value < 0 || value > 59)
                 {
                     throw new ArgumentException();
                 }
@@ -62,7 +62,7 @@ namespace Programming.Model.Classes
             }
             set
             {
-                if (value < 0 || value > 60)
+                if (value < 0 || value > 59)
                 {
                     throw new ArgumentException();
                 }

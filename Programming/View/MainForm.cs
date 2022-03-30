@@ -14,14 +14,16 @@ namespace Programming.View
         private Rectangle _currentRectangle;
         private Movie[] _movies;
         private Movie _currentMovie;
-        private int _rectanglesAmount = 5;
-        private int _moviesAmount = 6;
+        private int _rectanglesCount = 5;
+        private int _moviesCount = 6;
+        private string _wrongColor = "LightPink";
+        private string _correctColor = "Window";
 
         private int FindRectangleWithMaxWidth(Rectangle[] rectangles)
         {
             int indexOfMaxWidth = 0;
             double max = 0;
-            for (int i = 0; i < _rectanglesAmount; i++)
+            for (int i = 0; i < _rectanglesCount; i++)
             {
                 if (rectangles[i].Width > max)
                 {
@@ -35,7 +37,7 @@ namespace Programming.View
         {
             int indexOfMaxRating = 0;
             double max = 0;
-            for (int i = 0; i < _moviesAmount; i++)
+            for (int i = 0; i < _moviesCount; i++)
             {
                 if (movies[i].Rating > max)
                 {
@@ -55,7 +57,7 @@ namespace Programming.View
             EnumsListBox.SelectedIndex = 0;
 
             // вторая страница
-            _rectangles = new Rectangle[_rectanglesAmount];
+            _rectangles = new Rectangle[_rectanglesCount];
             var rand = new Random();
             double length, width;
             for (int i = 0; i <5; i++)
@@ -75,7 +77,7 @@ namespace Programming.View
                 new Movie("Klaus",96,2019,"Сartoon",8.7),
                 new Movie("It",135,2017,"Horror", 7.3),
                 new Movie("Home Alone",103,1990,"Comedy",8.3),
-                new Movie("The Green Mile",189,1999,"Drama",9.1),
+                new Movie("The Green Mile",189,1999 ,"Drama",9.1),
             };
 
             foreach (var movie in _movies)
@@ -174,28 +176,30 @@ namespace Programming.View
             WidthTextBox.Text = _currentRectangle.Width.ToString();
             ColorTextBox.Text = _currentRectangle.Color;
         }
+
         private void LenghtTextBox_TextChanged(object sender, EventArgs e)
         {
-            LenghtTextBox.BackColor = ColorTranslator.FromHtml("White");
+            LenghtTextBox.BackColor = ColorTranslator.FromHtml(_correctColor);
             try
             {
                 _currentRectangle.Length = Convert.ToDouble(LenghtTextBox.Text);
             }
             catch
             {
-                LenghtTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+                LenghtTextBox.BackColor = ColorTranslator.FromHtml(_wrongColor);
             }
         }
+
         private void WidthTextBox_TextChanged(object sender, EventArgs e)
         {
-            WidthTextBox.BackColor = ColorTranslator.FromHtml("White");
+            WidthTextBox.BackColor = ColorTranslator.FromHtml(_correctColor);
             try
             {
                 _currentRectangle.Width = Convert.ToDouble(WidthTextBox.Text);
             }
             catch
             {
-                WidthTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+                WidthTextBox.BackColor = ColorTranslator.FromHtml(_wrongColor);
             }
         }
         private void ColorTextBox_TextChanged(object sender, EventArgs e)
@@ -208,6 +212,7 @@ namespace Programming.View
             int indexFindRectangle = FindRectangleWithMaxWidth(_rectangles);
             RectanglesListBox.SelectedIndex = indexFindRectangle;
         }
+
         private void MoviesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var selectedMovie = MoviesListBox.SelectedIndex;
@@ -231,39 +236,40 @@ namespace Programming.View
 
         private void MovieDuretionTextBox_TextChanged(object sender, EventArgs e)
         {
-            MovieDurationTextBox.BackColor = ColorTranslator.FromHtml("White");
+            MovieDurationTextBox.BackColor = ColorTranslator.FromHtml(_correctColor);
             try
             {
                 _currentMovie.DurationMinutes = Convert.ToInt32(MovieDurationTextBox.Text);
             }
             catch
             {
-                MovieDurationTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+                MovieDurationTextBox.BackColor = ColorTranslator.FromHtml(_wrongColor);
             }
         }
+
         private void MovieReleaseTextBox_TextChanged(object sender, EventArgs e)
         {
-            MovieReleaseTextBox.BackColor = ColorTranslator.FromHtml("White");
+            MovieReleaseTextBox.BackColor = ColorTranslator.FromHtml(_correctColor);
             try
             {
                 _currentMovie.ReleaseYear = Convert.ToInt32(MovieReleaseTextBox.Text);
             }
             catch
             {
-                MovieReleaseTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+                MovieReleaseTextBox.BackColor = ColorTranslator.FromHtml(_wrongColor);
             }
         }
 
         private void MovieRatingTextBox_TextChanged(object sender, EventArgs e)
         {
-            MovieRatingTextBox.BackColor = ColorTranslator.FromHtml("White");
+            MovieRatingTextBox.BackColor = ColorTranslator.FromHtml(_correctColor);
             try
             {
                 _currentMovie.Rating = Convert.ToDouble(MovieRatingTextBox.Text);
             }
             catch
             {
-                MovieRatingTextBox.BackColor = ColorTranslator.FromHtml("LightPink");
+                MovieRatingTextBox.BackColor = ColorTranslator.FromHtml(_wrongColor);
             }
         }
 
@@ -271,6 +277,11 @@ namespace Programming.View
         {
             int indexFindMovie = FindMovieWithMaxRating(_movies);
             MoviesListBox.SelectedIndex = indexFindMovie;
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

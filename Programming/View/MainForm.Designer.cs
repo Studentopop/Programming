@@ -530,7 +530,7 @@ namespace Programming.View
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Lenght:";
+            this.label1.Text = "Length:";
             // 
             // RectanglesListBox
             // 
@@ -559,6 +559,7 @@ namespace Programming.View
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Programming Demo";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.TabControl.ResumeLayout(false);
             this.EnamsTabPage.ResumeLayout(false);
             this.SeasonGroupBox.ResumeLayout(false);

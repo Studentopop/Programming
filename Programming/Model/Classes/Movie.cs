@@ -10,7 +10,6 @@ namespace Programming.Model.Classes
 
         private double _rating;
 
-        private int year = DateTime.Now.Year;
         public Movie()
         { }
         public Movie(string name, int durationminutes, int releaseyear, string genre, double rating)
@@ -37,6 +36,7 @@ namespace Programming.Model.Classes
                 _durationMinutes = value;
             }
         }
+
         public int ReleaseYear
         {
             get
@@ -45,7 +45,7 @@ namespace Programming.Model.Classes
             }
             set
             {
-                if (value < 1900 || value > year)
+                if (value < 1900 || value > DateTime.Now.Year)
                 {
                     throw new ArgumentException();
                 }
@@ -53,6 +53,7 @@ namespace Programming.Model.Classes
                 _releaseYear = value;
             }  
         }
+
         public string Genre { get; set; }
         public double Rating
         {

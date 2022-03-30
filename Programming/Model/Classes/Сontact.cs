@@ -40,9 +40,6 @@ namespace Programming.Model.Classes
 
         public string Name { get; set; }
 
-        public string Surname
-        {
-            get; set;
-        }
+        public string Surname { get; set; }
     }
 }
