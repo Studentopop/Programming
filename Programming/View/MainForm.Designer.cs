@@ -34,6 +34,7 @@ namespace Programming.View
             this.TabControl = new System.Windows.Forms.TabControl();
             this.EnamsTabPage = new System.Windows.Forms.TabPage();
             this.SeasonGroupBox = new System.Windows.Forms.GroupBox();
+            this.SeasonComboBox = new System.Windows.Forms.ComboBox();
             this.SeasonButton = new System.Windows.Forms.Button();
             this.SeasonLabel = new System.Windows.Forms.Label();
             this.WeekdayGroupBox = new System.Windows.Forms.GroupBox();
@@ -72,7 +73,6 @@ namespace Programming.View
             this.label1 = new System.Windows.Forms.Label();
             this.RectanglesListBox = new System.Windows.Forms.ListBox();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.SeasonComboBox = new System.Windows.Forms.ComboBox();
             this.TabControl.SuspendLayout();
             this.EnamsTabPage.SuspendLayout();
             this.SeasonGroupBox.SuspendLayout();
@@ -123,6 +123,14 @@ namespace Programming.View
             this.SeasonGroupBox.TabIndex = 2;
             this.SeasonGroupBox.TabStop = false;
             this.SeasonGroupBox.Text = "Season Handle";
+            // 
+            // SeasonComboBox
+            // 
+            this.SeasonComboBox.FormattingEnabled = true;
+            this.SeasonComboBox.Location = new System.Drawing.Point(6, 69);
+            this.SeasonComboBox.Name = "SeasonComboBox";
+            this.SeasonComboBox.Size = new System.Drawing.Size(214, 28);
+            this.SeasonComboBox.TabIndex = 6;
             // 
             // SeasonButton
             // 
@@ -319,7 +327,7 @@ namespace Programming.View
             // 
             // MovieRatingTextBox
             // 
-            this.MovieRatingTextBox.Location = new System.Drawing.Point(184, 281);
+            this.MovieRatingTextBox.Location = new System.Drawing.Point(184, 282);
             this.MovieRatingTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MovieRatingTextBox.Name = "MovieRatingTextBox";
             this.MovieRatingTextBox.Size = new System.Drawing.Size(160, 27);
@@ -338,7 +346,7 @@ namespace Programming.View
             // 
             // MovieReleaseTextBox
             // 
-            this.MovieReleaseTextBox.Location = new System.Drawing.Point(185, 224);
+            this.MovieReleaseTextBox.Location = new System.Drawing.Point(185, 225);
             this.MovieReleaseTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MovieReleaseTextBox.Name = "MovieReleaseTextBox";
             this.MovieReleaseTextBox.Size = new System.Drawing.Size(160, 27);
@@ -359,7 +367,7 @@ namespace Programming.View
             // 
             this.MovieDurationTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.MovieDurationTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.MovieDurationTextBox.Location = new System.Drawing.Point(184, 167);
+            this.MovieDurationTextBox.Location = new System.Drawing.Point(185, 168);
             this.MovieDurationTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MovieDurationTextBox.Name = "MovieDurationTextBox";
             this.MovieDurationTextBox.Size = new System.Drawing.Size(160, 27);
@@ -469,7 +477,7 @@ namespace Programming.View
             // 
             // ColorTextBox
             // 
-            this.ColorTextBox.Location = new System.Drawing.Point(187, 167);
+            this.ColorTextBox.Location = new System.Drawing.Point(187, 168);
             this.ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ColorTextBox.Name = "ColorTextBox";
             this.ColorTextBox.Size = new System.Drawing.Size(160, 27);
@@ -539,14 +547,6 @@ namespace Programming.View
             // 
             this.ToolTip.AutomaticDelay = 50;
             this.ToolTip.ShowAlways = true;
-            // 
-            // SeasonComboBox
-            // 
-            this.SeasonComboBox.FormattingEnabled = true;
-            this.SeasonComboBox.Location = new System.Drawing.Point(6, 69);
-            this.SeasonComboBox.Name = "SeasonComboBox";
-            this.SeasonComboBox.Size = new System.Drawing.Size(214, 28);
-            this.SeasonComboBox.TabIndex = 6;
             // 
             // MainForm
             // 
