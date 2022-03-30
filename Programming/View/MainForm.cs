@@ -15,7 +15,7 @@ namespace Programming.View
         private Movie[] _movies;
         private Movie _currentMovie;
         private int _rectanglesAmount = 5;
-        private int _moviesAmount = 5;
+        private int _moviesAmount = 6;
 
         private int FindRectangleWithMaxWidth(Rectangle[] rectangles)
         {
@@ -58,7 +58,7 @@ namespace Programming.View
             _rectangles = new Rectangle[_rectanglesAmount];
             var rand = new Random();
             double length, width;
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i <5; i++)
             {
                 length = Math.Round(rand.NextDouble() * 100, 1);
                 width = Math.Round(rand.NextDouble() * 100, 1);

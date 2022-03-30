@@ -35,7 +35,6 @@ namespace Programming.View
             this.EnamsTabPage = new System.Windows.Forms.TabPage();
             this.SeasonGroupBox = new System.Windows.Forms.GroupBox();
             this.SeasonButton = new System.Windows.Forms.Button();
-            this.SeasonComboBox = new System.Windows.Forms.ComboBox();
             this.SeasonLabel = new System.Windows.Forms.Label();
             this.WeekdayGroupBox = new System.Windows.Forms.GroupBox();
             this.ParsingFlag = new System.Windows.Forms.Label();
@@ -73,6 +72,7 @@ namespace Programming.View
             this.label1 = new System.Windows.Forms.Label();
             this.RectanglesListBox = new System.Windows.Forms.ListBox();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.SeasonComboBox = new System.Windows.Forms.ComboBox();
             this.TabControl.SuspendLayout();
             this.EnamsTabPage.SuspendLayout();
             this.SeasonGroupBox.SuspendLayout();
@@ -111,8 +111,8 @@ namespace Programming.View
             // 
             // SeasonGroupBox
             // 
-            this.SeasonGroupBox.Controls.Add(this.SeasonButton);
             this.SeasonGroupBox.Controls.Add(this.SeasonComboBox);
+            this.SeasonGroupBox.Controls.Add(this.SeasonButton);
             this.SeasonGroupBox.Controls.Add(this.SeasonLabel);
             this.SeasonGroupBox.Dock = System.Windows.Forms.DockStyle.Right;
             this.SeasonGroupBox.Location = new System.Drawing.Point(400, 251);
@@ -126,7 +126,7 @@ namespace Programming.View
             // 
             // SeasonButton
             // 
-            this.SeasonButton.Location = new System.Drawing.Point(227, 68);
+            this.SeasonButton.Location = new System.Drawing.Point(227, 64);
             this.SeasonButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SeasonButton.Name = "SeasonButton";
             this.SeasonButton.Size = new System.Drawing.Size(75, 35);
@@ -134,16 +134,6 @@ namespace Programming.View
             this.SeasonButton.Text = "Go!";
             this.SeasonButton.UseVisualStyleBackColor = true;
             this.SeasonButton.Click += new System.EventHandler(this.SeasonButton_Click);
-            // 
-            // SeasonComboBox
-            // 
-            this.SeasonComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.SeasonComboBox.FormattingEnabled = true;
-            this.SeasonComboBox.Location = new System.Drawing.Point(8, 69);
-            this.SeasonComboBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.SeasonComboBox.Name = "SeasonComboBox";
-            this.SeasonComboBox.Size = new System.Drawing.Size(209, 28);
-            this.SeasonComboBox.TabIndex = 5;
             // 
             // SeasonLabel
             // 
@@ -180,7 +170,7 @@ namespace Programming.View
             // 
             // ParseButton
             // 
-            this.ParseButton.Location = new System.Drawing.Point(305, 69);
+            this.ParseButton.Location = new System.Drawing.Point(305, 64);
             this.ParseButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ParseButton.Name = "ParseButton";
             this.ParseButton.Size = new System.Drawing.Size(75, 34);
@@ -550,6 +540,14 @@ namespace Programming.View
             this.ToolTip.AutomaticDelay = 50;
             this.ToolTip.ShowAlways = true;
             // 
+            // SeasonComboBox
+            // 
+            this.SeasonComboBox.FormattingEnabled = true;
+            this.SeasonComboBox.Location = new System.Drawing.Point(6, 69);
+            this.SeasonComboBox.Name = "SeasonComboBox";
+            this.SeasonComboBox.Size = new System.Drawing.Size(214, 28);
+            this.SeasonComboBox.TabIndex = 6;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -597,7 +595,6 @@ namespace Programming.View
         private System.Windows.Forms.Label ParsingFlag;
         private System.Windows.Forms.GroupBox SeasonGroupBox;
         private System.Windows.Forms.Label SeasonLabel;
-        private System.Windows.Forms.ComboBox SeasonComboBox;
         private System.Windows.Forms.Button SeasonButton;
         private System.Windows.Forms.GroupBox RectangleGroupBox;
         private System.Windows.Forms.GroupBox FilmGroupBox;
@@ -622,5 +619,6 @@ namespace Programming.View
         private System.Windows.Forms.TextBox MovieReleaseTextBox;
         private System.Windows.Forms.TextBox MovieRatingTextBox;
         private System.Windows.Forms.ToolTip ToolTip;
+        private System.Windows.Forms.ComboBox SeasonComboBox;
     }
 }
