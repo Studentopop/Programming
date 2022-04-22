@@ -193,14 +193,14 @@ namespace Programming.View
 
         private void LenghtTextBox_TextChanged(object sender, EventArgs e)
         {
-            LenghtTextBox.BackColor = ColorTranslator.FromHtml(_correctColor);
+            LengthTextBox.BackColor = ColorTranslator.FromHtml(_correctColor);
             try
             {
-                _currentRectangle.Length = Convert.ToDouble(LenghtTextBox.Text);
+                _currentRectangle.Length = Convert.ToDouble(LengthTextBox.Text);
             }
             catch
             {
-                LenghtTextBox.BackColor = ColorTranslator.FromHtml(_wrongColor);
+                LengthTextBox.BackColor = ColorTranslator.FromHtml(_wrongColor);
             }
         }
 
@@ -294,6 +294,11 @@ namespace Programming.View
         }
 
         private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
         {
 
         }
