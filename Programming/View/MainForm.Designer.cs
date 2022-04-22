@@ -333,7 +333,7 @@ namespace Programming.View
             // 
             // MovieRatingTextBox
             // 
-            this.MovieRatingTextBox.Location = new System.Drawing.Point(184, 282);
+            this.MovieRatingTextBox.Location = new System.Drawing.Point(185, 276);
             this.MovieRatingTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MovieRatingTextBox.Name = "MovieRatingTextBox";
             this.MovieRatingTextBox.Size = new System.Drawing.Size(160, 27);
@@ -343,7 +343,7 @@ namespace Programming.View
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(185, 256);
+            this.label8.Location = new System.Drawing.Point(185, 257);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 20);
@@ -352,7 +352,7 @@ namespace Programming.View
             // 
             // MovieReleaseTextBox
             // 
-            this.MovieReleaseTextBox.Location = new System.Drawing.Point(185, 225);
+            this.MovieReleaseTextBox.Location = new System.Drawing.Point(185, 224);
             this.MovieReleaseTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MovieReleaseTextBox.Name = "MovieReleaseTextBox";
             this.MovieReleaseTextBox.Size = new System.Drawing.Size(160, 27);
@@ -362,7 +362,7 @@ namespace Programming.View
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(185, 199);
+            this.label7.Location = new System.Drawing.Point(185, 200);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(95, 20);
@@ -383,7 +383,7 @@ namespace Programming.View
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(185, 142);
+            this.label6.Location = new System.Drawing.Point(185, 143);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(142, 20);
@@ -421,7 +421,7 @@ namespace Programming.View
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(187, 31);
+            this.label4.Location = new System.Drawing.Point(185, 31);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 20);
@@ -518,7 +518,7 @@ namespace Programming.View
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(185, 87);
+            this.label2.Location = new System.Drawing.Point(187, 87);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 20);
@@ -579,7 +579,7 @@ namespace Programming.View
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(188, 253);
+            this.label10.Location = new System.Drawing.Point(187, 253);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(20, 20);
             this.label10.TabIndex = 10;
@@ -595,7 +595,7 @@ namespace Programming.View
             // IdRectangle
             // 
             this.IdRectangle.AutoSize = true;
-            this.IdRectangle.Location = new System.Drawing.Point(188, 313);
+            this.IdRectangle.Location = new System.Drawing.Point(187, 313);
             this.IdRectangle.Name = "IdRectangle";
             this.IdRectangle.Size = new System.Drawing.Size(25, 20);
             this.IdRectangle.TabIndex = 12;
