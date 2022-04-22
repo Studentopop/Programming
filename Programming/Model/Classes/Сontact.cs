@@ -6,7 +6,10 @@ namespace Programming.Model.Classes
 {
     public class Сontact
     {
+        private const int _phoneLength = 11;
         private string _number;
+        private string _name;
+        private string _surname;
 
         public Сontact()
         { }
@@ -38,8 +41,30 @@ namespace Programming.Model.Classes
             }
         }
 
-        public string Name { get; set; }
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                Validator.AssertStringContainsOnlyLetters(value, nameof(Name));
+                _name = value;
+            }
+        }
 
-        public string Surname { get; set; }
+        public string Surname
+        {
+            get
+            {
+                return _surname;
+            }
+            set
+            {
+                Validator.AssertStringContainsOnlyLetters(value, nameof(Surname));
+                _surname = value;
+            }
+        }
     }
 }

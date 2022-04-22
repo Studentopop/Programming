@@ -10,6 +10,8 @@ namespace Programming.Model.Classes
 
         private double _rating;
 
+        private int _year = DateTime.Now.Year;
+
         public Movie()
         { }
       
@@ -22,10 +24,7 @@ namespace Programming.Model.Classes
             }
             set
             {
-                if (value <= 0)
-                {
-                    throw new ArgumentException();
-                }
+                Validator.AssertOnPositiveValue(value, nameof(DurationMinutes));
                 _durationMinutes = value;
             }
         }
@@ -38,17 +37,13 @@ namespace Programming.Model.Classes
             }
             set
             {
-                if (value < 1900 || value > DateTime.Now.Year)
-                {
-                    throw new ArgumentException();
-                }
-
+                Validator.AssertValueInRange(value, 1900, _year, nameof(ReleaseYear));
                 _releaseYear = value;
-            }  
+            }
         }
 
         public string Genre { get; set; }
-        public double Rating
+        public double Rating 
         {
             get
             {
@@ -56,10 +51,7 @@ namespace Programming.Model.Classes
             }
             set
             {
-                if (value <= 0 || value > 10)
-                {
-                    throw new ArgumentException();
-                }
+                Validator.AssertValueInRange(value, 0, 10, nameof(Rating));
                 _rating = value;
             }
         }

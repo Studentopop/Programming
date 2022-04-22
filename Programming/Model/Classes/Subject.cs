@@ -1,22 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Programming.Model.Classes
 {
     public class Subject
     {
         private int _position;
+        private string _lecturer;
+        private string _name;
+
         public Subject()
         { }
-        public Subject(string name, string teacher, int position)
+
+        public Subject(string name, string lecturer, int position)
         {
             Name = name;
-            Teacher = teacher;
+            Lecturer = lecturer;
             Position = position;
         }
-        public string Name { get; set; }
-        public string Teacher { get; set; }
+
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                Validator.AssertStringContainsOnlyLetters(value, nameof(Name));
+                _name = value;
+            }
+        }
         public int Position
         {
             get
@@ -25,12 +38,22 @@ namespace Programming.Model.Classes
             }
             set
             {
-                if (value <= 0)
-                {
-                    throw new ArgumentException();
-                }
+                Validator.AssertOnPositiveValue(value, nameof(Position));
                 _position = value;
             }
         }
+        public string Lecturer
+        {
+            get
+            {
+                return _lecturer;
+            }
+            set
+            {
+                Validator.AssertStringContainsOnlyLetters(value, nameof(Lecturer));
+                _lecturer = value;
+            }
+        }
+
     }
 }
