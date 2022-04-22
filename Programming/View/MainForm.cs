@@ -141,7 +141,7 @@ namespace Programming.View
             }
             else
             {
-                ParsingFlag.Text = "Нет такого дня недели!";
+                ParsingFlag.Text = "Нет такого дня недели!!!";
             }
         }
 
