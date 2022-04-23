@@ -4,17 +4,17 @@ using System.Text;
 
 namespace Programming.Model.Classes
 {
-    public class Сontact
+    public class Contact
     {
         private const int _phoneLength = 11;
         private string _number;
         private string _name;
         private string _surname;
 
-        public Сontact()
+        public Contact()
         { }
 
-        public Сontact(string name, string surname, string number)
+        public Contact(string name, string surname, string number)
         {
             Name = name;
             Surname = surname;

@@ -8,7 +8,7 @@ namespace Programming.Model.Classes
         {
             if (value < 0)
             {
-                throw new ArgumentException($"Введите корректное значение {fieldName}");
+                throw new ArgumentException($"Введите неотрицательное значение {fieldName}");
             }
         }
 
@@ -16,7 +16,7 @@ namespace Programming.Model.Classes
         {
             if (value < 0)
             {
-                throw new ArgumentException($"Введите корректное значение {fieldName}");
+                throw new ArgumentException($"Введите неотрицательное значение {fieldName}");
             }
         }
 
@@ -24,7 +24,7 @@ namespace Programming.Model.Classes
         {
             if (!(value <= max || value >= min))
             {
-                throw new ArgumentException($"Введите корректное значение {fieldName}");
+                throw new ArgumentException($"Введите корректное значение от 0 до 60 {fieldName}");
             }
         }
 
@@ -32,7 +32,7 @@ namespace Programming.Model.Classes
         {
             if (!(value <= max || value >= min))
             {
-                throw new ArgumentException($"Введите корректное значение {fieldName}");
+                throw new ArgumentException($"Введите корректное значение от 0 до 60 {fieldName}");
             }
         }
 
@@ -42,7 +42,7 @@ namespace Programming.Model.Classes
             {
                 if (Char.IsLetter(value[i]) != true)
                 {
-                    throw new ArgumentException($"Введите корректное значение {fieldName}");
+                    throw new ArgumentException($"Введите только буквы {fieldName}");
                 }
             }
         }

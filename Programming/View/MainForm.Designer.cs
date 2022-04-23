@@ -64,6 +64,14 @@ namespace Programming.View
             this.FindMovieButton = new System.Windows.Forms.Button();
             this.MoviesListBox = new System.Windows.Forms.ListBox();
             this.RectangleGroupBox = new System.Windows.Forms.GroupBox();
+            this.CollisionTextBox = new System.Windows.Forms.TextBox();
+            this.IdTextBox = new System.Windows.Forms.TextBox();
+            this.CollisionLable = new System.Windows.Forms.Label();
+            this.IdRectangle = new System.Windows.Forms.Label();
+            this.Ycoordinate = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.Xcoordinate = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.FindRectangleButton = new System.Windows.Forms.Button();
             this.ColorTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -73,12 +81,6 @@ namespace Programming.View
             this.label1 = new System.Windows.Forms.Label();
             this.RectanglesListBox = new System.Windows.Forms.ListBox();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.label9 = new System.Windows.Forms.Label();
-            this.Xcoordinate = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.Ycoordinate = new System.Windows.Forms.TextBox();
-            this.IdRectangle = new System.Windows.Forms.Label();
-            this.CollisionLable = new System.Windows.Forms.Label();
             this.TabControl.SuspendLayout();
             this.EnamsTabPage.SuspendLayout();
             this.SeasonGroupBox.SuspendLayout();
@@ -98,7 +100,7 @@ namespace Programming.View
             this.TabControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(800, 453);
+            this.TabControl.Size = new System.Drawing.Size(801, 499);
             this.TabControl.TabIndex = 0;
             // 
             // EnamsTabPage
@@ -110,7 +112,7 @@ namespace Programming.View
             this.EnamsTabPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EnamsTabPage.Name = "EnamsTabPage";
             this.EnamsTabPage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.EnamsTabPage.Size = new System.Drawing.Size(792, 420);
+            this.EnamsTabPage.Size = new System.Drawing.Size(793, 466);
             this.EnamsTabPage.TabIndex = 0;
             this.EnamsTabPage.Text = "Enums";
             this.EnamsTabPage.UseVisualStyleBackColor = true;
@@ -121,11 +123,11 @@ namespace Programming.View
             this.SeasonGroupBox.Controls.Add(this.SeasonButton);
             this.SeasonGroupBox.Controls.Add(this.SeasonLabel);
             this.SeasonGroupBox.Dock = System.Windows.Forms.DockStyle.Right;
-            this.SeasonGroupBox.Location = new System.Drawing.Point(400, 251);
+            this.SeasonGroupBox.Location = new System.Drawing.Point(401, 251);
             this.SeasonGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SeasonGroupBox.Name = "SeasonGroupBox";
             this.SeasonGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SeasonGroupBox.Size = new System.Drawing.Size(389, 167);
+            this.SeasonGroupBox.Size = new System.Drawing.Size(389, 213);
             this.SeasonGroupBox.TabIndex = 2;
             this.SeasonGroupBox.TabStop = false;
             this.SeasonGroupBox.Text = "Season Handle";
@@ -169,7 +171,7 @@ namespace Programming.View
             this.WeekdayGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.WeekdayGroupBox.Name = "WeekdayGroupBox";
             this.WeekdayGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.WeekdayGroupBox.Size = new System.Drawing.Size(389, 167);
+            this.WeekdayGroupBox.Size = new System.Drawing.Size(389, 213);
             this.WeekdayGroupBox.TabIndex = 1;
             this.WeekdayGroupBox.TabStop = false;
             this.WeekdayGroupBox.Text = "Weekday Parsing";
@@ -223,7 +225,7 @@ namespace Programming.View
             this.EnumGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EnumGroupBox.Name = "EnumGroupBox";
             this.EnumGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.EnumGroupBox.Size = new System.Drawing.Size(786, 249);
+            this.EnumGroupBox.Size = new System.Drawing.Size(787, 249);
             this.EnumGroupBox.TabIndex = 0;
             this.EnumGroupBox.TabStop = false;
             this.EnumGroupBox.Text = "Enumerations";
@@ -301,7 +303,7 @@ namespace Programming.View
             this.ClassesTabPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ClassesTabPage.Name = "ClassesTabPage";
             this.ClassesTabPage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ClassesTabPage.Size = new System.Drawing.Size(792, 420);
+            this.ClassesTabPage.Size = new System.Drawing.Size(766, 466);
             this.ClassesTabPage.TabIndex = 1;
             this.ClassesTabPage.Text = "Classes";
             this.ClassesTabPage.UseVisualStyleBackColor = true;
@@ -322,11 +324,11 @@ namespace Programming.View
             this.FilmGroupBox.Controls.Add(this.FindMovieButton);
             this.FilmGroupBox.Controls.Add(this.MoviesListBox);
             this.FilmGroupBox.Dock = System.Windows.Forms.DockStyle.Right;
-            this.FilmGroupBox.Location = new System.Drawing.Point(401, 2);
+            this.FilmGroupBox.Location = new System.Drawing.Point(375, 2);
             this.FilmGroupBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FilmGroupBox.Name = "FilmGroupBox";
             this.FilmGroupBox.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.FilmGroupBox.Size = new System.Drawing.Size(388, 416);
+            this.FilmGroupBox.Size = new System.Drawing.Size(388, 462);
             this.FilmGroupBox.TabIndex = 1;
             this.FilmGroupBox.TabStop = false;
             this.FilmGroupBox.Text = "Movies";
@@ -343,7 +345,7 @@ namespace Programming.View
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(185, 257);
+            this.label8.Location = new System.Drawing.Point(185, 253);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 20);
@@ -430,7 +432,7 @@ namespace Programming.View
             // 
             // FindMovieButton
             // 
-            this.FindMovieButton.Location = new System.Drawing.Point(184, 366);
+            this.FindMovieButton.Location = new System.Drawing.Point(185, 423);
             this.FindMovieButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FindMovieButton.Name = "FindMovieButton";
             this.FindMovieButton.Size = new System.Drawing.Size(100, 29);
@@ -446,12 +448,14 @@ namespace Programming.View
             this.MoviesListBox.Location = new System.Drawing.Point(8, 31);
             this.MoviesListBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MoviesListBox.Name = "MoviesListBox";
-            this.MoviesListBox.Size = new System.Drawing.Size(168, 364);
+            this.MoviesListBox.Size = new System.Drawing.Size(168, 424);
             this.MoviesListBox.TabIndex = 0;
             this.MoviesListBox.SelectedIndexChanged += new System.EventHandler(this.MoviesListBox_SelectedIndexChanged);
             // 
             // RectangleGroupBox
             // 
+            this.RectangleGroupBox.Controls.Add(this.CollisionTextBox);
+            this.RectangleGroupBox.Controls.Add(this.IdTextBox);
             this.RectangleGroupBox.Controls.Add(this.CollisionLable);
             this.RectangleGroupBox.Controls.Add(this.IdRectangle);
             this.RectangleGroupBox.Controls.Add(this.Ycoordinate);
@@ -471,14 +475,81 @@ namespace Programming.View
             this.RectangleGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RectangleGroupBox.Name = "RectangleGroupBox";
             this.RectangleGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.RectangleGroupBox.Size = new System.Drawing.Size(389, 416);
+            this.RectangleGroupBox.Size = new System.Drawing.Size(389, 462);
             this.RectangleGroupBox.TabIndex = 0;
             this.RectangleGroupBox.TabStop = false;
             this.RectangleGroupBox.Text = "Rectangles";
             // 
+            // CollisionTextBox
+            // 
+            this.CollisionTextBox.Location = new System.Drawing.Point(187, 382);
+            this.CollisionTextBox.Name = "CollisionTextBox";
+            this.CollisionTextBox.Size = new System.Drawing.Size(160, 27);
+            this.CollisionTextBox.TabIndex = 15;
+            // 
+            // IdTextBox
+            // 
+            this.IdTextBox.Location = new System.Drawing.Point(187, 54);
+            this.IdTextBox.Name = "IdTextBox";
+            this.IdTextBox.ReadOnly = true;
+            this.IdTextBox.Size = new System.Drawing.Size(160, 27);
+            this.IdTextBox.TabIndex = 14;
+            // 
+            // CollisionLable
+            // 
+            this.CollisionLable.AutoSize = true;
+            this.CollisionLable.Location = new System.Drawing.Point(187, 359);
+            this.CollisionLable.Name = "CollisionLable";
+            this.CollisionLable.Size = new System.Drawing.Size(69, 20);
+            this.CollisionLable.TabIndex = 13;
+            this.CollisionLable.Text = "Collision:";
+            // 
+            // IdRectangle
+            // 
+            this.IdRectangle.AutoSize = true;
+            this.IdRectangle.Location = new System.Drawing.Point(187, 31);
+            this.IdRectangle.Name = "IdRectangle";
+            this.IdRectangle.Size = new System.Drawing.Size(25, 20);
+            this.IdRectangle.TabIndex = 12;
+            this.IdRectangle.Text = "id:";
+            // 
+            // Ycoordinate
+            // 
+            this.Ycoordinate.Location = new System.Drawing.Point(187, 329);
+            this.Ycoordinate.Name = "Ycoordinate";
+            this.Ycoordinate.ReadOnly = true;
+            this.Ycoordinate.Size = new System.Drawing.Size(160, 27);
+            this.Ycoordinate.TabIndex = 11;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(187, 306);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(20, 20);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Y:";
+            // 
+            // Xcoordinate
+            // 
+            this.Xcoordinate.Location = new System.Drawing.Point(187, 276);
+            this.Xcoordinate.Name = "Xcoordinate";
+            this.Xcoordinate.ReadOnly = true;
+            this.Xcoordinate.Size = new System.Drawing.Size(160, 27);
+            this.Xcoordinate.TabIndex = 9;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(186, 253);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(21, 20);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "X:";
+            // 
             // FindRectangleButton
             // 
-            this.FindRectangleButton.Location = new System.Drawing.Point(188, 366);
+            this.FindRectangleButton.Location = new System.Drawing.Point(187, 426);
             this.FindRectangleButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FindRectangleButton.Name = "FindRectangleButton";
             this.FindRectangleButton.Size = new System.Drawing.Size(100, 29);
@@ -489,9 +560,10 @@ namespace Programming.View
             // 
             // ColorTextBox
             // 
-            this.ColorTextBox.Location = new System.Drawing.Point(187, 168);
+            this.ColorTextBox.Location = new System.Drawing.Point(187, 112);
             this.ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ColorTextBox.Name = "ColorTextBox";
+            this.ColorTextBox.ReadOnly = true;
             this.ColorTextBox.Size = new System.Drawing.Size(160, 27);
             this.ColorTextBox.TabIndex = 6;
             this.ColorTextBox.TextChanged += new System.EventHandler(this.ColorTextBox_TextChanged);
@@ -499,7 +571,7 @@ namespace Programming.View
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(187, 144);
+            this.label3.Location = new System.Drawing.Point(187, 87);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 20);
@@ -508,7 +580,7 @@ namespace Programming.View
             // 
             // WidthTextBox
             // 
-            this.WidthTextBox.Location = new System.Drawing.Point(187, 112);
+            this.WidthTextBox.Location = new System.Drawing.Point(187, 169);
             this.WidthTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.WidthTextBox.Name = "WidthTextBox";
             this.WidthTextBox.Size = new System.Drawing.Size(160, 27);
@@ -518,7 +590,7 @@ namespace Programming.View
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(187, 87);
+            this.label2.Location = new System.Drawing.Point(187, 144);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 20);
@@ -527,7 +599,7 @@ namespace Programming.View
             // 
             // LengthTextBox
             // 
-            this.LengthTextBox.Location = new System.Drawing.Point(187, 55);
+            this.LengthTextBox.Location = new System.Drawing.Point(187, 226);
             this.LengthTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LengthTextBox.Name = "LengthTextBox";
             this.LengthTextBox.Size = new System.Drawing.Size(160, 27);
@@ -537,7 +609,7 @@ namespace Programming.View
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(187, 31);
+            this.label1.Location = new System.Drawing.Point(187, 201);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 20);
@@ -551,7 +623,7 @@ namespace Programming.View
             this.RectanglesListBox.Location = new System.Drawing.Point(8, 31);
             this.RectanglesListBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RectanglesListBox.Name = "RectanglesListBox";
-            this.RectanglesListBox.Size = new System.Drawing.Size(168, 364);
+            this.RectanglesListBox.Size = new System.Drawing.Size(168, 424);
             this.RectanglesListBox.TabIndex = 0;
             this.RectanglesListBox.SelectedIndexChanged += new System.EventHandler(this.RectanglesListBox_SelectedIndexChanged);
             // 
@@ -560,69 +632,18 @@ namespace Programming.View
             this.ToolTip.AutomaticDelay = 50;
             this.ToolTip.ShowAlways = true;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(187, 200);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(21, 20);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "X:";
-            // 
-            // Xcoordinate
-            // 
-            this.Xcoordinate.Location = new System.Drawing.Point(187, 223);
-            this.Xcoordinate.Name = "Xcoordinate";
-            this.Xcoordinate.Size = new System.Drawing.Size(160, 27);
-            this.Xcoordinate.TabIndex = 9;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(187, 253);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(20, 20);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Y:";
-            // 
-            // Ycoordinate
-            // 
-            this.Ycoordinate.Location = new System.Drawing.Point(187, 276);
-            this.Ycoordinate.Name = "Ycoordinate";
-            this.Ycoordinate.Size = new System.Drawing.Size(160, 27);
-            this.Ycoordinate.TabIndex = 11;
-            // 
-            // IdRectangle
-            // 
-            this.IdRectangle.AutoSize = true;
-            this.IdRectangle.Location = new System.Drawing.Point(187, 313);
-            this.IdRectangle.Name = "IdRectangle";
-            this.IdRectangle.Size = new System.Drawing.Size(25, 20);
-            this.IdRectangle.TabIndex = 12;
-            this.IdRectangle.Text = "id:";
-            this.IdRectangle.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // CollisionLable
-            // 
-            this.CollisionLable.AutoSize = true;
-            this.CollisionLable.Location = new System.Drawing.Point(253, 313);
-            this.CollisionLable.Name = "CollisionLable";
-            this.CollisionLable.Size = new System.Drawing.Size(69, 20);
-            this.CollisionLable.TabIndex = 13;
-            this.CollisionLable.Text = "Collision:";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 453);
+            this.ClientSize = new System.Drawing.Size(801, 499);
             this.Controls.Add(this.TabControl);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Text = "Programming Demo";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.TabControl.ResumeLayout(false);
             this.EnamsTabPage.ResumeLayout(false);
             this.SeasonGroupBox.ResumeLayout(false);
@@ -690,5 +711,7 @@ namespace Programming.View
         private System.Windows.Forms.TextBox Xcoordinate;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label CollisionLable;
+        private System.Windows.Forms.TextBox IdTextBox;
+        private System.Windows.Forms.TextBox CollisionTextBox;
     }
 }

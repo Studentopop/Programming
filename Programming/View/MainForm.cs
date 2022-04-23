@@ -9,15 +9,23 @@ namespace Programming.View
 {
     public partial class MainForm : Form
     {
+        private const int _rectanglesCount = 5;
+
+        private const int _moviesCount = 6;
+
+        private const string _wrongColor = "LightPink";
+
+        private const string _correctColor = "Window";
+
         private string[] _colors = { "Black", "Red", "Green", "Pink", "Yellow" };
+
         private Rectangle[] _rectangles;
+
         private Rectangle _currentRectangle;
+
         private Movie[] _movies;
+
         private Movie _currentMovie;
-        private int _rectanglesCount = 5;
-        private int _moviesCount = 6;
-        private string _wrongColor = "LightPink";
-        private string _correctColor = "Window";
 
         private int FindRectangleWithMaxWidth(Rectangle[] rectangles)
         {
@@ -147,7 +155,6 @@ namespace Programming.View
                 ParsingFlag.Text = "Нет такого дня недели!!!";
             }
         }
-
         private void SeasonButton_Click(object sender, EventArgs e)
         {
             var item = SeasonComboBox.SelectedItem;
@@ -180,14 +187,14 @@ namespace Programming.View
             ColorTextBox.Text = _currentRectangle.Color;
             Xcoordinate.Text = _currentRectangle.Center.X.ToString();
             Ycoordinate.Text = _currentRectangle.Center.Y.ToString();
-            IdRectangle.Text = "Id:" + _currentRectangle.Id.ToString();
+            IdTextBox.Text = _currentRectangle.Id.ToString();
             if (CollisionManager.IsCollision(_rectangles[0], _rectangles[1]))
             {
-                CollisionLable.Text = "Collision: True";
+                CollisionTextBox.Text = " True";
             }
             else
             {
-                CollisionLable.Text = "Collision: False";
+                CollisionTextBox.Text = " False";
             }
         }
 
@@ -291,16 +298,6 @@ namespace Programming.View
         {
             int indexFindMovie = FindMovieWithMaxRating(_movies);
             MoviesListBox.SelectedIndex = indexFindMovie;
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
