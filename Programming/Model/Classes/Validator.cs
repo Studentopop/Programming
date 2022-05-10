@@ -4,19 +4,19 @@ namespace Programming.Model.Classes
 {
     public static class Validator
     {
-        public static void AssertOnPositiveValue(int value, string fieldName)
+        public static void AssertOnPositiveValue(string property, int value)
         {
             if (value < 0)
             {
-                throw new ArgumentException($"Введите неотрицательное значение {fieldName}");
+                throw new System.ArgumentException($"Значение поля {property} должно быть положительным");
             }
         }
 
-        public static void AssertOnPositiveValue(double value, string fieldName)
+        public static void AssertOnPositiveValue(string property, double value)
         {
             if (value < 0)
             {
-                throw new ArgumentException($"Введите неотрицательное значение {fieldName}");
+                throw new System.ArgumentException($"Значение поля {property} должно быть положительным");
             }
         }
 

@@ -29,7 +29,7 @@ namespace Programming.Model.Classes
             }
             set
             {
-                Validator.AssertOnPositiveValue(value, nameof(Id));
+                Validator.AssertOnPositiveValue(nameof(Id), value);
                 _id = value;
             }
         }
@@ -46,7 +46,7 @@ namespace Programming.Model.Classes
             }
             set
             {
-                Validator.AssertOnPositiveValue(value, nameof(DurationMinutes));
+                Validator.AssertOnPositiveValue(nameof(DurationMinutes),value);
                 _durationMinutes = value;
             }
         }
