@@ -55,12 +55,12 @@ namespace Programming.Model.Classes
             }
         }
 
-        public Rectangle(int height, int width, string color, Point2D center)
+        public Rectangle(double height, double width, string color, Point2D center)
         {
             _allRectanglesCount++;
             _id = _allRectanglesCount;
-            Height = height;
-            Width = width;
+            Height = (int)height;
+            Width = (int)width;
             Color = color;
             Center = center;
         }
