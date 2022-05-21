@@ -65,7 +65,7 @@ namespace Programming.View.Controls
             // CollisionLable
             // 
             this.CollisionLable.AutoSize = true;
-            this.CollisionLable.Location = new System.Drawing.Point(191, 337);
+            this.CollisionLable.Location = new System.Drawing.Point(190, 337);
             this.CollisionLable.Name = "CollisionLable";
             this.CollisionLable.Size = new System.Drawing.Size(69, 20);
             this.CollisionLable.TabIndex = 29;
@@ -92,7 +92,7 @@ namespace Programming.View.Controls
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(191, 284);
+            this.label10.Location = new System.Drawing.Point(190, 284);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(20, 20);
             this.label10.TabIndex = 26;
@@ -110,7 +110,7 @@ namespace Programming.View.Controls
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(190, 231);
+            this.label9.Location = new System.Drawing.Point(191, 231);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(21, 20);
             this.label9.TabIndex = 24;
@@ -129,7 +129,7 @@ namespace Programming.View.Controls
             // 
             // ColorTextBox
             // 
-            this.ColorTextBox.Location = new System.Drawing.Point(191, 90);
+            this.ColorTextBox.Location = new System.Drawing.Point(191, 87);
             this.ColorTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ColorTextBox.Name = "ColorTextBox";
             this.ColorTextBox.ReadOnly = true;
@@ -140,7 +140,7 @@ namespace Programming.View.Controls
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(191, 65);
+            this.label3.Location = new System.Drawing.Point(191, 62);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 20);
@@ -149,7 +149,7 @@ namespace Programming.View.Controls
             // 
             // RectangleWidthTextBox
             // 
-            this.RectangleWidthTextBox.Location = new System.Drawing.Point(191, 147);
+            this.RectangleWidthTextBox.Location = new System.Drawing.Point(191, 144);
             this.RectangleWidthTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RectangleWidthTextBox.Name = "RectangleWidthTextBox";
             this.RectangleWidthTextBox.Size = new System.Drawing.Size(160, 27);
@@ -159,7 +159,7 @@ namespace Programming.View.Controls
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(191, 122);
+            this.label2.Location = new System.Drawing.Point(190, 119);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 20);
@@ -168,7 +168,7 @@ namespace Programming.View.Controls
             // 
             // RectangleHeightTextBox
             // 
-            this.RectangleHeightTextBox.Location = new System.Drawing.Point(191, 204);
+            this.RectangleHeightTextBox.Location = new System.Drawing.Point(191, 199);
             this.RectangleHeightTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RectangleHeightTextBox.Name = "RectangleHeightTextBox";
             this.RectangleHeightTextBox.Size = new System.Drawing.Size(160, 27);
@@ -178,7 +178,7 @@ namespace Programming.View.Controls
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(191, 179);
+            this.label1.Location = new System.Drawing.Point(191, 176);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 20);

@@ -58,5 +58,10 @@ namespace Programming.View.Controls
             var item = ValuesListBox.SelectedItem;
             IntTextBox.Text = ((int)item).ToString();
         }
+
+        private void EnumGroupBox_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

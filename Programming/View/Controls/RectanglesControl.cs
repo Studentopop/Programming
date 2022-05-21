@@ -37,7 +37,8 @@ namespace Programming.View.Controls
                 centerX = rand.Next(10);
                 centerY = rand.Next(10);
                 Random r = new Random();
-                _rectangles[i] = new Rectangle(height, width, _colors[r.Next(0, _colors.Length)], new Point2D(centerX, centerY));
+                _rectangles[i] = new Rectangle(height, width, _colors[r.Next(0, _colors.Length)], 
+                    new Point2D(centerX, centerY));
                 RectanglesListBox.Items.Add("Rectangle " + (i + 1));
             }
 
@@ -80,27 +81,27 @@ namespace Programming.View.Controls
 
         private void LenghtTextBox_TextChanged(object sender, EventArgs e)
         {
-            RectangleHeightTextBox.BackColor = AppColors.currentBackColor;
+            RectangleHeightTextBox.BackColor = AppColors.CurrentBackColor;
             try
             {
                 _currentRectangle.Height = int.Parse(RectangleHeightTextBox.Text);
             }
             catch
             {
-                RectangleHeightTextBox.BackColor = AppColors.errorBackColor;
+                RectangleHeightTextBox.BackColor = AppColors.ErrorBackColor;
             }
         }
 
         private void WidthTextBox_TextChanged(object sender, EventArgs e)
         {
-            RectangleWidthTextBox.BackColor = AppColors.currentBackColor;
+            RectangleWidthTextBox.BackColor = AppColors.CurrentBackColor;
             try
             {
                 _currentRectangle.Width = int.Parse(RectangleWidthTextBox.Text);
             }
             catch
             {
-                RectangleWidthTextBox.BackColor = AppColors.errorBackColor;
+                RectangleWidthTextBox.BackColor = AppColors.ErrorBackColor;
             }
         }
         private void ColorTextBox_TextChanged(object sender, EventArgs e)
@@ -117,11 +118,11 @@ namespace Programming.View.Controls
             try
             {
                 _currentRectangle.Height = int.Parse(RectangleHeightTextBox.Text);
-                RectangleHeightTextBox.BackColor = AppColors.currentBackColor; 
+                RectangleHeightTextBox.BackColor = AppColors.CurrentBackColor; 
             }
             catch
             {
-                RectangleHeightTextBox.BackColor = AppColors.errorBackColor; 
+                RectangleHeightTextBox.BackColor = AppColors.ErrorBackColor; 
             }
         }
 
@@ -130,11 +131,11 @@ namespace Programming.View.Controls
             try
             {
                 _currentRectangle.Width = int.Parse(RectangleWidthTextBox.Text);
-                RectangleWidthTextBox.BackColor = AppColors.currentBackColor;
+                RectangleWidthTextBox.BackColor = AppColors.CurrentBackColor;
             }
             catch
             {
-                RectangleWidthTextBox.BackColor = AppColors.errorBackColor; 
+                RectangleWidthTextBox.BackColor = AppColors.ErrorBackColor; 
             }
         }
        
@@ -143,11 +144,11 @@ namespace Programming.View.Controls
             try
             {
                 _currentRectangle.Center.X = int.Parse(XRectangleTextBox.Text);
-                XRectangleTextBox.BackColor = AppColors.currentBackColor;
+                XRectangleTextBox.BackColor = AppColors.CurrentBackColor;
             }
             catch
             {
-                XRectangleTextBox.BackColor = AppColors.errorBackColor; 
+                XRectangleTextBox.BackColor = AppColors.ErrorBackColor; 
             }
         }
 
@@ -156,11 +157,11 @@ namespace Programming.View.Controls
             try
             {
                 _currentRectangle.Center.Y = int.Parse(YRectangleTextBox.Text);
-                YRectangleTextBox.BackColor = AppColors.currentBackColor;
+                YRectangleTextBox.BackColor = AppColors.CurrentBackColor;
             }
             catch
             {
-                YRectangleTextBox.BackColor = AppColors.errorBackColor; 
+                YRectangleTextBox.BackColor = AppColors.ErrorBackColor; 
             }
         }
         private void RectangleFindButton_Click(object sender, EventArgs e)

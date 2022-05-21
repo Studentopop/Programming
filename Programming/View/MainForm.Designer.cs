@@ -44,8 +44,8 @@ namespace Programming.View
             this.seasonHandleControl1 = new Programming.View.Controls.SeasonHandleControl();
             this.WeekdayGroupBox = new System.Windows.Forms.GroupBox();
             this.weekdayParsingControl1 = new Programming.View.Controls.WeekdayParsingControl();
-            this.enumerationsControl1 = new Programming.View.Controls.EnumerationsControl();
             this.EnumGroupBox = new System.Windows.Forms.GroupBox();
+            this.enumerationsControl1 = new Programming.View.Controls.EnumerationsControl();
             this.RectanglesTabPage.SuspendLayout();
             this.ClassesTabPage.SuspendLayout();
             this.RectangleGroupBox.SuspendLayout();
@@ -68,7 +68,7 @@ namespace Programming.View
             this.RectanglesTabPage.Location = new System.Drawing.Point(4, 29);
             this.RectanglesTabPage.Name = "RectanglesTabPage";
             this.RectanglesTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.RectanglesTabPage.Size = new System.Drawing.Size(793, 466);
+            this.RectanglesTabPage.Size = new System.Drawing.Size(793, 500);
             this.RectanglesTabPage.TabIndex = 2;
             this.RectanglesTabPage.Text = "Rectangles";
             this.RectanglesTabPage.UseVisualStyleBackColor = true;
@@ -78,7 +78,7 @@ namespace Programming.View
             this.rectanglesCollisionControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rectanglesCollisionControl1.Location = new System.Drawing.Point(3, 3);
             this.rectanglesCollisionControl1.Name = "rectanglesCollisionControl1";
-            this.rectanglesCollisionControl1.Size = new System.Drawing.Size(783, 456);
+            this.rectanglesCollisionControl1.Size = new System.Drawing.Size(783, 490);
             this.rectanglesCollisionControl1.TabIndex = 0;
             // 
             // ClassesTabPage
@@ -132,7 +132,7 @@ namespace Programming.View
             this.TabControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(801, 499);
+            this.TabControl.Size = new System.Drawing.Size(801, 533);
             this.TabControl.TabIndex = 0;
             // 
             // EnamsTabPage
@@ -189,13 +189,6 @@ namespace Programming.View
             this.weekdayParsingControl1.Size = new System.Drawing.Size(414, 114);
             this.weekdayParsingControl1.TabIndex = 0;
             // 
-            // enumerationsControl1
-            // 
-            this.enumerationsControl1.Location = new System.Drawing.Point(0, 0);
-            this.enumerationsControl1.Name = "enumerationsControl1";
-            this.enumerationsControl1.Size = new System.Drawing.Size(790, 244);
-            this.enumerationsControl1.TabIndex = 0;
-            // 
             // EnumGroupBox
             // 
             this.EnumGroupBox.Controls.Add(this.enumerationsControl1);
@@ -209,11 +202,18 @@ namespace Programming.View
             this.EnumGroupBox.TabStop = false;
             this.EnumGroupBox.Text = "Enumerations";
             // 
+            // enumerationsControl1
+            // 
+            this.enumerationsControl1.Location = new System.Drawing.Point(0, 0);
+            this.enumerationsControl1.Name = "enumerationsControl1";
+            this.enumerationsControl1.Size = new System.Drawing.Size(790, 244);
+            this.enumerationsControl1.TabIndex = 0;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 499);
+            this.ClientSize = new System.Drawing.Size(801, 533);
             this.Controls.Add(this.TabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
