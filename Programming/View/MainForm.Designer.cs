@@ -35,25 +35,26 @@ namespace Programming.View
             this.RectanglesTabPage = new System.Windows.Forms.TabPage();
             this.rectanglesCollisionControl1 = new Programming.View.Controls.RectanglesCollisionControl();
             this.ClassesTabPage = new System.Windows.Forms.TabPage();
-            this.moviesControl1 = new Programming.View.Controls.MoviesControl();
             this.RectangleGroupBox = new System.Windows.Forms.GroupBox();
             this.rectanglesControl1 = new Programming.View.Controls.RectanglesControl();
-            this.TabControl = new System.Windows.Forms.TabControl();
+            this.moviesControl = new Programming.View.Controls.MoviesControl();
+            this.rectanglesControl2 = new Programming.View.Controls.RectanglesControl();
+            this.rectanglesControl = new Programming.View.Controls.RectanglesControl();
+            this.rectanglesControl3 = new Programming.View.Controls.RectanglesControl();
             this.EnamsTabPage = new System.Windows.Forms.TabPage();
-            this.SeasonGroupBox = new System.Windows.Forms.GroupBox();
-            this.seasonHandleControl1 = new Programming.View.Controls.SeasonHandleControl();
             this.WeekdayGroupBox = new System.Windows.Forms.GroupBox();
             this.weekdayParsingControl1 = new Programming.View.Controls.WeekdayParsingControl();
-            this.EnumGroupBox = new System.Windows.Forms.GroupBox();
+            this.SeasonGroupBox = new System.Windows.Forms.GroupBox();
+            this.seasonHandleControl1 = new Programming.View.Controls.SeasonHandleControl();
             this.enumerationsControl1 = new Programming.View.Controls.EnumerationsControl();
+            this.TabControl = new System.Windows.Forms.TabControl();
             this.RectanglesTabPage.SuspendLayout();
             this.ClassesTabPage.SuspendLayout();
             this.RectangleGroupBox.SuspendLayout();
-            this.TabControl.SuspendLayout();
             this.EnamsTabPage.SuspendLayout();
-            this.SeasonGroupBox.SuspendLayout();
             this.WeekdayGroupBox.SuspendLayout();
-            this.EnumGroupBox.SuspendLayout();
+            this.SeasonGroupBox.SuspendLayout();
+            this.TabControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // ToolTip
@@ -77,15 +78,13 @@ namespace Programming.View
             // ClassesTabPage
             // 
             resources.ApplyResources(this.ClassesTabPage, "ClassesTabPage");
-            this.ClassesTabPage.Controls.Add(this.moviesControl1);
+            this.ClassesTabPage.Controls.Add(this.rectanglesControl3);
+            this.ClassesTabPage.Controls.Add(this.rectanglesControl);
+            this.ClassesTabPage.Controls.Add(this.rectanglesControl2);
+            this.ClassesTabPage.Controls.Add(this.moviesControl);
             this.ClassesTabPage.Controls.Add(this.RectangleGroupBox);
             this.ClassesTabPage.Name = "ClassesTabPage";
             this.ClassesTabPage.UseVisualStyleBackColor = true;
-            // 
-            // moviesControl1
-            // 
-            resources.ApplyResources(this.moviesControl1, "moviesControl1");
-            this.moviesControl1.Name = "moviesControl1";
             // 
             // RectangleGroupBox
             // 
@@ -99,36 +98,34 @@ namespace Programming.View
             resources.ApplyResources(this.rectanglesControl1, "rectanglesControl1");
             this.rectanglesControl1.Name = "rectanglesControl1";
             // 
-            // TabControl
+            // moviesControl
             // 
-            this.TabControl.Controls.Add(this.EnamsTabPage);
-            this.TabControl.Controls.Add(this.ClassesTabPage);
-            this.TabControl.Controls.Add(this.RectanglesTabPage);
-            resources.ApplyResources(this.TabControl, "TabControl");
-            this.TabControl.Name = "TabControl";
-            this.TabControl.SelectedIndex = 0;
-            this.TabControl.SelectedIndexChanged += new System.EventHandler(this.TabControl_SelectedIndexChanged);
+            resources.ApplyResources(this.moviesControl, "moviesControl");
+            this.moviesControl.Name = "moviesControl";
+            // 
+            // rectanglesControl2
+            // 
+            resources.ApplyResources(this.rectanglesControl2, "rectanglesControl2");
+            this.rectanglesControl2.Name = "rectanglesControl2";
+            // 
+            // rectanglesControl
+            // 
+            resources.ApplyResources(this.rectanglesControl, "rectanglesControl");
+            this.rectanglesControl.Name = "rectanglesControl";
+            // 
+            // rectanglesControl3
+            // 
+            resources.ApplyResources(this.rectanglesControl3, "rectanglesControl3");
+            this.rectanglesControl3.Name = "rectanglesControl3";
             // 
             // EnamsTabPage
             // 
+            this.EnamsTabPage.Controls.Add(this.enumerationsControl1);
             this.EnamsTabPage.Controls.Add(this.SeasonGroupBox);
             this.EnamsTabPage.Controls.Add(this.WeekdayGroupBox);
-            this.EnamsTabPage.Controls.Add(this.EnumGroupBox);
             resources.ApplyResources(this.EnamsTabPage, "EnamsTabPage");
             this.EnamsTabPage.Name = "EnamsTabPage";
             this.EnamsTabPage.UseVisualStyleBackColor = true;
-            // 
-            // SeasonGroupBox
-            // 
-            this.SeasonGroupBox.Controls.Add(this.seasonHandleControl1);
-            resources.ApplyResources(this.SeasonGroupBox, "SeasonGroupBox");
-            this.SeasonGroupBox.Name = "SeasonGroupBox";
-            this.SeasonGroupBox.TabStop = false;
-            // 
-            // seasonHandleControl1
-            // 
-            resources.ApplyResources(this.seasonHandleControl1, "seasonHandleControl1");
-            this.seasonHandleControl1.Name = "seasonHandleControl1";
             // 
             // WeekdayGroupBox
             // 
@@ -142,17 +139,31 @@ namespace Programming.View
             resources.ApplyResources(this.weekdayParsingControl1, "weekdayParsingControl1");
             this.weekdayParsingControl1.Name = "weekdayParsingControl1";
             // 
-            // EnumGroupBox
+            // SeasonGroupBox
             // 
-            this.EnumGroupBox.Controls.Add(this.enumerationsControl1);
-            resources.ApplyResources(this.EnumGroupBox, "EnumGroupBox");
-            this.EnumGroupBox.Name = "EnumGroupBox";
-            this.EnumGroupBox.TabStop = false;
+            this.SeasonGroupBox.Controls.Add(this.seasonHandleControl1);
+            resources.ApplyResources(this.SeasonGroupBox, "SeasonGroupBox");
+            this.SeasonGroupBox.Name = "SeasonGroupBox";
+            this.SeasonGroupBox.TabStop = false;
+            // 
+            // seasonHandleControl1
+            // 
+            resources.ApplyResources(this.seasonHandleControl1, "seasonHandleControl1");
+            this.seasonHandleControl1.Name = "seasonHandleControl1";
             // 
             // enumerationsControl1
             // 
             resources.ApplyResources(this.enumerationsControl1, "enumerationsControl1");
             this.enumerationsControl1.Name = "enumerationsControl1";
+            // 
+            // TabControl
+            // 
+            this.TabControl.Controls.Add(this.EnamsTabPage);
+            this.TabControl.Controls.Add(this.ClassesTabPage);
+            this.TabControl.Controls.Add(this.RectanglesTabPage);
+            resources.ApplyResources(this.TabControl, "TabControl");
+            this.TabControl.Name = "TabControl";
+            this.TabControl.SelectedIndex = 0;
             // 
             // MainForm
             // 
@@ -165,11 +176,10 @@ namespace Programming.View
             this.ClassesTabPage.ResumeLayout(false);
             this.ClassesTabPage.PerformLayout();
             this.RectangleGroupBox.ResumeLayout(false);
-            this.TabControl.ResumeLayout(false);
             this.EnamsTabPage.ResumeLayout(false);
-            this.SeasonGroupBox.ResumeLayout(false);
             this.WeekdayGroupBox.ResumeLayout(false);
-            this.EnumGroupBox.ResumeLayout(false);
+            this.SeasonGroupBox.ResumeLayout(false);
+            this.TabControl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -177,18 +187,20 @@ namespace Programming.View
         #endregion
         private System.Windows.Forms.ToolTip ToolTip;
         private System.Windows.Forms.TabPage RectanglesTabPage;
-        private System.Windows.Forms.TabPage ClassesTabPage;
-        private System.Windows.Forms.TabControl TabControl;
         private Controls.RectanglesCollisionControl rectanglesCollisionControl1;
+        private System.Windows.Forms.TabPage ClassesTabPage;
+        private Controls.RectanglesControl rectanglesControl3;
+        private Controls.RectanglesControl rectanglesControl;
+        private Controls.RectanglesControl rectanglesControl2;
+        private Controls.MoviesControl moviesControl;
         private System.Windows.Forms.GroupBox RectangleGroupBox;
         private Controls.RectanglesControl rectanglesControl1;
-        private Controls.MoviesControl moviesControl1;
         private System.Windows.Forms.TabPage EnamsTabPage;
-        private System.Windows.Forms.GroupBox SeasonGroupBox;
-        private System.Windows.Forms.GroupBox WeekdayGroupBox;
-        private Controls.SeasonHandleControl seasonHandleControl1;
-        private Controls.WeekdayParsingControl weekdayParsingControl1;
-        private System.Windows.Forms.GroupBox EnumGroupBox;
         private Controls.EnumerationsControl enumerationsControl1;
+        private System.Windows.Forms.GroupBox SeasonGroupBox;
+        private Controls.SeasonHandleControl seasonHandleControl1;
+        private System.Windows.Forms.GroupBox WeekdayGroupBox;
+        private Controls.WeekdayParsingControl weekdayParsingControl1;
+        private System.Windows.Forms.TabControl TabControl;
     }
 }

@@ -19,8 +19,8 @@ namespace Programming.View
 
         public static readonly Color ErrorBackColor = Color.Pink;
 
-        public static readonly Color Collision = Color.FromArgb(127, 255, 127, 127);
+        public static readonly Color CollisionColor = Color.FromArgb(127, 255, 127, 127);
 
-        public static readonly Color NotCollision = Color.FromArgb(127, 127, 255, 127);
+        public static readonly Color NotCollisionColor = Color.FromArgb(127, 127, 255, 127);
     }
 }

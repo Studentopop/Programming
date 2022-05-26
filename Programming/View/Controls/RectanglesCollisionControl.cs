@@ -49,7 +49,7 @@ namespace Programming.View.Controls
 
             for (int n = 0; n < _rectangles.Count; n++)
             {
-                CanvasPanel.Controls[n].BackColor = AppColors.NotCollision;
+                CanvasPanel.Controls[n].BackColor = AppColors.NotCollisionColor;
                 _rectangles[n].Color = "Green";
             }
 
@@ -62,8 +62,8 @@ namespace Programming.View.Controls
                         _rectangles[i].Color = "Red";
                         _rectangles[j].Color = "Red";
 
-                        CanvasPanel.Controls[i].BackColor = AppColors.Collision;
-                        CanvasPanel.Controls[j].BackColor = AppColors.Collision;
+                        CanvasPanel.Controls[i].BackColor = AppColors.CollisionColor;
+                        CanvasPanel.Controls[j].BackColor = AppColors.CollisionColor;
                     }
                 }
             }
@@ -102,7 +102,7 @@ namespace Programming.View.Controls
             rectanglePanel.Height = newRectangle.Height;
             rectanglePanel.Location = 
                 new Point(newRectangle.Center.X, newRectangle.Center.Y);
-            rectanglePanel.BackColor = AppColors.NotCollision;
+            rectanglePanel.BackColor = AppColors.NotCollisionColor;
 
             _rectanglePanels.Add(rectanglePanel);
             CanvasPanel.Controls.Add(rectanglePanel);

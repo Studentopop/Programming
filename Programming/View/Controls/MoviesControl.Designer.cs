@@ -72,7 +72,7 @@ namespace Programming.View.Controls
             // 
             // MovieRatingTextBox
             // 
-            this.MovieRatingTextBox.Location = new System.Drawing.Point(185, 276);
+            this.MovieRatingTextBox.Location = new System.Drawing.Point(185, 277);
             this.MovieRatingTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MovieRatingTextBox.Name = "MovieRatingTextBox";
             this.MovieRatingTextBox.Size = new System.Drawing.Size(160, 27);
@@ -117,6 +117,7 @@ namespace Programming.View.Controls
             this.MovieDurationTextBox.Name = "MovieDurationTextBox";
             this.MovieDurationTextBox.Size = new System.Drawing.Size(160, 27);
             this.MovieDurationTextBox.TabIndex = 14;
+            this.MovieDurationTextBox.TextChanged += new System.EventHandler(this.MovieDurationTextBox_TextChanged);
             // 
             // label6
             // 
@@ -155,6 +156,7 @@ namespace Programming.View.Controls
             this.MovieNameTextBox.Size = new System.Drawing.Size(160, 27);
             this.MovieNameTextBox.TabIndex = 10;
             this.MovieNameTextBox.TextChanged += new System.EventHandler(this.MovieNameTextBox_TextChanged);
+            this.MovieNameTextBox.Enter += new System.EventHandler(this.MovieNameTextBox_Enter);
             // 
             // label4
             // 

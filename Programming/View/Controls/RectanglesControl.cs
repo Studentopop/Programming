@@ -168,5 +168,20 @@ namespace Programming.View.Controls
         {
             RectanglesListBox.SelectedIndex = FindRectangleWithMaxWidth(_rectangles);
         }
+
+        private void IdRectangleTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CollisionTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RectangleFindButton_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

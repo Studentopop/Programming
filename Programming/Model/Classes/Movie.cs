@@ -24,11 +24,11 @@ namespace Programming.Model.Classes
             }
             set
             {
-                Validator.AssertOnPositiveValue(nameof(DurationMinutes), value);
+                Validator.AssertValueInRange(value, 10, 500, nameof(DurationMinutes));
                 _durationMinutes = value;
             }
         }
-
+         
         public int ReleaseYear
         {
             get

@@ -71,7 +71,7 @@ namespace Programming.View.Controls
             _currentMovie.Genre = MovieGenreTextBox.Text;
         }
 
-        private void MovieDuretionTextBox_TextChanged(object sender, EventArgs e)
+        private void MovieDurationTextBox_TextChanged(object sender, EventArgs e)
         {
             MovieDurationTextBox.BackColor = ColorTranslator.FromHtml(_correctColor);
             try
@@ -119,5 +119,11 @@ namespace Programming.View.Controls
         {
             MoviesListBox.SelectedIndex = FindMovieWithMaxRating(_movies);
         }
+
+        private void MovieNameTextBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

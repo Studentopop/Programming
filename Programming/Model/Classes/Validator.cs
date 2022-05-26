@@ -4,11 +4,12 @@ namespace Programming.Model.Classes
 {
     public static class Validator
     {
+
         public static void AssertOnPositiveValue(string property, int value)
         {
             if (value < 0)
             {
-                throw new System.ArgumentException($"Значение поля {property} должно быть положительным");
+                throw new ArgumentException($"Значение поля {property} должно быть положительным");
             }
         }
 
@@ -16,13 +17,13 @@ namespace Programming.Model.Classes
         {
             if (value < 0)
             {
-                throw new System.ArgumentException($"Значение поля {property} должно быть положительным");
+                throw new ArgumentException($"Значение поля {property} должно быть положительным");
             }
         }
 
         public static void AssertValueInRange(int value, int min, int max, string fieldName)
         {
-            if (!(value <= max || value >= min))
+            if ((value > max || value < min))
             {
                 throw new ArgumentException($"Введите корректное значение от 0 до 60 {fieldName}");
             }
@@ -30,7 +31,7 @@ namespace Programming.Model.Classes
 
         public static void AssertValueInRange(double value, double min, double max, string fieldName)
         {
-            if (!(value <= max || value >= min))
+            if ((value > max || value <  min))
             {
                 throw new ArgumentException($"Введите корректное значение от 0 до 60 {fieldName}");
             }

@@ -8,10 +8,5 @@ namespace Programming.View
         {
             InitializeComponent();
         }
-
-        private void TabControl_SelectedIndexChanged(object sender, System.EventArgs e)
-        {
-
-        }
     }
 }
