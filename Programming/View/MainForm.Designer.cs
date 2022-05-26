@@ -35,25 +35,25 @@ namespace Programming.View
             this.RectanglesTabPage = new System.Windows.Forms.TabPage();
             this.rectanglesCollisionControl1 = new Programming.View.Controls.RectanglesCollisionControl();
             this.ClassesTabPage = new System.Windows.Forms.TabPage();
+            this.rectanglesControl3 = new Programming.View.Controls.RectanglesControl();
+            this.rectanglesControl = new Programming.View.Controls.RectanglesControl();
+            this.rectanglesControl2 = new Programming.View.Controls.RectanglesControl();
+            this.moviesControl = new Programming.View.Controls.MoviesControl();
             this.RectangleGroupBox = new System.Windows.Forms.GroupBox();
             this.rectanglesControl1 = new Programming.View.Controls.RectanglesControl();
-            this.moviesControl = new Programming.View.Controls.MoviesControl();
-            this.rectanglesControl2 = new Programming.View.Controls.RectanglesControl();
-            this.rectanglesControl = new Programming.View.Controls.RectanglesControl();
-            this.rectanglesControl3 = new Programming.View.Controls.RectanglesControl();
             this.EnamsTabPage = new System.Windows.Forms.TabPage();
-            this.WeekdayGroupBox = new System.Windows.Forms.GroupBox();
-            this.weekdayParsingControl1 = new Programming.View.Controls.WeekdayParsingControl();
+            this.enumerationsControl1 = new Programming.View.Controls.EnumerationsControl();
             this.SeasonGroupBox = new System.Windows.Forms.GroupBox();
             this.seasonHandleControl1 = new Programming.View.Controls.SeasonHandleControl();
-            this.enumerationsControl1 = new Programming.View.Controls.EnumerationsControl();
+            this.WeekdayGroupBox = new System.Windows.Forms.GroupBox();
+            this.weekdayParsingControl1 = new Programming.View.Controls.WeekdayParsingControl();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.RectanglesTabPage.SuspendLayout();
             this.ClassesTabPage.SuspendLayout();
             this.RectangleGroupBox.SuspendLayout();
             this.EnamsTabPage.SuspendLayout();
-            this.WeekdayGroupBox.SuspendLayout();
             this.SeasonGroupBox.SuspendLayout();
+            this.WeekdayGroupBox.SuspendLayout();
             this.TabControl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,6 +86,26 @@ namespace Programming.View
             this.ClassesTabPage.Name = "ClassesTabPage";
             this.ClassesTabPage.UseVisualStyleBackColor = true;
             // 
+            // rectanglesControl3
+            // 
+            resources.ApplyResources(this.rectanglesControl3, "rectanglesControl3");
+            this.rectanglesControl3.Name = "rectanglesControl3";
+            // 
+            // rectanglesControl
+            // 
+            resources.ApplyResources(this.rectanglesControl, "rectanglesControl");
+            this.rectanglesControl.Name = "rectanglesControl";
+            // 
+            // rectanglesControl2
+            // 
+            resources.ApplyResources(this.rectanglesControl2, "rectanglesControl2");
+            this.rectanglesControl2.Name = "rectanglesControl2";
+            // 
+            // moviesControl
+            // 
+            resources.ApplyResources(this.moviesControl, "moviesControl");
+            this.moviesControl.Name = "moviesControl";
+            // 
             // RectangleGroupBox
             // 
             resources.ApplyResources(this.RectangleGroupBox, "RectangleGroupBox");
@@ -98,26 +118,6 @@ namespace Programming.View
             resources.ApplyResources(this.rectanglesControl1, "rectanglesControl1");
             this.rectanglesControl1.Name = "rectanglesControl1";
             // 
-            // moviesControl
-            // 
-            resources.ApplyResources(this.moviesControl, "moviesControl");
-            this.moviesControl.Name = "moviesControl";
-            // 
-            // rectanglesControl2
-            // 
-            resources.ApplyResources(this.rectanglesControl2, "rectanglesControl2");
-            this.rectanglesControl2.Name = "rectanglesControl2";
-            // 
-            // rectanglesControl
-            // 
-            resources.ApplyResources(this.rectanglesControl, "rectanglesControl");
-            this.rectanglesControl.Name = "rectanglesControl";
-            // 
-            // rectanglesControl3
-            // 
-            resources.ApplyResources(this.rectanglesControl3, "rectanglesControl3");
-            this.rectanglesControl3.Name = "rectanglesControl3";
-            // 
             // EnamsTabPage
             // 
             this.EnamsTabPage.Controls.Add(this.enumerationsControl1);
@@ -127,22 +127,15 @@ namespace Programming.View
             this.EnamsTabPage.Name = "EnamsTabPage";
             this.EnamsTabPage.UseVisualStyleBackColor = true;
             // 
-            // WeekdayGroupBox
+            // enumerationsControl1
             // 
-            this.WeekdayGroupBox.Controls.Add(this.weekdayParsingControl1);
-            resources.ApplyResources(this.WeekdayGroupBox, "WeekdayGroupBox");
-            this.WeekdayGroupBox.Name = "WeekdayGroupBox";
-            this.WeekdayGroupBox.TabStop = false;
-            // 
-            // weekdayParsingControl1
-            // 
-            resources.ApplyResources(this.weekdayParsingControl1, "weekdayParsingControl1");
-            this.weekdayParsingControl1.Name = "weekdayParsingControl1";
+            resources.ApplyResources(this.enumerationsControl1, "enumerationsControl1");
+            this.enumerationsControl1.Name = "enumerationsControl1";
             // 
             // SeasonGroupBox
             // 
-            this.SeasonGroupBox.Controls.Add(this.seasonHandleControl1);
             resources.ApplyResources(this.SeasonGroupBox, "SeasonGroupBox");
+            this.SeasonGroupBox.Controls.Add(this.seasonHandleControl1);
             this.SeasonGroupBox.Name = "SeasonGroupBox";
             this.SeasonGroupBox.TabStop = false;
             // 
@@ -151,10 +144,17 @@ namespace Programming.View
             resources.ApplyResources(this.seasonHandleControl1, "seasonHandleControl1");
             this.seasonHandleControl1.Name = "seasonHandleControl1";
             // 
-            // enumerationsControl1
+            // WeekdayGroupBox
             // 
-            resources.ApplyResources(this.enumerationsControl1, "enumerationsControl1");
-            this.enumerationsControl1.Name = "enumerationsControl1";
+            resources.ApplyResources(this.WeekdayGroupBox, "WeekdayGroupBox");
+            this.WeekdayGroupBox.Controls.Add(this.weekdayParsingControl1);
+            this.WeekdayGroupBox.Name = "WeekdayGroupBox";
+            this.WeekdayGroupBox.TabStop = false;
+            // 
+            // weekdayParsingControl1
+            // 
+            resources.ApplyResources(this.weekdayParsingControl1, "weekdayParsingControl1");
+            this.weekdayParsingControl1.Name = "weekdayParsingControl1";
             // 
             // TabControl
             // 
@@ -177,8 +177,8 @@ namespace Programming.View
             this.ClassesTabPage.PerformLayout();
             this.RectangleGroupBox.ResumeLayout(false);
             this.EnamsTabPage.ResumeLayout(false);
-            this.WeekdayGroupBox.ResumeLayout(false);
             this.SeasonGroupBox.ResumeLayout(false);
+            this.WeekdayGroupBox.ResumeLayout(false);
             this.TabControl.ResumeLayout(false);
             this.ResumeLayout(false);
 

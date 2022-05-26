@@ -195,6 +195,9 @@ namespace Programming.View.Controls
             // 
             // CanvasPanel
             // 
+            this.CanvasPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CanvasPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CanvasPanel.Location = new System.Drawing.Point(340, 16);
             this.CanvasPanel.Name = "CanvasPanel";

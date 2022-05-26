@@ -60,6 +60,21 @@
   <metadata name="ToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="rectanglesCollisionControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="rectanglesCollisionControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="rectanglesCollisionControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>801, 490</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="rectanglesCollisionControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;rectanglesCollisionControl1.Name" xml:space="preserve">
     <value>rectanglesCollisionControl1</value>
   </data>
@@ -72,18 +87,15 @@
   <data name="&gt;&gt;rectanglesCollisionControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="RectanglesTabPage.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 29</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RectanglesTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
   <data name="RectanglesTabPage.Size" type="System.Drawing.Size, System.Drawing">
     <value>811, 500</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="RectanglesTabPage.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
@@ -101,30 +113,6 @@
   </data>
   <data name="&gt;&gt;RectanglesTabPage.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="rectanglesCollisionControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="rectanglesCollisionControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="rectanglesCollisionControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>801, 490</value>
-  </data>
-  <data name="rectanglesCollisionControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;rectanglesCollisionControl1.Name" xml:space="preserve">
-    <value>rectanglesCollisionControl1</value>
-  </data>
-  <data name="&gt;&gt;rectanglesCollisionControl1.Type" xml:space="preserve">
-    <value>Programming.View.Controls.RectanglesCollisionControl, Programming, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;rectanglesCollisionControl1.Parent" xml:space="preserve">
-    <value>RectanglesTabPage</value>
-  </data>
-  <data name="&gt;&gt;rectanglesCollisionControl1.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="ClassesTabPage.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Center</value>
@@ -198,6 +186,9 @@
   <data name="&gt;&gt;rectanglesControl2.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="moviesControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="moviesControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>409, 9</value>
   </data>
@@ -224,6 +215,18 @@
   </data>
   <data name="RectangleGroupBox.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="rectanglesControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="rectanglesControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 26</value>
+  </data>
+  <data name="rectanglesControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>382, 418</value>
+  </data>
+  <data name="rectanglesControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;rectanglesControl1.Name" xml:space="preserve">
     <value>rectanglesControl1</value>
@@ -297,29 +300,17 @@
   <data name="&gt;&gt;ClassesTabPage.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="rectanglesControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="enumerationsControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
-  <data name="rectanglesControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 26</value>
+  <data name="enumerationsControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 6</value>
   </data>
-  <data name="rectanglesControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 418</value>
+  <data name="enumerationsControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>796, 249</value>
   </data>
-  <data name="rectanglesControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;rectanglesControl1.Name" xml:space="preserve">
-    <value>rectanglesControl1</value>
-  </data>
-  <data name="&gt;&gt;rectanglesControl1.Type" xml:space="preserve">
-    <value>Programming.View.Controls.RectanglesControl, Programming, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;rectanglesControl1.Parent" xml:space="preserve">
-    <value>RectangleGroupBox</value>
-  </data>
-  <data name="&gt;&gt;rectanglesControl1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="enumerationsControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;enumerationsControl1.Name" xml:space="preserve">
     <value>enumerationsControl1</value>
@@ -333,121 +324,16 @@
   <data name="&gt;&gt;enumerationsControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;SeasonGroupBox.Name" xml:space="preserve">
-    <value>SeasonGroupBox</value>
+  <data name="SeasonGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
   </data>
-  <data name="&gt;&gt;SeasonGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="seasonHandleControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 25</value>
   </data>
-  <data name="&gt;&gt;SeasonGroupBox.Parent" xml:space="preserve">
-    <value>EnamsTabPage</value>
+  <data name="seasonHandleControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>380, 81</value>
   </data>
-  <data name="&gt;&gt;SeasonGroupBox.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;WeekdayGroupBox.Name" xml:space="preserve">
-    <value>WeekdayGroupBox</value>
-  </data>
-  <data name="&gt;&gt;WeekdayGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WeekdayGroupBox.Parent" xml:space="preserve">
-    <value>EnamsTabPage</value>
-  </data>
-  <data name="&gt;&gt;WeekdayGroupBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="EnamsTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 29</value>
-  </data>
-  <data name="EnamsTabPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="EnamsTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="EnamsTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>811, 500</value>
-  </data>
-  <data name="EnamsTabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="EnamsTabPage.Text" xml:space="preserve">
-    <value>Enums</value>
-  </data>
-  <data name="&gt;&gt;EnamsTabPage.Name" xml:space="preserve">
-    <value>EnamsTabPage</value>
-  </data>
-  <data name="&gt;&gt;EnamsTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;EnamsTabPage.Parent" xml:space="preserve">
-    <value>TabControl</value>
-  </data>
-  <data name="&gt;&gt;EnamsTabPage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;weekdayParsingControl1.Name" xml:space="preserve">
-    <value>weekdayParsingControl1</value>
-  </data>
-  <data name="&gt;&gt;weekdayParsingControl1.Type" xml:space="preserve">
-    <value>Programming.View.Controls.WeekdayParsingControl, Programming, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;weekdayParsingControl1.Parent" xml:space="preserve">
-    <value>WeekdayGroupBox</value>
-  </data>
-  <data name="&gt;&gt;weekdayParsingControl1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="WeekdayGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 251</value>
-  </data>
-  <data name="WeekdayGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="WeekdayGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="WeekdayGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>389, 247</value>
-  </data>
-  <data name="WeekdayGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="WeekdayGroupBox.Text" xml:space="preserve">
-    <value>Weekday Parsing</value>
-  </data>
-  <data name="&gt;&gt;WeekdayGroupBox.Name" xml:space="preserve">
-    <value>WeekdayGroupBox</value>
-  </data>
-  <data name="&gt;&gt;WeekdayGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;WeekdayGroupBox.Parent" xml:space="preserve">
-    <value>EnamsTabPage</value>
-  </data>
-  <data name="&gt;&gt;WeekdayGroupBox.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="weekdayParsingControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-7, 25</value>
-  </data>
-  <data name="weekdayParsingControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>414, 114</value>
-  </data>
-  <data name="weekdayParsingControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;weekdayParsingControl1.Name" xml:space="preserve">
-    <value>weekdayParsingControl1</value>
-  </data>
-  <data name="&gt;&gt;weekdayParsingControl1.Type" xml:space="preserve">
-    <value>Programming.View.Controls.WeekdayParsingControl, Programming, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;weekdayParsingControl1.Parent" xml:space="preserve">
-    <value>WeekdayGroupBox</value>
-  </data>
-  <data name="&gt;&gt;weekdayParsingControl1.ZOrder" xml:space="preserve">
+  <data name="seasonHandleControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;seasonHandleControl1.Name" xml:space="preserve">
@@ -492,46 +378,88 @@
   <data name="&gt;&gt;SeasonGroupBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="seasonHandleControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 25</value>
+  <data name="WeekdayGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
   </data>
-  <data name="seasonHandleControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>380, 81</value>
+  <data name="weekdayParsingControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-7, 25</value>
   </data>
-  <data name="seasonHandleControl1.TabIndex" type="System.Int32, mscorlib">
+  <data name="weekdayParsingControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>414, 114</value>
+  </data>
+  <data name="weekdayParsingControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;seasonHandleControl1.Name" xml:space="preserve">
-    <value>seasonHandleControl1</value>
+  <data name="&gt;&gt;weekdayParsingControl1.Name" xml:space="preserve">
+    <value>weekdayParsingControl1</value>
   </data>
-  <data name="&gt;&gt;seasonHandleControl1.Type" xml:space="preserve">
-    <value>Programming.View.Controls.SeasonHandleControl, Programming, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;weekdayParsingControl1.Type" xml:space="preserve">
+    <value>Programming.View.Controls.WeekdayParsingControl, Programming, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;seasonHandleControl1.Parent" xml:space="preserve">
-    <value>SeasonGroupBox</value>
+  <data name="&gt;&gt;weekdayParsingControl1.Parent" xml:space="preserve">
+    <value>WeekdayGroupBox</value>
   </data>
-  <data name="&gt;&gt;seasonHandleControl1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;weekdayParsingControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="enumerationsControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 6</value>
+  <data name="WeekdayGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 251</value>
   </data>
-  <data name="enumerationsControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>796, 249</value>
+  <data name="WeekdayGroupBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
-  <data name="enumerationsControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="WeekdayGroupBox.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
-  <data name="&gt;&gt;enumerationsControl1.Name" xml:space="preserve">
-    <value>enumerationsControl1</value>
+  <data name="WeekdayGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>389, 247</value>
   </data>
-  <data name="&gt;&gt;enumerationsControl1.Type" xml:space="preserve">
-    <value>Programming.View.Controls.EnumerationsControl, Programming, Culture=neutral, PublicKeyToken=null</value>
+  <data name="WeekdayGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;enumerationsControl1.Parent" xml:space="preserve">
+  <data name="WeekdayGroupBox.Text" xml:space="preserve">
+    <value>Weekday Parsing</value>
+  </data>
+  <data name="&gt;&gt;WeekdayGroupBox.Name" xml:space="preserve">
+    <value>WeekdayGroupBox</value>
+  </data>
+  <data name="&gt;&gt;WeekdayGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;WeekdayGroupBox.Parent" xml:space="preserve">
     <value>EnamsTabPage</value>
   </data>
-  <data name="&gt;&gt;enumerationsControl1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;WeekdayGroupBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="EnamsTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 29</value>
+  </data>
+  <data name="EnamsTabPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="EnamsTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="EnamsTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>811, 500</value>
+  </data>
+  <data name="EnamsTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="EnamsTabPage.Text" xml:space="preserve">
+    <value>Enums</value>
+  </data>
+  <data name="&gt;&gt;EnamsTabPage.Name" xml:space="preserve">
+    <value>EnamsTabPage</value>
+  </data>
+  <data name="&gt;&gt;EnamsTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;EnamsTabPage.Parent" xml:space="preserve">
+    <value>TabControl</value>
+  </data>
+  <data name="&gt;&gt;EnamsTabPage.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="TabControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
