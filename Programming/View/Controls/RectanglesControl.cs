@@ -1,49 +1,63 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using Programming.Model.Classes;
-using SystemColor = System.Drawing.Color;
-using Rectangle = Programming.Model.Classes.Rectangle;
 using Programming.Model.Geometry;
+using Rectangle = Programming.Model.Classes.Rectangle;
 
 namespace Programming.View.Controls
 {
+    /// <summary>
+    /// Предоставляет реализацию по представлению прямоугольников.
+    /// </summary>
     public partial class RectanglesControl : UserControl
     {
-        private string[] _colors = { "Red", "Black", "Green", "Yellow", "Orange" };
-
+        /// <summary>
+        /// Коллекция прямоугольников.
+        /// </summary>
         private Rectangle[] _rectangles;
 
+        /// <summary>
+        /// Выбранный прямоугольник.
+        /// </summary>
         private Rectangle _currentRectangle;
 
+        /// <summary>
+        /// Количество элементов.
+        /// </summary>
         private int _rectanglesAmount = 5;
 
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="RectanglesControl"/>.
+        /// </summary>
         public RectanglesControl()
         {
-
             InitializeComponent();
-            _rectangles = new Rectangle[_rectanglesAmount];
-            var rand = new Random();
-            double height, width;
-            int centerX, centerY;
-            for (int i = 0; i < 5; i++)
-            {
-                height = Math.Round(rand.NextDouble() * 100, 1);
-                width = Math.Round(rand.NextDouble() * 100, 1);
-                centerX = rand.Next(10);
-                centerY = rand.Next(10);
-                Random r = new Random();
-                _rectangles[i] = new Rectangle(height, width, _colors[r.Next(0, _colors.Length)], 
-                    new Point2D(centerX, centerY));
-                RectanglesListBox.Items.Add("Rectangle " + (i + 1));
-            }
 
+            _rectangles = CreateRectangles();
             RectanglesListBox.SelectedIndex = 0;
         }
+
+        /// <summary>
+        /// Инициализирует коллекцию прямоугольников.
+        /// </summary>
+        /// <returns>Возвращает коллекцию прямоугольников.</returns>
+        private Rectangle[] CreateRectangles()
+        {
+            Rectangle[] rectangles = new Rectangle[_rectanglesAmount];
+            for (int i = 0; i < _rectanglesAmount; i++)
+            {
+                _currentRectangle = RectangleFactory.Randomize();
+                rectangles[i] = _currentRectangle;
+                RectanglesListBox.Items.Add($"Rectangle {_currentRectangle.Id}");
+            }
+            return rectangles;
+        }
+
+        /// <summary>
+        /// Находит прямоугольник у которой ширина больше остальных.
+        /// </summary>
+        /// <param name="rectangles">Прямоугольник.</param>
+        /// <returns>Индекс элемента коллекции, чья ширина больше остальных.</returns>
         private int FindRectangleWithMaxWidth(Rectangle[] rectangles)
         {
             int indexOfMaxWidth = 0;

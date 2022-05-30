@@ -120,7 +120,6 @@ namespace Programming.View.Controls
             this.EnumGroupBox.TabIndex = 1;
             this.EnumGroupBox.TabStop = false;
             this.EnumGroupBox.Text = "Enumerations";
-            this.EnumGroupBox.Enter += new System.EventHandler(this.EnumGroupBox_Enter);
             // 
             // EnumerationsControl
             // 

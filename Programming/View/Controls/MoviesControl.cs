@@ -5,17 +5,29 @@ using Programming.Model.Classes;
 
 namespace Programming.View.Controls
 {
+    /// <summary>
+    /// Предоставляет реализацию по представлению фильмов.
+    /// </summary>
     public partial class MoviesControl : UserControl
     {
+        /// <summary>
+        /// Количество элементов.
+        /// </summary>
         private const int _moviesCount = 6;
 
-        private const string _wrongColor = "LightPink";
-
-        private const string _correctColor = "Window";
-
+        /// <summary>
+        /// Коллекция фильмов.
+        /// </summary>
         private Movie[] _movies;
 
+        /// <summary>
+        /// Текущий фильм.
+        /// </summary>
         private Movie _currentMovie;
+
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="MoviesControl"/>.
+        /// </summary>
         public MoviesControl()
         {
             InitializeComponent();
@@ -36,6 +48,12 @@ namespace Programming.View.Controls
             }
             MoviesListBox.SelectedIndex = 0;
         }
+
+        /// <summary>
+        /// Находит фильм у которой рейтинг больше чем у остальных.
+        /// </summary>
+        /// <param name="movies">Коллекция фильмов.</param>
+        /// <returns>Возвращает индекс элемента коллекции, чей рейтинг больше остальных.</returns>
         private int FindMovieWithMaxRating(Movie[] movies)
         {
             int indexOfMaxRating = 0;
@@ -73,40 +91,40 @@ namespace Programming.View.Controls
 
         private void MovieDurationTextBox_TextChanged(object sender, EventArgs e)
         {
-            MovieDurationTextBox.BackColor = ColorTranslator.FromHtml(_correctColor);
+            MovieDurationTextBox.BackColor = AppColors.CurrentBackColor;
             try
             {
                 _currentMovie.DurationMinutes = Convert.ToInt32(MovieDurationTextBox.Text);
             }
             catch
             {
-                MovieDurationTextBox.BackColor = ColorTranslator.FromHtml(_wrongColor);
+                MovieDurationTextBox.BackColor = AppColors.ErrorBackColor;
             }
         }
 
         private void MovieReleaseTextBox_TextChanged(object sender, EventArgs e)
         {
-            MovieReleaseTextBox.BackColor = ColorTranslator.FromHtml(_correctColor);
+            MovieReleaseTextBox.BackColor = AppColors.CurrentBackColor;
             try
             {
                 _currentMovie.ReleaseYear = Convert.ToInt32(MovieReleaseTextBox.Text);
             }
             catch
             {
-                MovieReleaseTextBox.BackColor = ColorTranslator.FromHtml(_wrongColor);
+                MovieReleaseTextBox.BackColor = AppColors.ErrorBackColor;
             }
         }
 
         private void MovieRatingTextBox_TextChanged(object sender, EventArgs e)
         {
-            MovieRatingTextBox.BackColor = ColorTranslator.FromHtml(_correctColor);
+            MovieRatingTextBox.BackColor = AppColors.CurrentBackColor;
             try
             {
                 _currentMovie.Rating = Convert.ToDouble(MovieRatingTextBox.Text);
             }
             catch
             {
-                MovieRatingTextBox.BackColor = ColorTranslator.FromHtml(_wrongColor);
+                MovieRatingTextBox.BackColor = AppColors.ErrorBackColor;
             }
         }
 
@@ -119,11 +137,5 @@ namespace Programming.View.Controls
         {
             MoviesListBox.SelectedIndex = FindMovieWithMaxRating(_movies);
         }
-
-        private void MovieNameTextBox_Enter(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

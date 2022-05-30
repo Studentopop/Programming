@@ -1,16 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using Programming.Model.Enums;
 
 namespace Programming.View.Controls
 {
+    /// <summary>
+    /// Предоставляет реализацию по парсингу дней недели.
+    /// </summary>
     public partial class WeekdayParsingControl : UserControl
     {
+
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="WeekdayParsingControl"/>.
+        /// </summary>
         public WeekdayParsingControl()
         {
             InitializeComponent();
@@ -28,7 +30,7 @@ namespace Programming.View.Controls
             }
             else
             {
-                ParsingFlag.Text = "Нет такого дня недели!!!";
+                ParsingFlag.Text = "Нет такого дня недели";
             }
         }
     }

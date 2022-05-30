@@ -1,19 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Programming.Model.Classes
 {
+    /// <summary>
+    /// Хранит данные о контактных данных человека.
+    /// </summary>
     public class Contact
     {
-        private const int _phoneLength = 11;
+
+        /// <summary>
+        /// Номер телефона.
+        /// </summary>
         private string _number;
+
+        /// <summary>
+        /// Имя человека.
+        /// </summary>
         private string _name;
+
+        /// <summary>
+        /// Фамилия человека.
+        /// </summary>
         private string _surname;
 
-        public Contact()
-        { }
-
+        /// <summary>
+        ///  Создаёт экземпляр класса <see cref="Contact"/>.
+        /// </summary>
+        /// <param name="number">Номер телефона . Должен состоять из цифр.
+        /// Длина 11 символов.</param>
+        /// <param name="name">Имя. Должно состоять из букв.</param>
+        /// <param name="surname">Фамилия. Должна состоять из букв.</param>
         public Contact(string name, string surname, string number)
         {
             Name = name;
@@ -21,6 +37,10 @@ namespace Programming.Model.Classes
             Number = number;
         }
 
+        /// <summary>
+        /// Возвращает и задаёт номер телефона человека. Должен состоять из цифр. 
+        /// Длина номера телефона  11 символов.
+        /// </summary>
         public string Number
         {
             get
@@ -41,6 +61,9 @@ namespace Programming.Model.Classes
             }
         }
 
+        /// <summary>
+        /// Возвращает и задаёт имя человека. Должно состоять только из букв.
+        /// </summary>
         public string Name
         {
             get
@@ -54,6 +77,9 @@ namespace Programming.Model.Classes
             }
         }
 
+        /// <summary>
+        /// Возвращает и задаёт фамилию человека. Должно состоять только из букв.
+        /// </summary>
         public string Surname
         {
             get

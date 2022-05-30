@@ -5,7 +5,7 @@ namespace Programming.View
     /// <summary>
     /// Хранит в себе значения цветов приложении.
     /// </summary>
-    public class AppColors
+    public static class AppColors
     {
         public static readonly Color SpringColor = Color.LightGreen;
 

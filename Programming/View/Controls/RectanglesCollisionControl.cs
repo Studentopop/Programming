@@ -9,22 +9,35 @@ using SystemColor = System.Drawing.Color;
 
 namespace Programming.View.Controls
 {
+    /// <summary>
+    /// Предоставляет реализацию по представлению прямоугольников.
+    /// </summary>
     public partial class RectanglesCollisionControl : UserControl
     {
+        /// <summary>
+        /// Выбранный прямоугольник.
+        /// </summary>
         private Rectangle _currentRectangle;
 
+        /// <summary>
+        /// Коллекция прямоугольников.
+        /// </summary>
         private List<Rectangle> _rectangles = new List<Rectangle>();
 
+        /// <summary>
+        /// Коллекция отображаемых прямоугольников.
+        /// </summary>
         private List<Panel> _rectanglePanels = new List<Panel>();
 
-        public int canvasWidth;
-
-        public int canvasHeight;
         public RectanglesCollisionControl()
         {
             InitializeComponent();
         }
 
+
+        /// <summary>
+        /// Обновляет информацию в списке.
+        /// </summary>
         private void UpdateListBoxes()
         {
             AddingRectanglesListBox.Items.Clear();
@@ -36,6 +49,10 @@ namespace Programming.View.Controls
 
             AddingRectanglesListBox.SelectedIndex = _rectangles.Count - 1;
         }
+
+        /// <summary>
+        /// Очищает информацию с текстовых полей и со списка.
+        /// </summary>
         private void ClearRectangleInfo()
         {
             IdSelectedRectangleTextBox.Clear();
@@ -44,6 +61,10 @@ namespace Programming.View.Controls
             WidthSelectedRectangleTextBox.Clear();
             HeightSelectedRectangleTextBox.Clear();
         }
+
+        /// <summary>
+        /// Находит пересекающиеся прямоугольники и изменяет их цвета.
+        /// </summary>
         private void FindCollisions()
         {
 
@@ -68,6 +89,11 @@ namespace Programming.View.Controls
                 }
             }
         }
+
+        /// <summary>
+        /// Обновляет информацию о выбранном прямоугольнике.
+        /// </summary>
+        /// <param name="rectangle">Прямоугольник.</param>
         private void UpdateRectangleInfo(Rectangle rectangle)
         {
             int index = AddingRectanglesListBox.FindString(rectangle.Id.ToString());
@@ -203,11 +229,6 @@ namespace Programming.View.Controls
             }
         }
 
-        private void CanvasPanel_SizeChanged(object sender, EventArgs e)
-        {
-            canvasHeight = CanvasPanel.Height;
-            canvasWidth = CanvasPanel.Width;
-        }
         private void AddRectanglePictureBox_MouseEnter(object sender, EventArgs e)
         {
             AddRectanglePictureBox.BackgroundImage =
@@ -248,11 +269,6 @@ namespace Programming.View.Controls
         private void RemoveRectanglePictureBox_MouseUp(object sender, MouseEventArgs e)
         {
             RemoveRectanglePictureBox.BackColor = SystemColor.White;
-        }
-
-        private void CanvasPanel_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

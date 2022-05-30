@@ -156,7 +156,6 @@ namespace Programming.View.Controls
             this.MovieNameTextBox.Size = new System.Drawing.Size(160, 27);
             this.MovieNameTextBox.TabIndex = 10;
             this.MovieNameTextBox.TextChanged += new System.EventHandler(this.MovieNameTextBox_TextChanged);
-            this.MovieNameTextBox.Enter += new System.EventHandler(this.MovieNameTextBox_Enter);
             // 
             // label4
             // 

@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using Programming.Model.Enums;
 
@@ -11,12 +6,18 @@ namespace Programming.View.Controls
 {
     public partial class SeasonHandleControl : UserControl
     {
+        /// <summary>
+        /// Предоставляет реализацию по выбору времени года.
+        /// </summary>
         public SeasonHandleControl()
         {
             InitializeComponent();
             SeasonComboBox.DataSource = Enum.GetValues(typeof(Seasons));
         }
 
+        /// <summary>
+        /// Предоставляет реализацию по изменение фона с выбором времени года.
+        /// </summary>
         private void SeasonButton_Click(object sender, EventArgs e)
         {
             var item = SeasonComboBox.SelectedItem;
@@ -38,11 +39,6 @@ namespace Programming.View.Controls
                     SeasonButton.BackColor = AppColors.AutumnColor;
                     break;
             }
-        }
-
-        private void SeasonHandleControl_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

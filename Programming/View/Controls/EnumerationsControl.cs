@@ -1,16 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using Programming.Model.Enums;
 
 namespace Programming.View.Controls
 {
+    /// <summary>
+    /// Предоставляет реализацию по представлению перечислений.
+    /// </summary>
     public partial class EnumerationsControl : UserControl
     {
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="EnumerationsControl"/>.
+        /// </summary>
         public EnumerationsControl()
         {
             InitializeComponent();
@@ -57,11 +58,6 @@ namespace Programming.View.Controls
         {
             var item = ValuesListBox.SelectedItem;
             IntTextBox.Text = ((int)item).ToString();
-        }
-
-        private void EnumGroupBox_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

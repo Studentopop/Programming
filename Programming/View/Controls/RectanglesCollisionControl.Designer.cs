@@ -203,7 +203,6 @@ namespace Programming.View.Controls
             this.CanvasPanel.Name = "CanvasPanel";
             this.CanvasPanel.Size = new System.Drawing.Size(456, 452);
             this.CanvasPanel.TabIndex = 18;
-            this.CanvasPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.CanvasPanel_Paint);
             // 
             // RectanglesCollisionControl
             // 
