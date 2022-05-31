@@ -1,20 +1,31 @@
-﻿    using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Programming.Model.Classes
+﻿namespace Programming.Model.Classes
 {
+    /// <summary>
+    /// Хранит данные о времени.
+    /// </summary>
     public class Time
     {
+        /// <summary>
+        /// Количество часов.
+        /// </summary>
         private int _hours;
 
+        /// <summary>
+        /// Количество минут.
+        /// </summary>
         private int _minutes;
 
+        /// <summary>
+        /// Количество секунд.
+        /// </summary>
         private int _seconds;
 
-        public Time()
-        { }
-
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="Time"/>.
+        /// </summary>
+        /// <param name="hours">Количество часов. Должно быть в промежутке от 0 до 23.</param>
+        /// <param name="minutes">Количетсво минут. Должно быть в промежутке от 0 до 59.</param>
+        /// <param name="seconds">Количество секунд. Должно быть в промежутке от 0 до 59.</param>
         public Time(int hours, int minutes, int seconds)
         {
             Hours = hours;
@@ -22,6 +33,9 @@ namespace Programming.Model.Classes
             Seconds = seconds;
         }
 
+        /// <summary>
+        /// Возвращает и задаёт количество часов. Число в промежутках от 0 до 23.
+        /// </summary>
         public int Hours
         {
             get
@@ -35,6 +49,9 @@ namespace Programming.Model.Classes
             }
         }
 
+        /// <summary>
+        /// Возвращает и задаёт количество минут. Число в промежутках от 0 до 59.
+        /// </summary>
         public int Minutes
         {
             get
@@ -48,6 +65,9 @@ namespace Programming.Model.Classes
             }
         }
 
+        /// <summary>
+        /// Возвращает и задаёт количество секунд. Число в промежутках от 0 до 59.
+        /// </summary>
         public int Seconds
         {
             get

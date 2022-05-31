@@ -1,23 +1,46 @@
-﻿using System;
-
-namespace Programming.Model.Classes
+﻿namespace Programming.Model.Classes
 {
+
+    /// <summary>
+    /// Хранит информацию о дисциплине.
+    /// </summary>
     public class Subject
     {
-        private int _position;
-        private string _lecturer;
+        /// <summary>
+        /// Возвращает и задаёт имя преподавателя.
+        /// </summary>
+        private string _firstname;
+
+        /// <summary>
+        /// Возвращает и задаёт имя преподавателя.
+        /// </summary>
+        private string _lastname;
+
+        /// <summary>
+        /// Возвращает и задаёт название дисциплины.
+        /// </summary>
         private string _name;
 
         public Subject()
         { }
 
-        public Subject(string name, string lecturer, int position)
+
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="Subject"/>.
+        /// </summary>
+        /// <param name="name">Название дисциплины.</param>
+        /// <param name="firstname">Имя преподавателя.</param>
+        /// <param name="lastname">Фамилия преподавателя.</param>
+        public Subject(string name, string firstname, string lastname)
         {
             Name = name;
-            Lecturer = lecturer;
-            Position = position;
+            Lastname = lastname;
+            Firstname = firstname;
         }
 
+        /// <summary>
+        /// Возвращает и задаёт название дисциплины.
+        /// </summary>
         public string Name
         {
             get
@@ -30,28 +53,35 @@ namespace Programming.Model.Classes
                 _name = value;
             }
         }
-        public int Position
+
+        /// <summary>
+        /// Возвращает и задаёт имя преподавателя.
+        /// </summary>
+        public string Firstname
         {
             get
             {
-                return _position;
+                return _firstname;
             }
             set
             {
-                Validator.AssertOnPositiveValue(nameof(Position),value);
-                _position = value;
+                Validator.AssertStringContainsOnlyLetters(value, nameof(Firstname));
+                _firstname = value;
             }
         }
-        public string Lecturer
+        /// <summary>
+        /// Возвращает и задаёт фамилию преподавателя.
+        /// </summary>
+        public string Lastname
         {
             get
             {
-                return _lecturer;
+                return _lastname;
             }
             set
             {
-                Validator.AssertStringContainsOnlyLetters(value, nameof(Lecturer));
-                _lecturer = value;
+                Validator.AssertStringContainsOnlyLetters(value, nameof(Lastname));
+                _lastname = value;
             }
         }
 
