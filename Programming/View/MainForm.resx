@@ -187,7 +187,7 @@
     <value>2</value>
   </data>
   <data name="moviesControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+    <value>Left</value>
   </data>
   <data name="moviesControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>409, 9</value>
@@ -300,9 +300,6 @@
   <data name="&gt;&gt;ClassesTabPage.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="enumerationsControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
   <data name="enumerationsControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 6</value>
   </data>
@@ -323,9 +320,6 @@
   </data>
   <data name="&gt;&gt;enumerationsControl1.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="SeasonGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
   </data>
   <data name="seasonHandleControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 25</value>
@@ -377,9 +371,6 @@
   </data>
   <data name="&gt;&gt;SeasonGroupBox.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="WeekdayGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
   </data>
   <data name="weekdayParsingControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>-7, 25</value>
@@ -1646,7 +1637,7 @@
     <value>No</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Programming Demo</value>
+    <value>Programming</value>
   </data>
   <data name="&gt;&gt;ToolTip.Name" xml:space="preserve">
     <value>ToolTip</value>

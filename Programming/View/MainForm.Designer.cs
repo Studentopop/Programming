@@ -134,8 +134,8 @@ namespace Programming.View
             // 
             // SeasonGroupBox
             // 
-            resources.ApplyResources(this.SeasonGroupBox, "SeasonGroupBox");
             this.SeasonGroupBox.Controls.Add(this.seasonHandleControl1);
+            resources.ApplyResources(this.SeasonGroupBox, "SeasonGroupBox");
             this.SeasonGroupBox.Name = "SeasonGroupBox";
             this.SeasonGroupBox.TabStop = false;
             // 
@@ -146,8 +146,8 @@ namespace Programming.View
             // 
             // WeekdayGroupBox
             // 
-            resources.ApplyResources(this.WeekdayGroupBox, "WeekdayGroupBox");
             this.WeekdayGroupBox.Controls.Add(this.weekdayParsingControl1);
+            resources.ApplyResources(this.WeekdayGroupBox, "WeekdayGroupBox");
             this.WeekdayGroupBox.Name = "WeekdayGroupBox";
             this.WeekdayGroupBox.TabStop = false;
             // 
