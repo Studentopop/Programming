@@ -57,7 +57,7 @@ namespace ContactList.Model
             }
         }
 
-        public DateTime? DateOfBirth
+        public DateTime DateOfBirth
         {
             get
             {
@@ -65,7 +65,8 @@ namespace ContactList.Model
             }
             set
             {
-                _dateOfBirth = (DateTime)value;
+                Validator.AssertValueInRange(value, DateTime.Today, nameof(DateOfBirth));
+                _dateOfBirth = value;
             }
         }
 

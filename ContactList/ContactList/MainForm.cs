@@ -21,7 +21,7 @@ namespace ContactList
             _contacts = Serializer.LoadFromFile();
             UpdateListBox(-1);
         }
-        private List<Contact> SearchMovies()
+        private List<Contact> SearchContacts()
         {
             var result = from contact in _contacts
                          where contact.FullName.Contains(_searchText) 
@@ -49,14 +49,14 @@ namespace ContactList
 
             ContactsListBox.Items.Clear();
 
-            if (_searchText != "" && _searchText != null) contacts = SearchMovies();
+            if (_searchText != "" && _searchText != null) contacts = SearchContacts();
             else contacts = _contacts;
 
             foreach (var contact in contacts)
             {   
                 if (contact.FullName != null)
                 {
-                    ContactsListBox.Items.Add($"{contact.FullName}");
+                    ContactsListBox.Items.Add(contact.FullName);
                 }
             }
 
@@ -65,10 +65,10 @@ namespace ContactList
         }
         private void AddContactButton_Click(object sender, EventArgs e)
         {
-            var movie = new Contact();
-            _contacts.Add(movie);
+            var contact = new Contact();
+            _contacts.Add(contact);
             SortFullName();
-            UpdateListBox(_contacts.IndexOf(movie));
+            UpdateListBox(_contacts.IndexOf(contact));
         }
 
         private void DeleteContactButton_Click(object sender, EventArgs e)
@@ -96,11 +96,12 @@ namespace ContactList
             if (_searchText == "" || _searchText == null)
                 _currentContact = _contacts[ContactsListBox.SelectedIndex];
             else
-                _currentContact = SearchMovies()[ContactsListBox.SelectedIndex];
+                _currentContact = SearchContacts()[ContactsListBox.SelectedIndex];
 
             FullNameTextBox.Text = _currentContact.FullName;
             PhoneTextBox.Text = _currentContact.Phone;
             VKTextBox.Text = _currentContact.VK;
+            DateofBirthTimePicker.Value = _currentContact.DateOfBirth;
         }
         private void FullNameTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -178,6 +179,14 @@ namespace ContactList
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Serializer.SaveToFile(_contacts);
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+            DateofBirthTimePicker.Value = DateTime.Today;
+            DateofBirthTimePicker.MaxDate = DateTime.Today;
+            DateofBirthTimePicker.MinDate = DateTime.MinValue;
 
         }
     }
