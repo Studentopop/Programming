@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using Newtonsoft.Json;
 using static System.Environment;
 
@@ -17,7 +18,7 @@ namespace ContactList.Model
         static Serializer()
         {
             Path = $@"{Environment.GetFolderPath(SpecialFolder.ApplicationData)}" +
-                    @"\Bataev Alisher\Program\";
+                    @"\Isaichenko Nikita\List of Program\";
             NameFile = "data.json";
 
             if (!File.Exists(Path))
@@ -39,12 +40,12 @@ namespace ContactList.Model
         /// Сохраняет данные из списка в формате JSON.
         /// </summary>
         /// <param name="students">Список студентов.</param>
-        public static void SaveToFile(List<Contact> people)
+        public static void SaveToFile(List<Contact> contacts)
         {
             using (StreamWriter writer = new StreamWriter(Path + NameFile))
             {
 
-                writer.Write(JsonConvert.SerializeObject(people));
+                writer.Write(JsonConvert.SerializeObject(contacts));
             }
         }
 
@@ -55,23 +56,23 @@ namespace ContactList.Model
         public static List<Contact> LoadFromFile()
         {
             {
-                var people = new List<Contact>();
+                var contacts = new List<Contact>();
 
                 try
                 {
                     using (StreamReader reader = new StreamReader(Path + NameFile))
                     {
-                        people = JsonConvert.DeserializeObject<List<Contact>>(reader.ReadToEnd());
+                        contacts = JsonConvert.DeserializeObject<List<Contact>>(reader.ReadToEnd());
                     }
 
-                    if (people == null) people = new List<Contact>();
+                    if (contacts == null) contacts = new List<Contact>();
                 }
                 catch
                 {
-                    return people;
+                    return contacts;
                 }
 
-                return people;
+                return contacts;
             }
         }
     }

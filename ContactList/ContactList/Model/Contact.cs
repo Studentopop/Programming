@@ -1,42 +1,34 @@
 ﻿using System;
-using ContactsApp.Model;
+using System.Collections.Generic;
+using System.Text;
 
 namespace ContactList.Model
 {
     public class Contact
     {
-        private string _fullname;
-
-        private string _vkcom;
+        private string _fullName;
 
         private string _phone;
 
+        private string _vk;
+
         private DateTime _dateOfBirth;
+
 
         public string FullName
         {
             get
             {
-                return _fullname;
+                return _fullName;
             }
             set
             {
-                _fullname = value;
+                Validator.AssertLengthString(value, 150, nameof(FullName));
+                Validator.AssertEmptyValue(value, nameof(FullName));
+                _fullName = value;
             }
         }
 
-        public string VKcom
-        {
-            get
-            {
-                return _vkcom;
-            }
-            set
-            {
-               // Validator.AssertValueInRange(value.Length, 1, 100, nameof(VKcom));
-                _vkcom = value;
-            }
-        }
         public string Phone
         {
             get
@@ -45,10 +37,27 @@ namespace ContactList.Model
             }
             set
             {
+                Validator.IsPhoneNumber(value, nameof(Phone));
+                Validator.AssertEmptyValue(value, nameof(Phone));
                 _phone = value;
             }
+        } 
+
+        public string VK
+        {
+            get
+            {
+                return _vk;
+            }
+            set
+            {
+                Validator.IsUrlLink(value, nameof(VK));
+                Validator.AssertEmptyValue(value, nameof(VK));
+                _vk = value;
+            }
         }
-        public DateTime DateOfBirth
+
+        public DateTime? DateOfBirth
         {
             get
             {
@@ -56,19 +65,24 @@ namespace ContactList.Model
             }
             set
             {
-                _dateOfBirth = value;
+                _dateOfBirth = (DateTime)value;
             }
         }
 
         public Contact()
         {
+            FullName = "FullName";
+            Phone = "+79000000000";
+            VK = "https/vk.com/afasdfasdf";
+            
         }
-        public Contact(string fullName, DateTime dateOfBirth, string phone, string vkcom)
+        public Contact(string fullname, DateTime dateofbirth, string phone , string vk)
         {
-            FullName = fullName;
-            DateOfBirth = dateOfBirth;
+            FullName = fullname;
+            DateOfBirth = dateofbirth;
             Phone = phone;
-            VKcom = vkcom;
+            VK = vk;
         }
+
     }
 }

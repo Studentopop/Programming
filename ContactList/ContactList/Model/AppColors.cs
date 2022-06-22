@@ -1,20 +1,20 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Text;
 
 namespace ContactList.Model
 {
-    /// <summary>
-    /// Хранит данные об используемых цветах.
-    /// </summary>
     public static class AppColors
     {
         /// <summary>
         /// Цвет корректного значения.
         /// </summary>
-        public static Color CorrectColor = Color.FromArgb(255, 255, 255);
+        public static readonly Color ErrorBackColor = Color.LightPink;
 
         /// <summary>
         /// Цвет некорректного значения.
         /// </summary>
-        public static Color ErrorColor = Color.FromArgb(255, 182, 193);
+        public static readonly Color NormalBackColor = Color.White;
     }
 }
