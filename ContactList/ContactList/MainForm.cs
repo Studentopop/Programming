@@ -190,6 +190,17 @@ namespace ContactList
         {
             AddContactPictureBox.BackgroundImage = Properties.Resources.plus;
         }
+
+        private void DeleteContactPictureBox_MouseLeave(object sender, EventArgs e)
+        {
+            DeleteContactPictureBox.BackgroundImage = Properties.Resources.cancel_32X32;
+        }
+
+        private void DeleteContactPictureBox_MouseEnter(object sender, EventArgs e)
+        {
+            DeleteContactPictureBox.BackgroundImage = Properties.Resources.cancel_32X32_uncolor;
+        }
+
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Serializer.SaveToFile(_contacts);

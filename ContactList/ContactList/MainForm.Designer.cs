@@ -185,14 +185,16 @@ namespace ContactList
             // 
             // DeleteContactPictureBox
             // 
-            this.DeleteContactPictureBox.Image = global::ContactList.Properties.Resources.cancel;
-            this.DeleteContactPictureBox.Location = new System.Drawing.Point(380, 218);
+            this.DeleteContactPictureBox.Image = global::ContactList.Properties.Resources.cancel_32X32;
+            this.DeleteContactPictureBox.Location = new System.Drawing.Point(394, 218);
             this.DeleteContactPictureBox.Name = "DeleteContactPictureBox";
-            this.DeleteContactPictureBox.Size = new System.Drawing.Size(24, 24);
+            this.DeleteContactPictureBox.Size = new System.Drawing.Size(32, 32);
             this.DeleteContactPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.DeleteContactPictureBox.TabIndex = 5;
             this.DeleteContactPictureBox.TabStop = false;
             this.DeleteContactPictureBox.Click += new System.EventHandler(this.DeleteContactPictureBox_Click);
+            this.DeleteContactPictureBox.MouseEnter += new System.EventHandler(this.DeleteContactPictureBox_MouseEnter);
+            this.DeleteContactPictureBox.MouseLeave += new System.EventHandler(this.DeleteContactPictureBox_MouseLeave);
             // 
             // MainForm
             // 
