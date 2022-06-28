@@ -181,21 +181,18 @@ namespace ContactList
             ClearContactInfo();
             UpdateListBox(-1);
         }
-
-        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Serializer.SaveToFile(_contacts);
-        }
-
         private void AddContactPictureBox_MouseEnter(object sender, EventArgs e)
         {
-            AddContactPictureBox.BackgroundImage = Properties.Resources.plus_active;
+            AddContactPictureBox.BackgroundImage = Properties.Resources.plus_uncolor;
         }
 
         private void AddContactPictureBox_MouseLeave(object sender, EventArgs e)
         {
             AddContactPictureBox.BackgroundImage = Properties.Resources.plus;
-
+        }
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Serializer.SaveToFile(_contacts);
         }
     }
 }

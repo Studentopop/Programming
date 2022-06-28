@@ -14,6 +14,7 @@ namespace ContactList.Model
 
         private DateTime _dateOfBirth;
 
+
         public string FullName
         {
             get
@@ -75,8 +76,9 @@ namespace ContactList.Model
             Phone = "+79000000000";
             VK = "https://vk.com/user/";
             DateOfBirth = DateTime.Today;
-        }
 
+
+        }
         public Contact(string fullname, DateTime dateofbirth, string phone, string vk)
         {
             FullName = fullname;
@@ -84,5 +86,6 @@ namespace ContactList.Model
             Phone = phone;
             VK = vk;
         }
+
     }
 }

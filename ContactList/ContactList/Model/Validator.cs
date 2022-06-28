@@ -43,8 +43,7 @@ namespace ContactList.Model
             if (value > max)
             {
                 throw new ArgumentException(
-                    $" {propertyName} должно находиться в диапозоне до {max}, " +
-                    $"но {value}.");
+                    $" {propertyName} должно находиться в диапозоне до {max}");
             }
         }
 
@@ -53,8 +52,7 @@ namespace ContactList.Model
             if (value > max)
             {
                 throw new ArgumentException(
-                    $" {propertyName} должно быть в диапазоне до {max}, " +
-                    $"но  {value}.");
+                    $" {propertyName} должно быть в диапазоне до {max}");
             }
         }
     }
