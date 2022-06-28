@@ -14,7 +14,6 @@ namespace ContactList.Model
 
         private DateTime _dateOfBirth;
 
-
         public string FullName
         {
             get
@@ -41,7 +40,7 @@ namespace ContactList.Model
                 Validator.AssertEmptyValue(value, nameof(Phone));
                 _phone = value;
             }
-        } 
+        }
 
         public string VK
         {
@@ -65,7 +64,7 @@ namespace ContactList.Model
             }
             set
             {
-                Validator.AssertValueInRange(value, DateTime.Today, nameof(DateOfBirth));
+                Validator.AssertValueInRange(value, DateTime.Now, nameof(DateOfBirth));
                 _dateOfBirth = value;
             }
         }
@@ -74,16 +73,16 @@ namespace ContactList.Model
         {
             FullName = "FullName";
             Phone = "+79000000000";
-            VK = "https/vk.com/afasdfasdf";
-            
+            VK = "https://vk.com/user/";
+            DateOfBirth = DateTime.Today;
         }
-        public Contact(string fullname, DateTime dateofbirth, string phone , string vk)
+
+        public Contact(string fullname, DateTime dateofbirth, string phone, string vk)
         {
             FullName = fullname;
             DateOfBirth = dateofbirth;
             Phone = phone;
             VK = vk;
         }
-
     }
 }

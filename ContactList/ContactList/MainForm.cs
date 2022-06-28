@@ -13,7 +13,7 @@ namespace ContactList
 
         private Contact _currentContact;
 
-        private string _searchText; 
+        private string _searchText;
 
         public MainForm()
         {
@@ -21,20 +21,23 @@ namespace ContactList
             _contacts = Serializer.LoadFromFile();
             UpdateListBox(-1);
         }
+
         private List<Contact> SearchContacts()
         {
             var result = from contact in _contacts
-                         where contact.FullName.Contains(_searchText) 
+                         where contact.FullName.Contains(_searchText)
                          select contact;
 
             return result.ToList();
         }
+
         private void SortFullName()
         {
             _contacts = (from Contact in _contacts
                          orderby Contact.FullName
                          select Contact).ToList();
         }
+
         private void ClearContactInfo()
         {
             ContactsListBox.SelectedIndex = -1;
@@ -43,6 +46,7 @@ namespace ContactList
             VKTextBox.Clear();
             DateofBirthTimePicker.Value = DateTime.Today;
         }
+
         private void UpdateListBox(int index)
         {
             List<Contact> contacts;
@@ -53,7 +57,7 @@ namespace ContactList
             else contacts = _contacts;
 
             foreach (var contact in contacts)
-            {   
+            {
                 if (contact.FullName != null)
                 {
                     ContactsListBox.Items.Add(contact.FullName);
@@ -63,7 +67,8 @@ namespace ContactList
             if (-1 <= index && index < ContactsListBox.Items.Count)
                 ContactsListBox.SelectedIndex = index;
         }
-        private void AddContactButton_Click(object sender, EventArgs e)
+
+        private void AddContactPictureBox_Click(object sender, EventArgs e)
         {
             var contact = new Contact();
             _contacts.Add(contact);
@@ -71,7 +76,7 @@ namespace ContactList
             UpdateListBox(_contacts.IndexOf(contact));
         }
 
-        private void DeleteContactButton_Click(object sender, EventArgs e)
+        private void DeleteContactPictureBox_Click(object sender, EventArgs e)
         {
             if (ContactsListBox.SelectedIndex == -1) return;
 
@@ -159,7 +164,7 @@ namespace ContactList
 
             try
             {
-                _currentContact.VK = DateofBirthTimePicker.Text;
+                _currentContact.DateOfBirth = DateofBirthTimePicker.Value;
                 DateofBirthTimePicker.BackColor = AppColors.NormalBackColor;
                 SortFullName();
                 UpdateListBox(_contacts.IndexOf(_currentContact));
@@ -169,6 +174,7 @@ namespace ContactList
                 DateofBirthTimePicker.BackColor = AppColors.ErrorBackColor;
             }
         }
+
         private void SearchTextBox_TextChanged(object sender, EventArgs e)
         {
             _searchText = SearchTextBox.Text;
@@ -181,12 +187,14 @@ namespace ContactList
             Serializer.SaveToFile(_contacts);
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void AddContactPictureBox_MouseEnter(object sender, EventArgs e)
         {
+            AddContactPictureBox.BackgroundImage = Properties.Resources.plus_active;
+        }
 
-            DateofBirthTimePicker.Value = DateTime.Today;
-            DateofBirthTimePicker.MaxDate = DateTime.Today;
-            DateofBirthTimePicker.MinDate = DateTime.MinValue;
+        private void AddContactPictureBox_MouseLeave(object sender, EventArgs e)
+        {
+            AddContactPictureBox.BackgroundImage = Properties.Resources.plus;
 
         }
     }

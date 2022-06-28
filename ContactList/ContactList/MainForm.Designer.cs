@@ -43,7 +43,11 @@ namespace ContactList
             this.FullNameTextBox = new System.Windows.Forms.TextBox();
             this.AddContactButton = new System.Windows.Forms.Button();
             this.DeleteContactButton = new System.Windows.Forms.Button();
+            this.AddContactPictureBox = new System.Windows.Forms.PictureBox();
+            this.DeleteContactPictureBox = new System.Windows.Forms.PictureBox();
             this.SelectedContactGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AddContactPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeleteContactPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // ContactsListBox
@@ -95,6 +99,7 @@ namespace ContactList
             // DateofBirthTimePicker
             // 
             this.DateofBirthTimePicker.Location = new System.Drawing.Point(110, 58);
+            this.DateofBirthTimePicker.MinDate = new System.DateTime(1875, 2, 21, 0, 0, 0, 0);
             this.DateofBirthTimePicker.Name = "DateofBirthTimePicker";
             this.DateofBirthTimePicker.Size = new System.Drawing.Size(211, 27);
             this.DateofBirthTimePicker.TabIndex = 8;
@@ -169,7 +174,6 @@ namespace ContactList
             this.AddContactButton.TabIndex = 2;
             this.AddContactButton.Text = "Add";
             this.AddContactButton.UseVisualStyleBackColor = true;
-            this.AddContactButton.Click += new System.EventHandler(this.AddContactButton_Click);
             // 
             // DeleteContactButton
             // 
@@ -179,13 +183,36 @@ namespace ContactList
             this.DeleteContactButton.TabIndex = 3;
             this.DeleteContactButton.Text = "Delete";
             this.DeleteContactButton.UseVisualStyleBackColor = true;
-            this.DeleteContactButton.Click += new System.EventHandler(this.DeleteContactButton_Click);
+            // 
+            // AddContactPictureBox
+            // 
+            this.AddContactPictureBox.Image = global::ContactList.Properties.Resources.plus;
+            this.AddContactPictureBox.Location = new System.Drawing.Point(454, 337);
+            this.AddContactPictureBox.Name = "AddContactPictureBox";
+            this.AddContactPictureBox.Size = new System.Drawing.Size(24, 24);
+            this.AddContactPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.AddContactPictureBox.TabIndex = 4;
+            this.AddContactPictureBox.TabStop = false;
+            this.AddContactPictureBox.Click += new System.EventHandler(this.AddContactPictureBox_Click);
+            this.AddContactPictureBox.MouseEnter += new System.EventHandler(this.AddContactPictureBox_MouseEnter);
+            this.AddContactPictureBox.MouseLeave += new System.EventHandler(this.AddContactPictureBox_MouseLeave);
+            // 
+            // DeleteContactPictureBox
+            // 
+            this.DeleteContactPictureBox.Location = new System.Drawing.Point(611, 337);
+            this.DeleteContactPictureBox.Name = "DeleteContactPictureBox";
+            this.DeleteContactPictureBox.Size = new System.Drawing.Size(125, 62);
+            this.DeleteContactPictureBox.TabIndex = 5;
+            this.DeleteContactPictureBox.TabStop = false;
+            this.DeleteContactPictureBox.Click += new System.EventHandler(this.DeleteContactPictureBox_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(833, 526);
+            this.Controls.Add(this.DeleteContactPictureBox);
+            this.Controls.Add(this.AddContactPictureBox);
             this.Controls.Add(this.DeleteContactButton);
             this.Controls.Add(this.AddContactButton);
             this.Controls.Add(this.SelectedContactGroupBox);
@@ -193,10 +220,12 @@ namespace ContactList
             this.Name = "MainForm";
             this.Text = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.SelectedContactGroupBox.ResumeLayout(false);
             this.SelectedContactGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AddContactPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DeleteContactPictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -216,6 +245,8 @@ namespace ContactList
         private System.Windows.Forms.Button DeleteContactButton;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox SearchTextBox;
+        private System.Windows.Forms.PictureBox AddContactPictureBox;
+        private System.Windows.Forms.PictureBox DeleteContactPictureBox;
     }
 }
 

@@ -20,9 +20,10 @@ namespace ContactList.Model
                                             $"{maxLength} в поле {propertyName}.");
             }
         }
+
         public static void IsUrlLink(string value, string propertyName)
         {
-            if (!Regex.IsMatch(value, @"(https?:\/\/)?(www\.)?(vk.com\/)(id\d|[a-zA-z])"))
+            if (!Regex.IsMatch(value, @"(https?:\/\/)?(www\.)?(vk.com\/)(id\d|[a-zA-z][a-zA-Z0-9_.]{2,})"))
             {
                 throw new ArgumentException($"Должна быть ссылка на {propertyName}.");
             }
@@ -36,6 +37,7 @@ namespace ContactList.Model
                     $" { propertyName} начинается с '+' и дальше идут 11 цифр.");
             }
         }
+
         public static void AssertValueInRange(int value, int max, string propertyName)
         {
             if (value > max)
@@ -45,15 +47,15 @@ namespace ContactList.Model
                     $"но {value}.");
             }
         }
+
         public static void AssertValueInRange(DateTime value, DateTime max, string propertyName)
         {
             if (value > max)
             {
                 throw new ArgumentException(
-                    $"The {propertyName} should be in the range up to {max}, " +
-                    $"but was {value}.");
+                    $" {propertyName} должно быть в диапазоне до {max}, " +
+                    $"но  {value}.");
             }
         }
-
     }
 }
