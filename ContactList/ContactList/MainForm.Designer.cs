@@ -55,7 +55,7 @@ namespace ContactList
             | System.Windows.Forms.AnchorStyles.Left)));
             this.ContactsListBox.FormattingEnabled = true;
             this.ContactsListBox.ItemHeight = 20;
-            this.ContactsListBox.Location = new System.Drawing.Point(13, 13);
+            this.ContactsListBox.Location = new System.Drawing.Point(12, 13);
             this.ContactsListBox.Name = "ContactsListBox";
             this.ContactsListBox.Size = new System.Drawing.Size(324, 464);
             this.ContactsListBox.TabIndex = 0;
@@ -76,6 +76,7 @@ namespace ContactList
             this.SelectedContactGroupBox.Controls.Add(this.label1);
             this.SelectedContactGroupBox.Controls.Add(this.FullNameTextBox);
             this.SelectedContactGroupBox.Location = new System.Drawing.Point(344, 13);
+            this.SelectedContactGroupBox.MaximumSize = new System.Drawing.Size(480, 199);
             this.SelectedContactGroupBox.Name = "SelectedContactGroupBox";
             this.SelectedContactGroupBox.Size = new System.Drawing.Size(480, 199);
             this.SelectedContactGroupBox.TabIndex = 1;
@@ -165,15 +166,16 @@ namespace ContactList
             this.FullNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.FullNameTextBox.Location = new System.Drawing.Point(110, 25);
+            this.FullNameTextBox.MaximumSize = new System.Drawing.Size(346, 27);
             this.FullNameTextBox.Name = "FullNameTextBox";
-            this.FullNameTextBox.Size = new System.Drawing.Size(350, 27);
+            this.FullNameTextBox.Size = new System.Drawing.Size(346, 27);
             this.FullNameTextBox.TabIndex = 0;
             this.FullNameTextBox.TextChanged += new System.EventHandler(this.FullNameTextBox_TextChanged);
             // 
             // AddContactPictureBox
             // 
             this.AddContactPictureBox.Image = global::ContactList.Properties.Resources.plus;
-            this.AddContactPictureBox.Location = new System.Drawing.Point(350, 218);
+            this.AddContactPictureBox.Location = new System.Drawing.Point(344, 218);
             this.AddContactPictureBox.Name = "AddContactPictureBox";
             this.AddContactPictureBox.Size = new System.Drawing.Size(24, 24);
             this.AddContactPictureBox.TabIndex = 4;
@@ -185,7 +187,7 @@ namespace ContactList
             // DeleteContactPictureBox
             // 
             this.DeleteContactPictureBox.Image = global::ContactList.Properties.Resources.cancel;
-            this.DeleteContactPictureBox.Location = new System.Drawing.Point(442, 218);
+            this.DeleteContactPictureBox.Location = new System.Drawing.Point(374, 218);
             this.DeleteContactPictureBox.Name = "DeleteContactPictureBox";
             this.DeleteContactPictureBox.Size = new System.Drawing.Size(24, 24);
             this.DeleteContactPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;

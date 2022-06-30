@@ -51,6 +51,7 @@ namespace ContactList.Model
             }
             set
             {
+                Validator.AssertLengthString(value, 150, nameof(VK));
                 Validator.IsUrlLink(value, nameof(VK));
                 Validator.AssertEmptyValue(value, nameof(VK));
                 _vk = value;
@@ -74,7 +75,7 @@ namespace ContactList.Model
         {
             FullName = "FullName";
             Phone = "+79000000000";
-            VK = "https://vk.com/user/";
+            VK = "https://vk.com/";
             DateOfBirth = DateTime.Today;
 
 
