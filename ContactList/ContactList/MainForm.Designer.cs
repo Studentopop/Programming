@@ -176,7 +176,6 @@ namespace ContactList
             this.AddContactPictureBox.Location = new System.Drawing.Point(350, 218);
             this.AddContactPictureBox.Name = "AddContactPictureBox";
             this.AddContactPictureBox.Size = new System.Drawing.Size(24, 24);
-            this.AddContactPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.AddContactPictureBox.TabIndex = 4;
             this.AddContactPictureBox.TabStop = false;
             this.AddContactPictureBox.Click += new System.EventHandler(this.AddContactPictureBox_Click);
@@ -185,10 +184,10 @@ namespace ContactList
             // 
             // DeleteContactPictureBox
             // 
-            this.DeleteContactPictureBox.Image = global::ContactList.Properties.Resources.cancel_32X32;
-            this.DeleteContactPictureBox.Location = new System.Drawing.Point(394, 218);
+            this.DeleteContactPictureBox.Image = global::ContactList.Properties.Resources.cancel;
+            this.DeleteContactPictureBox.Location = new System.Drawing.Point(442, 218);
             this.DeleteContactPictureBox.Name = "DeleteContactPictureBox";
-            this.DeleteContactPictureBox.Size = new System.Drawing.Size(32, 32);
+            this.DeleteContactPictureBox.Size = new System.Drawing.Size(24, 24);
             this.DeleteContactPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.DeleteContactPictureBox.TabIndex = 5;
             this.DeleteContactPictureBox.TabStop = false;

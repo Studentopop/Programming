@@ -183,22 +183,26 @@ namespace ContactList
         }
         private void AddContactPictureBox_MouseEnter(object sender, EventArgs e)
         {
-            AddContactPictureBox.BackgroundImage = Properties.Resources.plus_uncolor;
+            AddContactPictureBox.Image = 
+                Properties.Resources.plus_active;
         }
 
         private void AddContactPictureBox_MouseLeave(object sender, EventArgs e)
         {
-            AddContactPictureBox.BackgroundImage = Properties.Resources.plus;
+            AddContactPictureBox.Image =
+                Properties.Resources.plus;
         }
 
         private void DeleteContactPictureBox_MouseLeave(object sender, EventArgs e)
         {
-            DeleteContactPictureBox.BackgroundImage = Properties.Resources.cancel_32X32;
+            DeleteContactPictureBox.Image = 
+                Properties.Resources.cancel;
         }
 
         private void DeleteContactPictureBox_MouseEnter(object sender, EventArgs e)
         {
-            DeleteContactPictureBox.BackgroundImage = Properties.Resources.cancel_32X32_uncolor;
+            DeleteContactPictureBox.Image = 
+                Properties.Resources.cancel_active;
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
