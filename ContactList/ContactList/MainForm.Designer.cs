@@ -103,6 +103,7 @@ namespace ContactList
             // DateofBirthTimePicker
             // 
             this.DateofBirthTimePicker.Location = new System.Drawing.Point(110, 58);
+            this.DateofBirthTimePicker.MinDate = new System.DateTime(1900, 12, 31, 0, 0, 0, 0);
             this.DateofBirthTimePicker.Name = "DateofBirthTimePicker";
             this.DateofBirthTimePicker.Size = new System.Drawing.Size(211, 27);
             this.DateofBirthTimePicker.TabIndex = 8;
