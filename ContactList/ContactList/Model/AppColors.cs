@@ -5,15 +5,18 @@ using System.Text;
 
 namespace ContactList.Model
 {
+    /// <summary>
+    /// Хранит данные об используемых цветах.
+    /// </summary>
     public static class AppColors
     {
         /// <summary>
-        /// Цвет корректного значения.
+        /// Цвет во время ошибки.
         /// </summary>
         public static readonly Color ErrorBackColor = Color.LightPink;
 
         /// <summary>
-        /// Цвет некорректного значения.
+        /// Цвет нормального состояния.
         /// </summary>
         public static readonly Color NormalBackColor = Color.White;
     }

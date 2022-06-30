@@ -9,12 +9,24 @@ namespace ContactList
 {
     public partial class MainForm : Form
     {
+        /// <summary>
+        /// Список контактов.
+        /// </summary>
         private List<Contact> _contacts;
 
+        /// <summary>
+        /// Текущий контакт.
+        /// </summary>
         private Contact _currentContact;
 
+        /// <summary>
+        /// Текст поиска.
+        /// </summary>
         private string _searchText;
 
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="MainForm"/>.
+        /// </summary>
         public MainForm()
         {
             InitializeComponent();
@@ -22,6 +34,11 @@ namespace ContactList
             UpdateListBox(-1);
         }
 
+        /// <summary>
+        /// Организует поиск полей у объектов, удовлетворяющих введенному в строку значению.
+        /// </summary>
+        /// <param name="searchText">Строка по которой нужно искать.</param>
+        /// <returns>Список объектов подходящих под введенную строку.</returns>
         private List<Contact> SearchContacts()
         {
             var result = from contact in _contacts
@@ -31,6 +48,9 @@ namespace ContactList
             return result.ToList();
         }
 
+        /// <summary>
+        /// Сортировка _contacts.
+        /// </summary>
         private void SortFullName()
         {
             _contacts = (from Contact in _contacts
@@ -38,6 +58,9 @@ namespace ContactList
                          select Contact).ToList();
         }
 
+        /// <summary>
+        /// Очищает поля для вывода информации.
+        /// </summary>
         private void ClearContactInfo()
         {
             ContactsListBox.SelectedIndex = -1;
@@ -47,6 +70,10 @@ namespace ContactList
             DateofBirthTimePicker.Value = DateTime.Today;
         }
 
+        /// <summary>
+        /// Обновляет данные в списке ContactsListBox.
+        /// </summary>
+        /// <param name="index">Индекс выбранного элемента.</param>
         private void UpdateListBox(int index)
         {
             List<Contact> contacts;
