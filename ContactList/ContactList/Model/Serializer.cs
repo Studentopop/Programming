@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
 using Newtonsoft.Json;
-using static System.Environment;
 
 namespace ContactList.Model
 {
@@ -12,68 +10,81 @@ namespace ContactList.Model
     /// </summary>
     public static class Serializer
     {
+         /// <summary>
+         /// Возвращает и задает путь к файлу.
+         /// </summary>
+        public static string Filename { get; set; }
+
         /// <summary>
-        /// Создает экземпляр класса <see cref="Serializer"/>
+        /// Создает экземпляр класса <see cref="ContactSerializer"/>.
         /// </summary>
         static Serializer()
         {
-            Path = $@"{Environment.GetFolderPath(SpecialFolder.ApplicationData)}" +
-                    @"\Isaichenko Nikita\List of Program\";
-            NameFile = "data.json";
-
-            if (!File.Exists(Path))
-            {
-                DirectoryInfo directory = Directory.CreateDirectory(Path);
-            }
+            var appDataFolder =
+                Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) +
+                @"\Bataev\ContactApp\userdata.json";
+            Filename = appDataFolder;
         }
-        /// <summary>
-        /// Возвращает и задает путь куда будут сериализоватся данные.
-        /// </summary>
-        public static string Path { get; set; }
 
         /// <summary>
-        /// Возвращает и задает имя файла.
+        /// Проверяет, существует ли папка, указанная в свойстве Filename.
+        /// И, если папка не существует, то создает папку.
         /// </summary>
-        public static string NameFile { get; set; }
-
-        /// <summary>
-        /// Сохраняет данные из списка в формате JSON.
-        /// </summary>
-        /// <param name="students">Список студентов.</param>
-        public static void SaveToFile(List<Contact> contacts)
+        public static void CreateDirectory()
         {
-            using (StreamWriter writer = new StreamWriter(Path + NameFile))
+            if (!Directory.Exists(Filename))
             {
-
-                writer.Write(JsonConvert.SerializeObject(contacts));
+                Directory.CreateDirectory(Path.GetDirectoryName(Filename));
             }
         }
 
         /// <summary>
-        /// Загружает данные в формате JSON и десериализует их в список.
+        /// Сохраняет данные о контактах в файл.
         /// </summary>
-        /// <returns>Список объектов <see cref="Student"/>.</returns>
+        /// <param name="contact">Список контактов, которые нужно сохранить.</param>
+        /// <exception cref="Exception">Возникает, 
+        /// если произошла ошибка при сохранении.</exception>
+        public static void SaveToFile(List<Contact> contact)
+        {
+            try
+            {
+                CreateDirectory();
+                JsonSerializer serializer = new JsonSerializer();
+                using (StreamWriter sw = new StreamWriter(Filename))
+                using (JsonWriter writer = new JsonTextWriter(sw))
+                {
+                    serializer.Serialize(writer, contact);
+                }
+            }
+            catch
+            {
+                throw new Exception($"Произошла ошибка при сохранении данных в файл.");
+            }
+        }
+
+        /// <summary>
+        /// Загружает данные из файла и передает их в список.
+        /// </summary>
+        /// <returns>Возвращает список контактов.</returns>
         public static List<Contact> LoadFromFile()
         {
+            List<Contact> contact = null;
+            try
             {
-                var contacts = new List<Contact>();
-
-                try
+                CreateDirectory();
+                JsonSerializer serializer = new JsonSerializer();
+                using (StreamReader sr = new StreamReader(Filename))
+                using (JsonReader reader = new JsonTextReader(sr))
                 {
-                    using (StreamReader reader = new StreamReader(Path + NameFile))
-                    {
-                        contacts = JsonConvert.DeserializeObject<List<Contact>>(reader.ReadToEnd());
-                    }
-
-                    if (contacts == null) contacts = new List<Contact>();
+                    contact = serializer.Deserialize<List<Contact>>(reader);
                 }
-                catch
-                {
-                    return contacts;
-                }
-
-                return contacts;
             }
+            catch
+            {
+                return new List<Contact>();
+            }
+
+            return contact;
         }
     }
 }
