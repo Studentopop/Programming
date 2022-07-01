@@ -53,8 +53,8 @@ namespace ContactList.Model
         /// не являетя ссылкой на VK.</exception>
         public static void IsUrlLink(string value, string propertyName)
         {
-            if (!Regex.IsMatch(value, @"(https?:\/\/)?(www\.)?(vk.com\/)
-                              (|[a-zA-z][a-zA-Z0-9_.]{2,})"))
+            if (!Regex.IsMatch(value, @"(https?:\/\/)?(www\.)?(vk.com\/)(|[a-z
+                                      A-z][a-zA-Z0-9_.]{2,})"))
             {
                 throw new ArgumentException($"Должна быть ссылка на {propertyName}.");
             }
