@@ -25,7 +25,7 @@ DefaultDirName=C:\Program Files (x86)\{#MyAppName}
 ChangesAssociations=yes
 DefaultGroupName={#MyAppName}
 AllowNoIcons=yes
-LicenseFile=..\MIT_License.txt
+LicenseFile=MIT_License.txt
 ; Uncomment the following line to run in non administrative install mode (install for current user only.)
 ;PrivilegesRequired=lowest
 OutputDir=Setup
