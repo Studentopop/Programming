@@ -168,6 +168,7 @@ namespace ContactList
                 PhoneTextBox.BackColor = AppColors.ErrorBackColor;
             }
         }
+
         private void VKTextBox_TextChanged(object sender, EventArgs e)
         {
             if (ContactsListBox.SelectedIndex == -1) return;

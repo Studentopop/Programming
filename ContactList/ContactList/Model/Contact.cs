@@ -29,7 +29,6 @@ namespace ContactList.Model
         /// </summary>
         private DateTime _dateOfBirth;
 
-
         /// <summary>
         /// Возвращает и задает полное имя контакта.
         /// Должно состоять только из букв. Длина не более 150 символов.
