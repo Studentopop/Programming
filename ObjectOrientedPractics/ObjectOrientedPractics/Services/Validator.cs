@@ -4,6 +4,9 @@ using System.Text;
 
 namespace ObjectOrientedPractics.Services
 {
+    /// <summary>
+    /// Предоставляет методы для проверки входных данных.
+    /// </summary>
     class Validator
     {
         /// <summary>
