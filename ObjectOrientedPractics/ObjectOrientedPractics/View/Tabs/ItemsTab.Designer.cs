@@ -39,10 +39,11 @@ namespace ObjectOrientedPractics.View.Tabs
             this.AddButton = new System.Windows.Forms.Button();
             this.RemoveButton = new System.Windows.Forms.Button();
             this.ItemsPanel = new System.Windows.Forms.Panel();
-            this.IDTextBox = new System.Windows.Forms.TextBox();
-            this.CostTextBox = new System.Windows.Forms.TextBox();
-            this.NameTextBoxNameTextBox = new System.Windows.Forms.TextBox();
             this.DescriptionTextBox = new System.Windows.Forms.TextBox();
+            this.NameTextBoxNameTextBox = new System.Windows.Forms.TextBox();
+            this.CostTextBox = new System.Windows.Forms.TextBox();
+            this.IDTextBox = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.ItemsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,14 +56,15 @@ namespace ObjectOrientedPractics.View.Tabs
             this.label1.Size = new System.Drawing.Size(45, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Items";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // ItemsListBox
             // 
             this.ItemsListBox.FormattingEnabled = true;
             this.ItemsListBox.ItemHeight = 20;
-            this.ItemsListBox.Location = new System.Drawing.Point(3, 41);
+            this.ItemsListBox.Location = new System.Drawing.Point(3, 29);
             this.ItemsListBox.Name = "ItemsListBox";
-            this.ItemsListBox.Size = new System.Drawing.Size(348, 424);
+            this.ItemsListBox.Size = new System.Drawing.Size(364, 424);
             this.ItemsListBox.TabIndex = 1;
             // 
             // label2
@@ -105,7 +107,7 @@ namespace ObjectOrientedPractics.View.Tabs
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 278);
+            this.label6.Location = new System.Drawing.Point(3, 267);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(88, 20);
             this.label6.TabIndex = 6;
@@ -113,18 +115,18 @@ namespace ObjectOrientedPractics.View.Tabs
             // 
             // AddButton
             // 
-            this.AddButton.Location = new System.Drawing.Point(3, 470);
+            this.AddButton.Location = new System.Drawing.Point(3, 459);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(131, 77);
+            this.AddButton.Size = new System.Drawing.Size(118, 54);
             this.AddButton.TabIndex = 7;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
             // 
             // RemoveButton
             // 
-            this.RemoveButton.Location = new System.Drawing.Point(140, 470);
+            this.RemoveButton.Location = new System.Drawing.Point(127, 459);
             this.RemoveButton.Name = "RemoveButton";
-            this.RemoveButton.Size = new System.Drawing.Size(131, 77);
+            this.RemoveButton.Size = new System.Drawing.Size(118, 54);
             this.RemoveButton.TabIndex = 8;
             this.RemoveButton.Text = "Remove";
             this.RemoveButton.UseVisualStyleBackColor = true;
@@ -140,25 +142,18 @@ namespace ObjectOrientedPractics.View.Tabs
             this.ItemsPanel.Controls.Add(this.label3);
             this.ItemsPanel.Controls.Add(this.label6);
             this.ItemsPanel.Controls.Add(this.label5);
-            this.ItemsPanel.Location = new System.Drawing.Point(370, 3);
+            this.ItemsPanel.Location = new System.Drawing.Point(373, 3);
             this.ItemsPanel.Name = "ItemsPanel";
-            this.ItemsPanel.Size = new System.Drawing.Size(456, 553);
+            this.ItemsPanel.Size = new System.Drawing.Size(453, 510);
             this.ItemsPanel.TabIndex = 9;
             // 
-            // IDTextBox
+            // DescriptionTextBox
             // 
-            this.IDTextBox.Location = new System.Drawing.Point(52, 38);
-            this.IDTextBox.Name = "IDTextBox";
-            this.IDTextBox.Size = new System.Drawing.Size(173, 27);
-            this.IDTextBox.TabIndex = 7;
-            this.IDTextBox.TextChanged += new System.EventHandler(this.IDTextBox_TextChanged);
-            // 
-            // CostTextBox
-            // 
-            this.CostTextBox.Location = new System.Drawing.Point(52, 71);
-            this.CostTextBox.Name = "CostTextBox";
-            this.CostTextBox.Size = new System.Drawing.Size(173, 27);
-            this.CostTextBox.TabIndex = 8;
+            this.DescriptionTextBox.Location = new System.Drawing.Point(4, 290);
+            this.DescriptionTextBox.Multiline = true;
+            this.DescriptionTextBox.Name = "DescriptionTextBox";
+            this.DescriptionTextBox.Size = new System.Drawing.Size(446, 160);
+            this.DescriptionTextBox.TabIndex = 10;
             // 
             // NameTextBoxNameTextBox
             // 
@@ -168,25 +163,40 @@ namespace ObjectOrientedPractics.View.Tabs
             this.NameTextBoxNameTextBox.Size = new System.Drawing.Size(450, 123);
             this.NameTextBoxNameTextBox.TabIndex = 9;
             // 
-            // DescriptionTextBox
+            // CostTextBox
             // 
-            this.DescriptionTextBox.Location = new System.Drawing.Point(3, 301);
-            this.DescriptionTextBox.Multiline = true;
-            this.DescriptionTextBox.Name = "DescriptionTextBox";
-            this.DescriptionTextBox.Size = new System.Drawing.Size(450, 210);
-            this.DescriptionTextBox.TabIndex = 10;
+            this.CostTextBox.Location = new System.Drawing.Point(52, 71);
+            this.CostTextBox.Name = "CostTextBox";
+            this.CostTextBox.Size = new System.Drawing.Size(173, 27);
+            this.CostTextBox.TabIndex = 8;
+            // 
+            // IDTextBox
+            // 
+            this.IDTextBox.Location = new System.Drawing.Point(52, 38);
+            this.IDTextBox.Name = "IDTextBox";
+            this.IDTextBox.Size = new System.Drawing.Size(173, 27);
+            this.IDTextBox.TabIndex = 7;
+            this.IDTextBox.TextChanged += new System.EventHandler(this.IDTextBox_TextChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(252, 459);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(118, 54);
+            this.panel1.TabIndex = 10;
             // 
             // ItemsTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.ItemsPanel);
             this.Controls.Add(this.RemoveButton);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.ItemsListBox);
             this.Controls.Add(this.label1);
             this.Name = "ItemsTab";
-            this.Size = new System.Drawing.Size(830, 559);
+            this.Size = new System.Drawing.Size(830, 567);
             this.ItemsPanel.ResumeLayout(false);
             this.ItemsPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -206,9 +216,10 @@ namespace ObjectOrientedPractics.View.Tabs
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Button RemoveButton;
         private System.Windows.Forms.Panel ItemsPanel;
-        private System.Windows.Forms.TextBox DescriptionTextBox;
         private System.Windows.Forms.TextBox NameTextBoxNameTextBox;
         private System.Windows.Forms.TextBox CostTextBox;
         private System.Windows.Forms.TextBox IDTextBox;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox DescriptionTextBox;
     }
 }

@@ -19,5 +19,15 @@ namespace ObjectOrientedPractics.View.Tabs
         {
 
         }
+
+        private void DescriptionTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
