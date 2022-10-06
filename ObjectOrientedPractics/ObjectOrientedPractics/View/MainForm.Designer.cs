@@ -82,6 +82,7 @@ namespace ObjectOrientedPractics.View
             // 
             // customersTab1
             // 
+            this.customersTab1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.customersTab1.Location = new System.Drawing.Point(3, 3);
             this.customersTab1.Name = "customersTab1";
             this.customersTab1.Size = new System.Drawing.Size(892, 522);

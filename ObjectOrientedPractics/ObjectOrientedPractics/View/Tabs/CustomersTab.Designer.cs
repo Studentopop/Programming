@@ -44,7 +44,7 @@ namespace ObjectOrientedPractics.View.Tabs
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.CustomersPanel.SuspendLayout();
             this.ButtonsPanel.SuspendLayout();
             this.SelectedCustomerPanel.SuspendLayout();
@@ -137,7 +137,7 @@ namespace ObjectOrientedPractics.View.Tabs
             this.SelectedCustomerPanel.Controls.Add(this.label2);
             this.SelectedCustomerPanel.Location = new System.Drawing.Point(403, 4);
             this.SelectedCustomerPanel.Name = "SelectedCustomerPanel";
-            this.SelectedCustomerPanel.Size = new System.Drawing.Size(449, 319);
+            this.SelectedCustomerPanel.Size = new System.Drawing.Size(449, 248);
             this.SelectedCustomerPanel.TabIndex = 2;
             // 
             // AddressTextBox
@@ -147,7 +147,7 @@ namespace ObjectOrientedPractics.View.Tabs
             this.AddressTextBox.Location = new System.Drawing.Point(88, 110);
             this.AddressTextBox.Multiline = true;
             this.AddressTextBox.Name = "AddressTextBox";
-            this.AddressTextBox.Size = new System.Drawing.Size(357, 206);
+            this.AddressTextBox.Size = new System.Drawing.Size(357, 132);
             this.AddressTextBox.TabIndex = 8;
             this.AddressTextBox.TextChanged += new System.EventHandler(this.AddressTextBox_TextChanged);
             // 
@@ -205,19 +205,21 @@ namespace ObjectOrientedPractics.View.Tabs
             this.label2.TabIndex = 2;
             this.label2.Text = "Selected Customer";
             // 
-            // panel4
+            // panel1
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel4.Location = new System.Drawing.Point(403, 329);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(452, 310);
-            this.panel4.TabIndex = 3;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel1.Location = new System.Drawing.Point(403, 259);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(449, 380);
+            this.panel1.TabIndex = 3;
             // 
             // CustomersTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.SelectedCustomerPanel);
             this.Controls.Add(this.ButtonsPanel);
             this.Controls.Add(this.CustomersPanel);
@@ -249,6 +251,6 @@ namespace ObjectOrientedPractics.View.Tabs
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel1;
     }
 }
