@@ -1,21 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace ObjectOrientedPractics.Services
-{ /// <summary>
-  /// Хранит данные о вызываемых цветах.
-  /// </summary>
-    public static class AppColor
+{
+    //// <summary>
+    /// Хранит данные об используемых цветах.
+    /// </summary>
+    public static class AppColors
     {
         /// <summary>
-        /// Цвет некорректного значения.
-        /// </summary> 
-        public static System.Drawing.Color ErrorColor = System.Drawing.Color.LightPink;
+        /// Цвет во время ошибки.
+        /// </summary>
+        public static readonly Color ErrorBackColor = Color.LightPink;
 
         /// <summary>
-        /// Цвет корректного значения.
+        /// Цвет нормального состояния.
         /// </summary>
-        public static System.Drawing.Color CorrectColor = System.Drawing.Color.White;
+        public static readonly Color NormalBackColor = Color.White;
     }
 }

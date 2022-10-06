@@ -56,8 +56,8 @@ namespace ObjectOrientedPractics.View.Tabs
             IDTextBox.Clear();
             NameTextBox.Clear();
             DescriptionTextBox.Clear();
-            NameTextBox.BackColor = AppColor.CorrectColor;
-            CostTextBox.BackColor = AppColor.CorrectColor;
+            NameTextBox.BackColor = AppColors.NormalBackColor;
+            CostTextBox.BackColor = AppColors.NormalBackColor;
             ItemsListBox.Items.Clear();
         }
 
@@ -85,11 +85,11 @@ namespace ObjectOrientedPractics.View.Tabs
             }
             catch
             {
-                NameTextBox.BackColor = AppColor.ErrorColor;
+                NameTextBox.BackColor = AppColors.ErrorBackColor;
                 return;
             }
 
-            NameTextBox.BackColor = AppColor.CorrectColor;
+            NameTextBox.BackColor = AppColors.NormalBackColor;
         }
         private void CostTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -103,10 +103,10 @@ namespace ObjectOrientedPractics.View.Tabs
             }
             catch
             {
-                CostTextBox.BackColor = AppColor.ErrorColor;
+                CostTextBox.BackColor = AppColors.ErrorBackColor;
                 return;
             }
-            CostTextBox.BackColor = AppColor.CorrectColor;
+            CostTextBox.BackColor = AppColors.NormalBackColor;
         }
         private void DescriptionTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -119,11 +119,11 @@ namespace ObjectOrientedPractics.View.Tabs
             }
             catch
             {
-                DescriptionTextBox.BackColor = AppColor.ErrorColor;
+                DescriptionTextBox.BackColor = AppColors.ErrorBackColor;
                 return;
             }
 
-            DescriptionTextBox.BackColor = AppColor.CorrectColor; 
+            DescriptionTextBox.BackColor = AppColors.NormalBackColor; 
         }
         private void AddButton_Click(object sender, EventArgs e)
         {

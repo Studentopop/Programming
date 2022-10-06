@@ -6,6 +6,9 @@ using ObjectOrientedPractics.Services;
 
 namespace ObjectOrientedPractics.View.Tabs
 {
+    /// <summary>
+    /// Реализация представления покупателей.
+    /// </summary>
     public partial class CustomersTab : UserControl
     {
         /// <summary>
@@ -19,7 +22,7 @@ namespace ObjectOrientedPractics.View.Tabs
         private Customer _currentCustomer;
 
         /// <summary>
-        /// Реализация представления класса <see cref="Customer"/>.
+        /// Создает экземпляр класса <see cref="CustomersTab"/>
         /// </summary>
         public CustomersTab()
         {
@@ -27,14 +30,19 @@ namespace ObjectOrientedPractics.View.Tabs
         }
         
         /// <summary>
-        /// На значение товара задаются параметры.
+        /// На значение покупателя задаются параметры.
         /// </summary>
-        /// <param name="Customer"></param>
+        /// <param name="сustomer"></param>
         /// <returns></returns>
         private string CustomerDescription(Customer сustomer)
         {
             return $"{сustomer.Fullname}: - {сustomer.Address}";
         }
+
+        /// <summary>
+        /// Обновляет информацию в списке.
+        /// </summary>
+        /// <param name="customer"></param>
         private void UpdateCustomerInfo(Customer customer)
         {
             int indexSelectedCustomer = CustomersListBox.SelectedIndex;
@@ -46,15 +54,15 @@ namespace ObjectOrientedPractics.View.Tabs
         }
 
         /// <summary>
-        ///Очищает информацию о товаре.
+        ///Очищает информацию о покупателе.
         /// </summary>
         private void ClearCustomerInfo()
         {
             FullNameTextBox.Clear();
             AddressTextBox.Clear();
             IDTextBox.Clear();
-            FullNameTextBox.BackColor = AppColor.CorrectColor;
-            AddressTextBox.BackColor = AppColor.CorrectColor;
+            FullNameTextBox.BackColor = AppColors.ErrorBackColor;
+            AddressTextBox.BackColor = AppColors.NormalBackColor;
             CustomersListBox.Items.Clear();
         }
 
@@ -81,11 +89,11 @@ namespace ObjectOrientedPractics.View.Tabs
             }
             catch
             {
-                FullNameTextBox.BackColor = AppColor.ErrorColor;
+                FullNameTextBox.BackColor = AppColors.ErrorBackColor;
                 return;
             }
 
-            FullNameTextBox.BackColor = AppColor.CorrectColor;
+            FullNameTextBox.BackColor = AppColors.NormalBackColor;
         }
         
         private void AddressTextBox_TextChanged(object sender, EventArgs e)
@@ -99,11 +107,11 @@ namespace ObjectOrientedPractics.View.Tabs
             }
             catch
             {
-                AddressTextBox.BackColor = AppColor.ErrorColor;
+                AddressTextBox.BackColor = AppColors.ErrorBackColor;
                 return;
             }
 
-            AddressTextBox.BackColor = AppColor.CorrectColor;
+            AddressTextBox.BackColor = AppColors.NormalBackColor;
         }
         private void AddButton_Click(object sender, EventArgs e)
         {

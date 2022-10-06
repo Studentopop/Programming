@@ -18,7 +18,7 @@ namespace ObjectOrientedPractics.Model
         private string _fullname;
 
         /// <summary>
-        /// Адрес.
+        /// Адрес покупателя.
         /// </summary>
         private string _address;
 
@@ -28,7 +28,7 @@ namespace ObjectOrientedPractics.Model
         private static int _allCustomersCount;
 
         /// <summary>
-        /// Создаёт экземпляр класса <see cref="Customer"/> по-умолчанию.
+        /// Создаёт экземпляр класса <see cref="Customer"/>.
         /// </summary>
         public Customer()
         {
@@ -41,9 +41,9 @@ namespace ObjectOrientedPractics.Model
         /// <summary>
         /// Создаёт экземпляр класса <see cref="Customer"/>.
         /// </summary>
-        /// <param name="fullName">Полное имя. Длина строки должна быть 
+        /// <param name="fullname">Полное имя. Длина строки должна быть 
         ///                        не больше 200 символов.</param>
-        /// <param name="adress">Адрес. Длина строки должна быть не больше 500 символов.</param>
+        /// <param name="address">Адрес. Длина строки должна быть не больше 500 символов.</param>
         public Customer(string fullname, string address)
         {
             Fullname = fullname;
