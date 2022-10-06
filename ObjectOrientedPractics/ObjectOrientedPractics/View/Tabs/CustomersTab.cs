@@ -33,7 +33,7 @@ namespace ObjectOrientedPractics.View.Tabs
         /// <returns></returns>
         private string CustomerDescription(Customer сustomer)
         {
-            return $"{сustomer.Id}: - {сustomer.Fullname}";
+            return $"{сustomer.Fullname}: - {сustomer.Address}";
         }
         private void UpdateCustomerInfo(Customer customer)
         {

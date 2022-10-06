@@ -163,6 +163,7 @@ namespace ObjectOrientedPractics.View.Tabs
             // 
             // IDTextBox
             // 
+            this.IDTextBox.Enabled = false;
             this.IDTextBox.Location = new System.Drawing.Point(88, 44);
             this.IDTextBox.Name = "IDTextBox";
             this.IDTextBox.Size = new System.Drawing.Size(198, 27);

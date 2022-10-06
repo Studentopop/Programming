@@ -34,8 +34,8 @@ namespace ObjectOrientedPractics.Model
         {
             _allCustomersCount++;
             _id = _allCustomersCount;
-            Fullname = "";
-            Address = "";
+            Fullname = "Full Name";
+            Address = "Address";
         }
 
         /// <summary>
