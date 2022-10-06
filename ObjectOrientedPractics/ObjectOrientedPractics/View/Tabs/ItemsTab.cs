@@ -40,6 +40,14 @@ namespace ObjectOrientedPractics.View.Tabs
         {
             return $"{item.Name}: - {item.Cost}";
         }
+        private void UpdateItemInfo(Item item)
+        {
+            int indexSelectedItem = ItemsListBox.SelectedIndex;
+
+            if (indexSelectedItem == -1) return;
+
+            ItemsListBox.Items[indexSelectedItem] = ItemDescription(item);
+        }
 
         /// <summary>
         ///Очищает информацию о товаре.
@@ -50,15 +58,24 @@ namespace ObjectOrientedPractics.View.Tabs
             IDTextBox.Clear();
             NameTextBox.Clear();
             DescriptionTextBox.Clear();
+            NameTextBox.BackColor = AppColor.CorrectColor;
+            CostTextBox.BackColor = AppColor.CorrectColor;
+            ItemsListBox.Items.Clear();
         }
-        private void UpdateItemInfo(Item item)
+
+        private void ItemsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int indexSelectedItem = ItemsListBox.SelectedIndex;
-
-            if (indexSelectedItem == -1) return;
-
-            ItemsListBox.Items[indexSelectedItem] = ItemDescription(item);
+            if (ItemsListBox.SelectedIndex != -1)
+            {
+                int indexSelectedItem = ItemsListBox.SelectedIndex;
+                _currentItem = _items[indexSelectedItem];
+                NameTextBox.Text = _currentItem.Name;
+                DescriptionTextBox.Text = _currentItem.Info;
+                CostTextBox.Text = _currentItem.Cost.ToString();
+                IDTextBox.Text = _currentItem.Id.ToString();
+            }
         }
+        
         private void NameTextBox_TextChanged(object sender, EventArgs e)
         {
             if (ItemsListBox.SelectedIndex == -1) return;
@@ -82,7 +99,8 @@ namespace ObjectOrientedPractics.View.Tabs
 
             try
             {
-                _currentItem.Cost = (int)Convert.ToDouble(CostTextBox.Text);     ////////////////////////
+                double cost = Convert.ToDouble(CostTextBox.Text);
+                _currentItem.Cost = cost;
                 UpdateItemInfo(_currentItem);
             }
             catch
@@ -90,7 +108,6 @@ namespace ObjectOrientedPractics.View.Tabs
                 CostTextBox.BackColor = AppColor.ErrorColor;
                 return;
             }
-
             CostTextBox.BackColor = AppColor.CorrectColor;
         }
         private void DescriptionTextBox_TextChanged(object sender, EventArgs e)
@@ -112,37 +129,28 @@ namespace ObjectOrientedPractics.View.Tabs
         }
         private void AddButton_Click(object sender, EventArgs e)
         {
-            _currentItem = new Item(NameTextBox.Text, DescriptionTextBox.Text,
-                (int)Convert.ToDouble(CostTextBox.Text));
+            _currentItem = new Item();
             _items.Add(_currentItem);
             ItemsListBox.Items.Add(ItemDescription(_currentItem));
-            IDTextBox.Text = _currentItem.Id.ToString();
-        }
-        private void ItemsListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (ItemsListBox.SelectedItem == null) return;
-
-            int indexSelectedItem = ItemsListBox.SelectedIndex;
-            _currentItem = _items[indexSelectedItem];
-            NameTextBox.Text = _currentItem.Name;
-            DescriptionTextBox.Text = _currentItem.Info;
-            CostTextBox.Text = _currentItem.Cost.ToString();
-            IDTextBox.Text = _currentItem.Id.ToString();
+            ItemsListBox.SelectedIndex = _items.Count - 1;
+            UpdateItemInfo(_currentItem);
         }
         private void RemoveButton_Click(object sender, EventArgs e)
         {
-            int indexSelectedItem = ItemsListBox.SelectedIndex;
+            int index = ItemsListBox.SelectedIndex;
 
-            if (indexSelectedItem == -1) return;
+            if (index == -1) return;
 
-            _items.RemoveAt(indexSelectedItem);
-
+            _items.RemoveAt(index);
             ClearItemInfo();
 
-            for (int i = 0; i <= _items.Count - 1; i++)
+            foreach (var item in _items)
             {
-                ItemsListBox.Items.Add(ItemDescription(_items[i]));
+                ItemsListBox.Items.Add(ItemDescription(item));
+                ItemsListBox.SelectedIndex = 0;
             }
+
+            UpdateItemInfo(_currentItem);
         }
     }
 }

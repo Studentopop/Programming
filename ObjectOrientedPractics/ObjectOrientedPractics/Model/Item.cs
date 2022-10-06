@@ -26,7 +26,7 @@ namespace ObjectOrientedPractics.Model
 		/// <summary>
 		/// Стоимость товара.
 		/// </summary>
-		private int _cost;
+		private double _cost;
 
 		/// <summary>
 		/// Все товары.
@@ -41,7 +41,7 @@ namespace ObjectOrientedPractics.Model
 		/// <param name="info">Информация о товаре. Длина строки должна 
 		///					   быть не больше 1000 символов.</param>
 		/// <param name="cost">Стоимость товара. Длина строки должна быть от 0 до 100 000.</param>
-		public Item(string name, string info, int cost)
+		public Item(string name, string info, double cost)
 		{
 			Name = name;
 			Info = info;
@@ -57,7 +57,7 @@ namespace ObjectOrientedPractics.Model
 		{
 			_allItemsCount++;
 			_id = _allItemsCount; 
-			Name = "";
+			Name = "Name";
 			Info = "";
 			Cost = 0;
 		}
@@ -107,7 +107,7 @@ namespace ObjectOrientedPractics.Model
 		/// <summary>
 		/// Возвращает и задаёт стоимость товара.
 		/// </summary>
-		public int Cost
+		public double Cost
         {
 			get
             {

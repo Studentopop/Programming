@@ -17,7 +17,7 @@ namespace ObjectOrientedPractics.Services
         /// <param name="max">Правая граница диапазона.</param>
         /// <param name="fieldName">Имя значения.</param>
         /// <exception cref="ArgumentException"></exception>
-        public static void AssertValueInRange(int value, int min, int max, string fieldName)
+        public static void AssertValueInRange(double value, int min, int max, string fieldName)
         {
             if ((value > max || value < min))
             {

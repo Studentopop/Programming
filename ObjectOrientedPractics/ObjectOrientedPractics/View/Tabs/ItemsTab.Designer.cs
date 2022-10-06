@@ -73,6 +73,7 @@ namespace ObjectOrientedPractics.View.Tabs
             this.ItemsListBox.Name = "ItemsListBox";
             this.ItemsListBox.Size = new System.Drawing.Size(385, 524);
             this.ItemsListBox.TabIndex = 1;
+            this.ItemsListBox.SelectedIndexChanged += new System.EventHandler(this.ItemsListBox_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -120,6 +121,7 @@ namespace ObjectOrientedPractics.View.Tabs
             this.AddButton.TabIndex = 0;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // SelectedItemPanel
             // 
@@ -150,6 +152,7 @@ namespace ObjectOrientedPractics.View.Tabs
             this.DescriptionTextBox.Name = "DescriptionTextBox";
             this.DescriptionTextBox.Size = new System.Drawing.Size(442, 94);
             this.DescriptionTextBox.TabIndex = 9;
+            this.DescriptionTextBox.TextChanged += new System.EventHandler(this.DescriptionTextBox_TextChanged);
             // 
             // label6
             // 
@@ -169,6 +172,7 @@ namespace ObjectOrientedPractics.View.Tabs
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(442, 94);
             this.NameTextBox.TabIndex = 7;
+            this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
             // 
             // label5
             // 
@@ -185,6 +189,7 @@ namespace ObjectOrientedPractics.View.Tabs
             this.CostTextBox.Name = "CostTextBox";
             this.CostTextBox.Size = new System.Drawing.Size(178, 27);
             this.CostTextBox.TabIndex = 5;
+            this.CostTextBox.TextChanged += new System.EventHandler(this.CostTextBox_TextChanged);
             // 
             // label4
             // 
