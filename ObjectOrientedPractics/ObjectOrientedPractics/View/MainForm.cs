@@ -21,5 +21,19 @@ namespace ObjectOrientedPractics
         {
 
         }
+
+        private void TabPages_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void itemsTab2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

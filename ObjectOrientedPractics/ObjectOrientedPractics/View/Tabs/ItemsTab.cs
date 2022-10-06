@@ -29,5 +29,10 @@ namespace ObjectOrientedPractics.View.Tabs
         {
 
         }
+
+        private void ItemsTab_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
