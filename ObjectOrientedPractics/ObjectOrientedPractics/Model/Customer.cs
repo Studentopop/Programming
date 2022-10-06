@@ -1,5 +1,4 @@
 ﻿using ObjectOrientedPractics.Services;
-using static ObjectOrientedPractics.Services.IdGenerator;
 
 namespace ObjectOrientedPractics.Model
 {
@@ -31,7 +30,6 @@ namespace ObjectOrientedPractics.Model
         /// <param name="adress">Адрес. Длина строки должна быть не больше 500 символов.</param>
         public Customer(string fullname, string address)
         {
-            _id = GetNextId();
             Fullname = fullname;
             Address = address;
         }
@@ -41,7 +39,6 @@ namespace ObjectOrientedPractics.Model
         /// </summary>
         public Customer()
         {
-            _id = GetNextId();
             Fullname = "";
             Address = "";
         }

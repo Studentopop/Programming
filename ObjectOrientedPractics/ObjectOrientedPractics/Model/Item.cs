@@ -1,6 +1,5 @@
 ﻿using System;
 using ObjectOrientedPractics.Services;
-using static ObjectOrientedPractics.Services.IdGenerator;
 
 namespace ObjectOrientedPractics.Model
 {
@@ -30,6 +29,11 @@ namespace ObjectOrientedPractics.Model
 		private int _cost;
 
 		/// <summary>
+		/// Все товары.
+		/// </summary>
+		private static int _allItemsCount;
+
+		/// <summary>
 		/// Создаёт экземпляр класса <see cref="Item"/>
 		/// </summary>
 		/// <param name="name">Название товара. Длина строки должна быть
@@ -39,10 +43,11 @@ namespace ObjectOrientedPractics.Model
 		/// <param name="cost">Стоимость товара. Длина строки должна быть от 0 до 100 000.</param>
 		public Item(string name, string info, int cost)
 		{
-			_id = GetNextId();
 			Name = name;
 			Info = info;
 			Cost = cost;
+			_allItemsCount++;
+			_id = _allItemsCount;
 		}
 
 		/// <summary>
@@ -50,12 +55,23 @@ namespace ObjectOrientedPractics.Model
 		/// </summary>
 		public Item()
 		{
-			_id = GetNextId();
+			_allItemsCount++;
+			_id = _allItemsCount; 
 			Name = "";
 			Info = "";
 			Cost = 0;
 		}
 
+		/// <summary>
+		/// Возвращает уникальный идентификатор товара.
+		/// </summary>
+		public int Id
+		{
+			get
+			{
+				return _id;
+			}
+		}
 		/// <summary>
 		/// Возвращает и задаёт название товара.
 		/// </summary>
