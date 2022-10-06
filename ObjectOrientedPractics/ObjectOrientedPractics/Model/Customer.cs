@@ -8,6 +8,11 @@ namespace ObjectOrientedPractics.Model
     class Customer
     {
         /// <summary>
+        /// Уникальный идентификатор для всех объектов этого класса.
+        /// </summary>
+        private readonly int _id;
+
+        /// <summary>
         /// Полное имя.
         /// </summary>
         private string _fullname;
@@ -16,6 +21,22 @@ namespace ObjectOrientedPractics.Model
         /// Адрес.
         /// </summary>
         private string _address;
+
+        /// <summary>
+        /// Общее количество покупателей.
+        /// </summary>
+        private static int _allCustomersCount;
+
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="Customer"/> по-умолчанию.
+        /// </summary>
+        public Customer()
+        {
+            _allCustomersCount++;
+            _id = _allCustomersCount;
+            Fullname = "";
+            Address = "";
+        }
 
         /// <summary>
         /// Создаёт экземпляр класса <see cref="Customer"/>.
@@ -27,15 +48,19 @@ namespace ObjectOrientedPractics.Model
         {
             Fullname = fullname;
             Address = address;
+            _allCustomersCount++;
+            _id = _allCustomersCount;
         }
 
         /// <summary>
-        /// Создаёт экземпляр класса <see cref="Customer"/> по-умолчанию.
+        /// Возвращает уникальный идентификатор покупателя.
         /// </summary>
-        public Customer()
+        public int Id
         {
-            Fullname = "";
-            Address = "";
+            get
+            {
+                return _id;
+            }
         }
 
         /// <summary>

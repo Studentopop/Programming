@@ -14,7 +14,7 @@ namespace ObjectOrientedPractics.View.Tabs
         /// <summary>
         /// Коллекция товаров.
         /// </summary>
-        private List<Item> _items;
+        private List<Item> _items = new List<Item>();
 
         /// <summary>
         /// Выбранный товар.
@@ -26,8 +26,6 @@ namespace ObjectOrientedPractics.View.Tabs
         /// </summary>
         public ItemsTab()
         {
-            _items = new List<Item>();
-
             InitializeComponent();
         }
 
