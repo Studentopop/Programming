@@ -8,11 +8,6 @@ namespace ObjectOrientedPractics.Model
     class Customer
     {
         /// <summary>
-        /// Уникальный индетификатор.
-        /// </summary>
-        private readonly int _id;
-
-        /// <summary>
         /// Полное имя.
         /// </summary>
         private string _fullname;

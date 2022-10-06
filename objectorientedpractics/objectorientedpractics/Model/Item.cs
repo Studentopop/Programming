@@ -1,6 +1,5 @@
 ﻿using System;
 using ObjectOrientedPractics.Services;
-using static ObjectOrientedPractics.Services.IdGenerator;
 
 namespace ObjectOrientedPractics.Model
 {
@@ -27,7 +26,12 @@ namespace ObjectOrientedPractics.Model
 		/// <summary>
 		/// Стоимость товара.
 		/// </summary>
-		private int _cost;
+		private double _cost;
+
+		/// <summary>
+		/// Все товары.
+		/// </summary>
+		private static int _allItemsCount;
 
 		/// <summary>
 		/// Создаёт экземпляр класса <see cref="Item"/>
@@ -37,12 +41,13 @@ namespace ObjectOrientedPractics.Model
 		/// <param name="info">Информация о товаре. Длина строки должна 
 		///					   быть не больше 1000 символов.</param>
 		/// <param name="cost">Стоимость товара. Длина строки должна быть от 0 до 100 000.</param>
-		public Item(string name, string info, int cost)
+		public Item(string name, string info, double cost)
 		{
-			_id = GetNextId();
 			Name = name;
 			Info = info;
 			Cost = cost;
+			_allItemsCount++;
+			_id = _allItemsCount;
 		}
 
 		/// <summary>
@@ -50,12 +55,23 @@ namespace ObjectOrientedPractics.Model
 		/// </summary>
 		public Item()
 		{
-			_id = GetNextId();
-			Name = "";
+			_allItemsCount++;
+			_id = _allItemsCount; 
+			Name = "Name";
 			Info = "";
 			Cost = 0;
 		}
 
+		/// <summary>
+		/// Возвращает уникальный идентификатор товара.
+		/// </summary>
+		public int Id
+		{
+			get
+			{
+				return _id;
+			}
+		}
 		/// <summary>
 		/// Возвращает и задаёт название товара.
 		/// </summary>
@@ -91,7 +107,7 @@ namespace ObjectOrientedPractics.Model
 		/// <summary>
 		/// Возвращает и задаёт стоимость товара.
 		/// </summary>
-		public int Cost
+		public double Cost
         {
 			get
             {
