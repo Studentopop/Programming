@@ -61,7 +61,7 @@ namespace ObjectOrientedPractics.View.Tabs
             FullNameTextBox.Clear();
             AddressTextBox.Clear();
             IDTextBox.Clear();
-            FullNameTextBox.BackColor = AppColors.ErrorBackColor;
+            FullNameTextBox.BackColor = AppColors.NormalBackColor;
             AddressTextBox.BackColor = AppColors.NormalBackColor;
             CustomersListBox.Items.Clear();
         }
