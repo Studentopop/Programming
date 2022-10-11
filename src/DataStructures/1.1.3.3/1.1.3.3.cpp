@@ -11,26 +11,27 @@ void DemoGetPower(double, int);
 int main()
 {
 	setlocale(LC_ALL, "RUS");
-	double base1, base2, base3;
-	int exponent1, exponent2, exponent3;
+	//TODO: использовать одну переменную+
+	double base;
+	int exponent;
 	cout << "¬ведите значение base ";
-	cin >> base1;
+	cin >> base;
 	cout << "¬ведите значение exponent ";
-	cin >> exponent1;
+	cin >> exponent;
 	cout << '\n';
-	DemoGetPower(base1, exponent1);
+	DemoGetPower(base, exponent);
 	cout << "¬ведите значение base ";
-	cin >> base2;
+	cin >> base;
 	cout << "¬ведите значение exponent ";
-	cin >> exponent2;
+	cin >> exponent;
 	cout << '\n';
-	DemoGetPower(base2, exponent2);
+	DemoGetPower(base, exponent);
 	cout << "¬ведите значение base ";
-	cin >> base3;
+	cin >> base;
 	cout << "¬ведите значение exponent ";
-	cin >> exponent3;
+	cin >> exponent;
 	cout << '\n';
-	DemoGetPower(base3, exponent3);
+	DemoGetPower(base, exponent);
 	return 0;
 }
 

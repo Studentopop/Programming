@@ -8,31 +8,33 @@ int main()
 {
 	setlocale(LC_ALL, "RUS");
 
-	int number1 = 14;
-	cout << "Исходнок число ->   " << number1 << endl;
-	RoundToTens(number1);
-	cout << "Число после округления->   " << number1 << endl;
+	//TODO: одна переменная +
+	int number = 14;
+	cout << "Исходное число ->   " << number << endl;
+	RoundToTens(number);
+	cout << "Число после округления->   " << number << endl;
 
-	int number2 = 191;
-	cout << "Исходнок число ->   " << number2 << endl;
-	RoundToTens(number2);
-	cout << "Число после округления->   " << number2 << endl;
+	number = 191;
+	cout << "Исходное число ->   " << number << endl;
+	RoundToTens(number);
+	cout << "Число после округления->   " << number << endl;
 
-	int number3 = 27;
-	cout << "Исходнок число ->   " << number3 << endl;
-	RoundToTens(number3);
-	cout << "Число после округления->   " << number3 << endl;
+	number = 27;
+	cout << "Исходное число ->   " << number << endl;
+	RoundToTens(number);
+	cout << "Число после округления->   " << number << endl;
 
-	int number4 = -5327;
-	cout << "Исходнок число ->   " << number4 << endl;
-	RoundToTens(number4);
-	cout << "Число после округления->   " << number4 << endl;
+	number = -5327;
+	cout << "Исходное число ->   " << number << endl;
+	RoundToTens(number);
+	cout << "Число после округления->   " << number << endl;
 
 	return 0;
 }
 
 void RoundToTens(int& value)
 {
+	//TODO: через switch+
 	int a = value % 10;
 	if (a >= 5)
 	{

@@ -6,16 +6,20 @@ using namespace std;
 
 int* MakeRandomArray(int arraySize)
 {
-	int* Array = new int[arraySize];
+	//TODO: с маленькой буквы+
+	int* array = new int[arraySize];
 	for (int i = 0; i < arraySize; i++)
 	{
-		Array[i] = 0 + rand() % (100 - 0 + 1);
+		//TODO: магические числа+
+		array[i] =  rand() % (101);
 	}
+
 	for (int i = 0; i < arraySize; i++)
 	{
-		cout << Array[i];
+		cout << array[i];
 		cout << " ";
 	}
+	delete[] Array;
 	return 0;
 }
 

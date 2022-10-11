@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstdlib>
 
 using namespace std;
 
@@ -27,8 +26,6 @@ void selectionSort(double list[], int listLength)
 
 int main()
 {
-	setlocale(LC_ALL, "rus");
-
 	int n = 10;
 	double A[10];
 	A[0] = 1.1;

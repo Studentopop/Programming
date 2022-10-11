@@ -31,26 +31,31 @@ int main()
 {
 	setlocale(LC_ALL, "rus");
 
+	//TODO: размер в переменную+
+	int maximumSize = 40;
+	int minimumSize = 20;
+	int size = 10;
 	int randomDigits[10] = {};
 
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < size; i++)
 	{
-		randomDigits[i] = rand() % 40 - 20;
+		//TODO: магические числа+
+		randomDigits[i] = rand() % maximumSize - minimumSize;
 	}
 
 
 	cout << endl << "Массив c числами oт -20 до 20: " << endl;
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < size; i++)
 	{
 		cout << randomDigits[i] << " ";
 	}
 	cout << '\n';
 
 
-	selectionSort(randomDigits, 10);
+	selectionSort(randomDigits, size);
 
 	cout << "Sorted array ..." << endl;
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < size; i++)
 		cout << randomDigits[i] << " ";
 	cout << endl;
 

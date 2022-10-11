@@ -4,20 +4,21 @@ using namespace std;
 void main()
 {
 	setlocale(LC_ALL, "RUS");
-
-	int n;
+	//TODO: переименновать+
+	int size;
 	cout << "¬ведите положительное число ";
-	cin >> n;
-	char* Array = new char[n];
-	for (int i = 0; i < n; i++)
+	cin >> size;
+	//TODO: с маленькой+
+	char* array = new char[size];
+	for (int i = 0; i < size; i++)
 	{
-		cin >> Array[i];
+		cin >> array[i];
 		cout << '\n';
 	}
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < size; i++)
 	{
-		cout << Array[i];
+		cout << array[i];
 		cout << "; ";
 	}
-	delete[] Array;
+	delete[] array;
 }
