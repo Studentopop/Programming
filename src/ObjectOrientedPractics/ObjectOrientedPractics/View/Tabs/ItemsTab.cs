@@ -150,5 +150,10 @@ namespace ObjectOrientedPractics.View.Tabs
 
             UpdateItemInfo(_currentItem);
         }
+
+        private void CategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
