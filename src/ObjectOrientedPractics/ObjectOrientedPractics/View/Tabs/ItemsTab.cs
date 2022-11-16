@@ -19,7 +19,7 @@ namespace ObjectOrientedPractics.View.Tabs
         /// <summary>
         /// Выбранный товар.
         /// </summary>
-        private Item _currentItem;
+        private Item _currentItem = new Item();
 
         /// <summary>
         /// Создает экземпляр класса <see cref="ItemsTab"/>.
@@ -27,6 +27,10 @@ namespace ObjectOrientedPractics.View.Tabs
         public ItemsTab()
         {
             InitializeComponent();
+            var category = Enum.GetValues(typeof(Category));
+
+            foreach (var value in category)
+                CategoryComboBox.Items.Add(value);
         }
 
         /// <summary>
@@ -36,15 +40,15 @@ namespace ObjectOrientedPractics.View.Tabs
         /// <returns></returns>
         private string ItemDescription(Item item)
         {
-            return $"{item.Name}: - {item.Cost}";
+            return $"{item.Name}";
         }
         private void UpdateItemInfo(Item item)
         {
-            int indexSelectedItem = ItemsListBox.SelectedIndex;
-
-            if (indexSelectedItem == -1) return;
-
-            ItemsListBox.Items[indexSelectedItem] = ItemDescription(item);
+            IDTextBox.Text = item.Id.ToString();
+            CostTextBox.Text = item.Cost.ToString();
+            NameTextBox.Text = item.Name;
+            DescriptionTextBox.Text = item.Info;
+            CategoryComboBox.Text = item.Category.ToString();
         }
 
         /// <summary>
@@ -61,16 +65,36 @@ namespace ObjectOrientedPractics.View.Tabs
             ItemsListBox.Items.Clear();
         }
 
+        /// <summary>
+        /// Меняет доступ к редактированию элементов.
+        /// </summary>
+        private void ChangeAccessToChangeElements()
+        {
+            bool value = ItemsListBox.SelectedIndex == -1;
+            NameTextBox.ReadOnly = value;
+            CostTextBox.ReadOnly = value;
+            DescriptionTextBox.ReadOnly = value;
+            CategoryComboBox.DropDownStyle =ComboBoxStyle.DropDownList;
+        }
+
         private void ItemsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (ItemsListBox.SelectedIndex != -1)
+            try
             {
-                int indexSelectedItem = ItemsListBox.SelectedIndex;
-                _currentItem = _items[indexSelectedItem];
-                NameTextBox.Text = _currentItem.Name;
-                DescriptionTextBox.Text = _currentItem.Info;
-                CostTextBox.Text = _currentItem.Cost.ToString();
-                IDTextBox.Text = _currentItem.Id.ToString();
+                var selectedIndex = ItemsListBox.SelectedIndex;
+
+                if (selectedIndex >= 0)
+                {
+                    _currentItem = _items[selectedIndex];
+                    UpdateItemInfo(_currentItem);
+                }
+
+                ChangeAccessToChangeElements();
+            }
+            catch
+            {
+                ClearItemInfo();
+                ChangeAccessToChangeElements();
             }
         }
         
@@ -127,11 +151,10 @@ namespace ObjectOrientedPractics.View.Tabs
         }
         private void AddButton_Click(object sender, EventArgs e)
         {
-            _currentItem = new Item();
-            _items.Add(_currentItem);
-            ItemsListBox.Items.Add(ItemDescription(_currentItem));
-            ItemsListBox.SelectedIndex = _items.Count - 1;
-            UpdateItemInfo(_currentItem);
+            var item = new Item("Name", "Info", 0, Category.Xbox);
+            _items.Add(item);
+            ItemsListBox.Items.Add(item.Name);
+            ItemsListBox.SelectedIndex = ItemsListBox.Items.Count - 1;
         }
         private void RemoveButton_Click(object sender, EventArgs e)
         {
@@ -151,7 +174,29 @@ namespace ObjectOrientedPractics.View.Tabs
             UpdateItemInfo(_currentItem);
         }
 
+        private void ItemsTab_Load(object sender, EventArgs e)
+        {
+            ChangeAccessToChangeElements();
+
+            foreach (var value in Enum.GetValues(typeof(Category)))
+            {
+                CategoryComboBox.Items.Add(value.ToString());
+            }
+
+            CategoryComboBox.SelectedIndex = -1;
+        }
+
         private void CategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int indexCategory = CategoryComboBox.SelectedIndex;
+            int indexListBox = ItemsListBox.SelectedIndex;
+
+            if ((indexCategory == -1) || (indexListBox == -1)) return;
+
+            _currentItem.Category = (Category)CategoryComboBox.SelectedItem;
+        }
+
+        private void SelectedItemPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }

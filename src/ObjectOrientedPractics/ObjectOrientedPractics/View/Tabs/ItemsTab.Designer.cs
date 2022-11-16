@@ -37,6 +37,8 @@ namespace ObjectOrientedPractics.View.Tabs
             this.RemoveButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
             this.SelectedItemPanel = new System.Windows.Forms.Panel();
+            this.CategoryComboBox = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.DescriptionTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.NameTextBox = new System.Windows.Forms.TextBox();
@@ -46,8 +48,6 @@ namespace ObjectOrientedPractics.View.Tabs
             this.label3 = new System.Windows.Forms.Label();
             this.IDTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.CategoryComboBox = new System.Windows.Forms.ComboBox();
             this.ItemsPanel.SuspendLayout();
             this.ButtonsPanel.SuspendLayout();
             this.SelectedItemPanel.SuspendLayout();
@@ -146,6 +146,25 @@ namespace ObjectOrientedPractics.View.Tabs
             this.SelectedItemPanel.Name = "SelectedItemPanel";
             this.SelectedItemPanel.Size = new System.Drawing.Size(449, 635);
             this.SelectedItemPanel.TabIndex = 2;
+            this.SelectedItemPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.SelectedItemPanel_Paint);
+            // 
+            // CategoryComboBox
+            // 
+            this.CategoryComboBox.FormattingEnabled = true;
+            this.CategoryComboBox.Location = new System.Drawing.Point(82, 111);
+            this.CategoryComboBox.Name = "CategoryComboBox";
+            this.CategoryComboBox.Size = new System.Drawing.Size(178, 28);
+            this.CategoryComboBox.TabIndex = 11;
+            this.CategoryComboBox.SelectedIndexChanged += new System.EventHandler(this.CategoryComboBox_SelectedIndexChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(4, 114);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(72, 20);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Category:";
             // 
             // DescriptionTextBox
             // 
@@ -231,24 +250,6 @@ namespace ObjectOrientedPractics.View.Tabs
             this.label2.TabIndex = 1;
             this.label2.Text = "Selected Item";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(4, 114);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(72, 20);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Category:";
-            // 
-            // CategoryComboBox
-            // 
-            this.CategoryComboBox.FormattingEnabled = true;
-            this.CategoryComboBox.Location = new System.Drawing.Point(82, 111);
-            this.CategoryComboBox.Name = "CategoryComboBox";
-            this.CategoryComboBox.Size = new System.Drawing.Size(178, 28);
-            this.CategoryComboBox.TabIndex = 11;
-            this.CategoryComboBox.SelectedIndexChanged += new System.EventHandler(this.CategoryComboBox_SelectedIndexChanged);
-            // 
             // ItemsTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -258,6 +259,7 @@ namespace ObjectOrientedPractics.View.Tabs
             this.Controls.Add(this.ItemsPanel);
             this.Name = "ItemsTab";
             this.Size = new System.Drawing.Size(855, 642);
+            this.Load += new System.EventHandler(this.ItemsTab_Load);
             this.ItemsPanel.ResumeLayout(false);
             this.ItemsPanel.PerformLayout();
             this.ButtonsPanel.ResumeLayout(false);

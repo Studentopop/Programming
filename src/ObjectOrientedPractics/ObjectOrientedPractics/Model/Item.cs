@@ -96,6 +96,14 @@ namespace ObjectOrientedPractics.Model
 		/// Возвращает и задает категорию товара.
 		/// </summary>
 		public Category Category { get; set; }
+		
+		/// <summary>
+		/// Создает экземпляр класса <see cref="Item"/>.
+		/// </summary>
+		public Item()
+		{
+			_id = _allItemsCount++;
+		}
 
 		/// <summary>
 		/// Создаёт экземпляр класса <see cref="Item"/>
@@ -112,8 +120,8 @@ namespace ObjectOrientedPractics.Model
 			Info = info;
 			Cost = cost;
 			_allItemsCount++;
-			_id = _allItemsCount;
 			Category = category;
+			_id = _allItemsCount;
 		}
 	}
 }
