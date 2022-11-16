@@ -149,6 +149,7 @@ namespace ObjectOrientedPractics.View.Tabs
             // 
             // CategoryComboBox
             // 
+            this.CategoryComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CategoryComboBox.FormattingEnabled = true;
             this.CategoryComboBox.Location = new System.Drawing.Point(82, 111);
             this.CategoryComboBox.Name = "CategoryComboBox";
@@ -238,6 +239,7 @@ namespace ObjectOrientedPractics.View.Tabs
             this.IDTextBox.Name = "IDTextBox";
             this.IDTextBox.Size = new System.Drawing.Size(178, 27);
             this.IDTextBox.TabIndex = 2;
+            this.IDTextBox.TextChanged += new System.EventHandler(this.IDTextBox_TextChanged);
             // 
             // label2
             // 

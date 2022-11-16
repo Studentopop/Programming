@@ -60,6 +60,7 @@ namespace ObjectOrientedPractics.View.Tabs
             IDTextBox.Clear();
             NameTextBox.Clear();
             DescriptionTextBox.Clear();
+            CostTextBox.Clear();
             NameTextBox.BackColor = AppColors.NormalBackColor;
             CostTextBox.BackColor = AppColors.NormalBackColor;
             ItemsListBox.Items.Clear();
@@ -165,6 +166,11 @@ namespace ObjectOrientedPractics.View.Tabs
             if ((indexCategory == -1) || (indexListBox == -1)) return;
 
             _currentItem.Category = (Category)CategoryComboBox.SelectedItem;
+        }
+
+        private void IDTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

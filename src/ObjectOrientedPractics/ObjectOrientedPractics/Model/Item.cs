@@ -102,7 +102,10 @@ namespace ObjectOrientedPractics.Model
 		/// </summary>
 		public Item()
 		{
-			_id = _allItemsCount++;
+			_allItemsCount++;
+			_id = _allItemsCount;
+			Name = "Name";
+			Cost = 0;
 		}
 
 		/// <summary>
