@@ -146,7 +146,6 @@ namespace ObjectOrientedPractics.View.Tabs
             this.SelectedItemPanel.Name = "SelectedItemPanel";
             this.SelectedItemPanel.Size = new System.Drawing.Size(449, 635);
             this.SelectedItemPanel.TabIndex = 2;
-            this.SelectedItemPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.SelectedItemPanel_Paint);
             // 
             // CategoryComboBox
             // 
@@ -259,7 +258,6 @@ namespace ObjectOrientedPractics.View.Tabs
             this.Controls.Add(this.ItemsPanel);
             this.Name = "ItemsTab";
             this.Size = new System.Drawing.Size(855, 642);
-            this.Load += new System.EventHandler(this.ItemsTab_Load);
             this.ItemsPanel.ResumeLayout(false);
             this.ItemsPanel.PerformLayout();
             this.ButtonsPanel.ResumeLayout(false);
