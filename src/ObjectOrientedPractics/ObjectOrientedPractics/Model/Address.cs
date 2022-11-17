@@ -5,6 +5,9 @@ using ObjectOrientedPractics.Services;
 
 namespace ObjectOrientedPractics.Model
 {
+    /// <summary>
+    /// Хранит данные о адресе.
+    /// </summary>
     class Address
     {
         /// <summary>
