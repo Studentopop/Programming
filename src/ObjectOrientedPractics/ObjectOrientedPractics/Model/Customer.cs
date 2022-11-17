@@ -42,7 +42,13 @@ namespace ObjectOrientedPractics.Model
         /// </summary>
         /// <param name="fullname">Полное имя. Длина строки должна быть 
         ///                        не больше 200 символов.</param>
-        /// <param name="address">Адрес. Длина строки должна быть не больше 500 символов.</param>
+        /// <param name="index">Почтовый индекс.</param>
+        /// <param name="country">Страна/регион.</param>
+        /// <param name="city">Город (населенный пункт).</param>
+        /// <param name="street">Улица.</param>
+        /// <param name="apartment">Номер квартиры/помещения.</param>
+        /// <param name="building">Номер дома.</param>
+
         public Customer(string fullname, int index, string country, 
             string city, string street, string apartment, string building)
         {
