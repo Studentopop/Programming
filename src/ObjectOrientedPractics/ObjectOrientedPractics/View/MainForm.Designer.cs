@@ -29,31 +29,34 @@ namespace ObjectOrientedPractics.View
         /// </summary>
         private void InitializeComponent()
         {
-            ObjectOrientedPractics.Model.Address address1 = new ObjectOrientedPractics.Model.Address();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.itemsTab1 = new ObjectOrientedPractics.View.Tabs.ItemsTab();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.customersTab1 = new ObjectOrientedPractics.View.Tabs.CustomersTab();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.addressControl1 = new ObjectOrientedPractics.View.Controls.AddressControl();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.itemsTab1 = new ObjectOrientedPractics.View.Tabs.ItemsTab();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tabPage2
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(906, 561);
-            this.tabControl1.TabIndex = 0;
+            this.tabPage2.Controls.Add(this.customersTab1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(928, 528);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Customers";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // customersTab1
+            // 
+            this.customersTab1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customersTab1.Location = new System.Drawing.Point(3, 3);
+            this.customersTab1.Name = "customersTab1";
+            this.customersTab1.Size = new System.Drawing.Size(922, 522);
+            this.customersTab1.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -74,75 +77,39 @@ namespace ObjectOrientedPractics.View
             this.itemsTab1.Size = new System.Drawing.Size(892, 522);
             this.itemsTab1.TabIndex = 0;
             // 
-            // tabPage2
+            // tabControl1
             // 
-            this.tabPage2.Controls.Add(this.customersTab1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(898, 528);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Customers";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // customersTab1
-            // 
-            this.customersTab1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customersTab1.Location = new System.Drawing.Point(3, 3);
-            this.customersTab1.Name = "customersTab1";
-            this.customersTab1.Size = new System.Drawing.Size(892, 522);
-            this.customersTab1.TabIndex = 0;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.addressControl1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(898, 528);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // addressControl1
-            // 
-            address1.Apartment = "None";
-            address1.Building = "None";
-            address1.City = "None";
-            address1.Country = "None";
-            address1.Index = 100000;
-            address1.Street = "None";
-            this.addressControl1.Address = address1;
-            this.addressControl1.Location = new System.Drawing.Point(34, 26);
-            this.addressControl1.Name = "addressControl1";
-            this.addressControl1.Size = new System.Drawing.Size(730, 211);
-            this.addressControl1.TabIndex = 0;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(936, 561);
+            this.tabControl1.TabIndex = 0;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(906, 561);
+            this.ClientSize = new System.Drawing.Size(936, 561);
             this.Controls.Add(this.tabControl1);
-            this.MinimumSize = new System.Drawing.Size(924, 608);
+            this.MinimumSize = new System.Drawing.Size(954, 608);
             this.Name = "MainForm";
             this.Text = "MainForm";
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private Tabs.ItemsTab itemsTab1;
         private System.Windows.Forms.TabPage tabPage2;
         private Tabs.CustomersTab customersTab1;
-        private System.Windows.Forms.TabPage tabPage3;
-        private Controls.AddressControl addressControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private Tabs.ItemsTab itemsTab1;
+        private System.Windows.Forms.TabControl tabControl1;
     }
 }

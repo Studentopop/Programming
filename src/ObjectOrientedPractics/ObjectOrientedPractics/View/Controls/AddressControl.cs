@@ -5,16 +5,19 @@ using ObjectOrientedPractics.Services;
 
 namespace ObjectOrientedPractics.View.Controls
 {
+    /// <summary>
+    /// Предоставляет методы для обработки адресов.
+    /// </summary>
     public partial class AddressControl : UserControl
     {
+        /// <summary>
+        /// Адрес.
+        /// </summary>
         private Address _address = new Address();
 
-        public AddressControl()
-        {
-
-            InitializeComponent();
-        }
-
+        /// <summary>
+        /// Возращает и задает адрес.
+        /// </summary>
         public Address Address
         {
             get
@@ -27,6 +30,18 @@ namespace ObjectOrientedPractics.View.Controls
                 UpdateAddressInfo();
             }
         }
+
+        /// <summary>
+        /// Создает экземпляр класса <see cref="AddressControl"/>.
+        /// </summary>
+        public AddressControl()
+        {
+            InitializeComponent();
+        }
+
+        /// <summary>
+        /// Обновляет информацию о адресе в текстовых полях.
+        /// </summary>
         public void UpdateAddressInfo()
         {
             PostIndexTextBox.Text = Address.Index.ToString();
@@ -35,6 +50,21 @@ namespace ObjectOrientedPractics.View.Controls
             StreetTextBox.Text = Address.Street;
             BuildingTextBox.Text = Address.Building;
             ApartmentTextBox.Text = Address.Apartment;
+        }
+
+        /// <summary>
+        /// Очищает текстовые поля.
+        /// </summary>
+        public void Clear()
+        {
+            PostIndexTextBox.Clear();
+            CountryTextBox.Clear();
+            CityTextBox.Clear();
+            StreetTextBox.Clear();
+            BuildingTextBox.Clear();
+            ApartmentTextBox.Clear();
+
+            PostIndexTextBox.BackColor = AppColors.NormalBackColor;
         }
 
         private void PostIndexTextBox_TextChanged(object sender, EventArgs e)
@@ -126,18 +156,6 @@ namespace ObjectOrientedPractics.View.Controls
             }
 
             ApartmentTextBox.BackColor = AppColors.NormalBackColor;
-        }
-
-        public void Clear()
-        {
-            PostIndexTextBox.Clear();
-            CountryTextBox.Clear();
-            CityTextBox.Clear();
-            StreetTextBox.Clear();
-            BuildingTextBox.Clear();
-            ApartmentTextBox.Clear();
-
-            PostIndexTextBox.BackColor = AppColors.NormalBackColor;
         }
     }
 }
