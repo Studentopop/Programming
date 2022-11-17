@@ -45,5 +45,14 @@ namespace ObjectOrientedPractics.Services
             }
         }
 
+        public static void AssertStringLength(int value, int countSymbols, string propertyName)
+        {
+            if (value.ToString().Length != countSymbols)
+            {
+                throw new ArgumentException($"Некорректная длина поле {propertyName}." +
+                    $" Необходимая длина = {countSymbols}");
+            }
+        }
+
     }
 }
