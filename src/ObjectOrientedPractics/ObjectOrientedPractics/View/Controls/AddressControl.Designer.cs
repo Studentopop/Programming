@@ -115,6 +115,7 @@ namespace ObjectOrientedPractics.View.Controls
             this.PostIndexTextBox.Name = "PostIndexTextBox";
             this.PostIndexTextBox.Size = new System.Drawing.Size(125, 27);
             this.PostIndexTextBox.TabIndex = 7;
+            this.PostIndexTextBox.TextChanged += new System.EventHandler(this.PostIndexTextBox_TextChanged);
             // 
             // CountryTextBox
             // 
@@ -130,6 +131,7 @@ namespace ObjectOrientedPractics.View.Controls
             this.StreetTextBox.Name = "StreetTextBox";
             this.StreetTextBox.Size = new System.Drawing.Size(477, 27);
             this.StreetTextBox.TabIndex = 9;
+            this.StreetTextBox.TextChanged += new System.EventHandler(this.StreetTextBox_TextChanged);
             // 
             // BuildingTextBox
             // 
@@ -137,6 +139,7 @@ namespace ObjectOrientedPractics.View.Controls
             this.BuildingTextBox.Name = "BuildingTextBox";
             this.BuildingTextBox.Size = new System.Drawing.Size(158, 27);
             this.BuildingTextBox.TabIndex = 10;
+            this.BuildingTextBox.TextChanged += new System.EventHandler(this.BuildingTextBox_TextChanged);
             // 
             // CityTextBox
             // 
@@ -144,6 +147,7 @@ namespace ObjectOrientedPractics.View.Controls
             this.CityTextBox.Name = "CityTextBox";
             this.CityTextBox.Size = new System.Drawing.Size(162, 27);
             this.CityTextBox.TabIndex = 11;
+            this.CityTextBox.TextChanged += new System.EventHandler(this.CityTextBox_TextChanged);
             // 
             // ApartmentTextBox
             // 
@@ -151,6 +155,7 @@ namespace ObjectOrientedPractics.View.Controls
             this.ApartmentTextBox.Name = "ApartmentTextBox";
             this.ApartmentTextBox.Size = new System.Drawing.Size(124, 27);
             this.ApartmentTextBox.TabIndex = 12;
+            this.ApartmentTextBox.TextChanged += new System.EventHandler(this.ApartmentTextBox_TextChanged);
             // 
             // AddressControl
             // 

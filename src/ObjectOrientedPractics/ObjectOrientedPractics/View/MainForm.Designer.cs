@@ -29,20 +29,25 @@ namespace ObjectOrientedPractics.View
         /// </summary>
         private void InitializeComponent()
         {
+            ObjectOrientedPractics.Model.Address address1 = new ObjectOrientedPractics.Model.Address();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.itemsTab1 = new ObjectOrientedPractics.View.Tabs.ItemsTab();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.customersTab1 = new ObjectOrientedPractics.View.Tabs.CustomersTab();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.addressControl1 = new ObjectOrientedPractics.View.Controls.AddressControl();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
@@ -88,6 +93,31 @@ namespace ObjectOrientedPractics.View
             this.customersTab1.Size = new System.Drawing.Size(892, 522);
             this.customersTab1.TabIndex = 0;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.addressControl1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(898, 528);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // addressControl1
+            // 
+            address1.Apartment = "None";
+            address1.Building = "None";
+            address1.City = "None";
+            address1.Country = "None";
+            address1.Index = 100000;
+            address1.Street = "None";
+            this.addressControl1.Address = address1;
+            this.addressControl1.Location = new System.Drawing.Point(34, 26);
+            this.addressControl1.Name = "addressControl1";
+            this.addressControl1.Size = new System.Drawing.Size(730, 211);
+            this.addressControl1.TabIndex = 0;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -100,6 +130,7 @@ namespace ObjectOrientedPractics.View
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -111,5 +142,7 @@ namespace ObjectOrientedPractics.View
         private Tabs.ItemsTab itemsTab1;
         private System.Windows.Forms.TabPage tabPage2;
         private Tabs.CustomersTab customersTab1;
+        private System.Windows.Forms.TabPage tabPage3;
+        private Controls.AddressControl addressControl1;
     }
 }

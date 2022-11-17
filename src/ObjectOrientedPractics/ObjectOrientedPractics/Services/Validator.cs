@@ -45,12 +45,21 @@ namespace ObjectOrientedPractics.Services
             }
         }
 
-        public static void AssertStringLength(int value, int countSymbols, string propertyName)
+        /// <summary>
+        /// Проверяет строку на определенную длину.
+        /// </summary>
+        /// <param name="value">Проверяемое значение.</param>
+        /// <param name="length">>Длина на которую проверяется строка.</param>
+        /// <param name="propertyName">Имя свойства или объекта,
+        /// которое подлежит проверке.</param>
+        /// <exception cref="ArgumentException">Возникает, когда
+        /// длина строки не равна определенной длине.</exception>
+        public static void AssertStringLength(int value, int length, string propertyName)
         {
-            if (value.ToString().Length != countSymbols)
+            if (value.ToString().Length != length)
             {
                 throw new ArgumentException($"Некорректная длина поле {propertyName}." +
-                    $" Необходимая длина = {countSymbols}");
+                    $" Необходимая длина = {length}");
             }
         }
 
