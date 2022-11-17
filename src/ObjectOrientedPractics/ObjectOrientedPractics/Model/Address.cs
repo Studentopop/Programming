@@ -8,7 +8,7 @@ namespace ObjectOrientedPractics.Model
     /// <summary>
     /// Хранит данные о адресе.
     /// </summary>
-    class Address
+    public class Address
     {
         /// <summary>
         /// Фиксированная длина почтового индекса.
@@ -75,26 +75,33 @@ namespace ObjectOrientedPractics.Model
         /// </summary>
         public Address()
         {
-
+            Index = 100000;
+            Country = "None";
+            City = "None";
+            Street = "None";
+            Building = "None";
+            Apartment = "None";
         }
 
         /// <summary>
         /// Создает экземпляр класса <see cref="Address"/>.
         /// </summary>
-        /// <param name="index"> Почтовый индекс. Длина должна быть целым шестизначным числом.</param>
+        /// <param name="index"> Почтовый индекс.
+        /// Длина должна быть целым шестизначным числом.</param>
         /// <param name="country">Страна/регион. Длина не более 50 символов.</param>
         /// <param name="city">Город (населенный пункт). Длина не более 50 символов.</param>
         /// <param name="street">Улица. Длина не более 100 символов.</param>
         /// <param name="building">Номер дома. Длина не более 10 символов.</param>
-        /// <param name="apatment">Номер квартиры/помещенияю. Длина не более 10 символов.</param>
-        public Address(int index, string country, string city, string street, string building, string apatment)
+        /// <param name="apartment">Номер квартиры/помещенияю. Длина не более 10 символов.</param>
+        public Address(int index, string country, string city,
+                       string street, string apartment, string building)
         {
             Index = index;
             Country = country;
             City = city;
             Street = street;
             Building = building;
-            Apartment = apatment;
+            Apartment = apartment;
         }
 
         /// <summary>
@@ -109,7 +116,7 @@ namespace ObjectOrientedPractics.Model
             }
             set
             {
-                Validator.AssertStringLength(value.ToString(), _indexLength, nameof(Index));
+                Validator.AssertStringLength(value, _indexLength, nameof(Index));
                 _index = value;
             }
         }
@@ -147,7 +154,7 @@ namespace ObjectOrientedPractics.Model
                 _city = value;
             }
         }
-        
+
         /// <summary>
         /// Возвращает и задает номер улицы.
         /// Длина не более 100 символов.

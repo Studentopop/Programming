@@ -36,7 +36,7 @@ namespace ObjectOrientedPractics.View.Tabs
         /// <returns></returns>
         private string CustomerDescription(Customer сustomer)
         {
-            return $"{сustomer.Fullname}: - {сustomer.Address}";
+            return $"{сustomer.Fullname}";
         }
 
         /// <summary>
@@ -59,10 +59,8 @@ namespace ObjectOrientedPractics.View.Tabs
         private void ClearCustomerInfo()
         {
             FullNameTextBox.Clear();
-            AddressTextBox.Clear();
             IDTextBox.Clear();
             FullNameTextBox.BackColor = AppColors.NormalBackColor;
-            AddressTextBox.BackColor = AppColors.NormalBackColor;
             CustomersListBox.Items.Clear();
         }
 
@@ -73,7 +71,6 @@ namespace ObjectOrientedPractics.View.Tabs
                 int indexSelectedCustomer = CustomersListBox.SelectedIndex;
                 _currentCustomer = _customers[indexSelectedCustomer];
                 FullNameTextBox.Text = _currentCustomer.Fullname;
-                AddressTextBox.Text = _currentCustomer.Address;
                 IDTextBox.Text = _currentCustomer.Id.ToString();
             }
         }
@@ -95,24 +92,7 @@ namespace ObjectOrientedPractics.View.Tabs
 
             FullNameTextBox.BackColor = AppColors.NormalBackColor;
         }
-        
-        private void AddressTextBox_TextChanged(object sender, EventArgs e)
-        {
-            if (CustomersListBox.SelectedIndex == -1) return;
 
-            try
-            {
-                _currentCustomer.Address = AddressTextBox.Text;
-                UpdateCustomerInfo(_currentCustomer);
-            }
-            catch
-            {
-                AddressTextBox.BackColor = AppColors.ErrorBackColor;
-                return;
-            }
-
-            AddressTextBox.BackColor = AppColors.NormalBackColor;
-        }
         private void AddButton_Click(object sender, EventArgs e)
         {
             _currentCustomer = new Customer();
