@@ -21,7 +21,7 @@ namespace ObjectOrientedPractics.Services
         {
             if ((value > max || value < min))
             {
-                throw new ArgumentException($"Введите корректное значение от 0 до 60" +
+                throw new ArgumentException($"Введите корректное значение от {min} до {max}" +
                     $" {fieldName}");
             }
         }
@@ -45,5 +45,13 @@ namespace ObjectOrientedPractics.Services
             }
         }
 
+        public static void AssertStringLength(string value, int length, string propertyName)
+        {
+            if (value.Length != length)
+            {
+                throw new ArgumentException($"Количество символов в {propertyName} " +
+                    $"должно быть равно { length}.");
+            }
+        }
     }
 }
