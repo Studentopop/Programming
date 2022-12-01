@@ -71,8 +71,7 @@ namespace ObjectOrientedPractics.View.Controls
         {
             try
             {
-                int index = Convert.ToInt32(PostIndexTextBox.Text);
-                _address.Index = index;
+                _address.Index = Convert.ToInt32(PostIndexTextBox.Text);
             }
             catch
             {

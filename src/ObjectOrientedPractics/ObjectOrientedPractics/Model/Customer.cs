@@ -5,7 +5,7 @@ namespace ObjectOrientedPractics.Model
     /// <summary>
     /// Хранит данные о покупателе.
     /// </summary>
-    class Customer
+    public class Customer
     {
         /// <summary>
         /// Уникальный идентификатор для всех объектов этого класса.
@@ -20,7 +20,7 @@ namespace ObjectOrientedPractics.Model
         /// <summary>
         /// Адрес покупателя.
         /// </summary>
-        private string _address;
+        private Address _address;
 
         /// <summary>
         /// Общее количество покупателей.
@@ -35,7 +35,7 @@ namespace ObjectOrientedPractics.Model
             _allCustomersCount++;
             _id = _allCustomersCount;
             Fullname = "Name";
-            Address = "Address";
+            Address = new Address();
         }
 
         /// <summary>
@@ -44,10 +44,11 @@ namespace ObjectOrientedPractics.Model
         /// <param name="fullname">Полное имя. Длина строки должна быть 
         ///                        не больше 200 символов.</param>
         /// <param name="address">Адрес. Длина строки должна быть не больше 500 символов.</param>
-        public Customer(string fullname, string address)
+        public Customer(string fullname, int Index, string Country, string City, string Street,
+            string Building, string Apartment)
         {
             Fullname = fullname;
-            Address = address;
+            Address = new Address(Index, Country, City, Street, Building, Apartment);
             _allCustomersCount++;
             _id = _allCustomersCount;
         }
@@ -82,7 +83,7 @@ namespace ObjectOrientedPractics.Model
         /// <summary>
         /// Возвращает и задаёт адрес. 
         /// </summary>
-        public string Address
+        public Address Address
         {
             get
             {
@@ -90,7 +91,6 @@ namespace ObjectOrientedPractics.Model
             }
             set
             {
-                Validator.AssertLengthString(value, 500, nameof(Address));
                 _address = value;
             }
         }

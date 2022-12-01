@@ -38,13 +38,13 @@ namespace ObjectOrientedPractics.View.Tabs
             this.RemoveButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
             this.SelectedCustomerPanel = new System.Windows.Forms.Panel();
+            this.addressControl = new ObjectOrientedPractics.View.Controls.AddressControl();
             this.FullNameTextBox = new System.Windows.Forms.TextBox();
             this.IDTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.addressControl1 = new ObjectOrientedPractics.View.Controls.AddressControl();
             this.CustomersPanel.SuspendLayout();
             this.ButtonsPanel.SuspendLayout();
             this.SelectedCustomerPanel.SuspendLayout();
@@ -128,7 +128,7 @@ namespace ObjectOrientedPractics.View.Tabs
             this.SelectedCustomerPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SelectedCustomerPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.SelectedCustomerPanel.Controls.Add(this.addressControl1);
+            this.SelectedCustomerPanel.Controls.Add(this.addressControl);
             this.SelectedCustomerPanel.Controls.Add(this.FullNameTextBox);
             this.SelectedCustomerPanel.Controls.Add(this.IDTextBox);
             this.SelectedCustomerPanel.Controls.Add(this.label4);
@@ -138,6 +138,21 @@ namespace ObjectOrientedPractics.View.Tabs
             this.SelectedCustomerPanel.Name = "SelectedCustomerPanel";
             this.SelectedCustomerPanel.Size = new System.Drawing.Size(545, 355);
             this.SelectedCustomerPanel.TabIndex = 2;
+            // 
+            // addressControl
+            // 
+            address1.Apartment = "None";
+            address1.Building = "None";
+            address1.City = "None";
+            address1.Country = "None";
+            address1.Index = 100000;
+            address1.Street = "None";
+            this.addressControl.Address = address1;
+            this.addressControl.Location = new System.Drawing.Point(4, 110);
+            this.addressControl.Name = "addressControl";
+            this.addressControl.Size = new System.Drawing.Size(537, 222);
+            this.addressControl.TabIndex = 8;
+            this.addressControl.Load += new System.EventHandler(this.addressControl_Load);
             // 
             // FullNameTextBox
             // 
@@ -195,20 +210,6 @@ namespace ObjectOrientedPractics.View.Tabs
             this.panel1.Size = new System.Drawing.Size(545, 274);
             this.panel1.TabIndex = 3;
             // 
-            // addressControl1
-            // 
-            address1.Apartment = "None";
-            address1.Building = "None";
-            address1.City = "None";
-            address1.Country = "None";
-            address1.Index = 100000;
-            address1.Street = "None";
-            this.addressControl1.Address = address1;
-            this.addressControl1.Location = new System.Drawing.Point(4, 110);
-            this.addressControl1.Name = "addressControl1";
-            this.addressControl1.Size = new System.Drawing.Size(559, 222);
-            this.addressControl1.TabIndex = 8;
-            // 
             // CustomersTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -244,6 +245,6 @@ namespace ObjectOrientedPractics.View.Tabs
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private Controls.AddressControl addressControl1;
+        private Controls.AddressControl addressControl;
     }
 }

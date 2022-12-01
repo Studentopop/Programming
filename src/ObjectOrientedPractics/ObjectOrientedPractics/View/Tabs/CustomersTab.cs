@@ -27,8 +27,38 @@ namespace ObjectOrientedPractics.View.Tabs
         public CustomersTab()
         {
             InitializeComponent();
+            _customers = Customers;
         }
-        
+
+        /// <summary>
+        /// Возвращает и задаёт список покупателей.
+        /// </summary>  
+        public List<Customer> Customers
+        {
+            get
+            {
+                return _customers;
+            }
+            set
+            {
+                _customers = value;
+                UpdateListBox();
+            }
+        }
+
+
+        /// <summary>
+        /// Обновляет ListBox.
+        /// </summary>
+        private void UpdateListBox()
+        {
+            CustomersListBox.Items.Clear();
+            for (int i = 0; i < _customers.Count; i++)
+            {
+                CustomersListBox.Items.Add(_customers[i].Fullname);
+            }
+        }
+
         /// <summary>
         /// На значение покупателя задаются параметры.
         /// </summary>
@@ -45,12 +75,10 @@ namespace ObjectOrientedPractics.View.Tabs
         /// <param name="customer"></param>
         private void UpdateCustomerInfo(Customer customer)
         {
-            int indexSelectedCustomer = CustomersListBox.SelectedIndex;
-
-            if (indexSelectedCustomer == -1) return;
-
-            CustomersListBox.Items[indexSelectedCustomer] 
-                = CustomerDescription(customer);
+            IDTextBox.Text = _currentCustomer.Id.ToString();
+            FullNameTextBox.Text = _currentCustomer.Fullname.ToString();
+            addressControl.Address = customer.Address;
+            addressControl.UpdateAddressInfo();
         }
 
         /// <summary>
@@ -62,17 +90,25 @@ namespace ObjectOrientedPractics.View.Tabs
             IDTextBox.Clear();
             FullNameTextBox.BackColor = AppColors.NormalBackColor;
             CustomersListBox.Items.Clear();
+            addressControl.Clear();
         }
 
         private void CustomersListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (CustomersListBox.SelectedIndex != -1)
+            if (CustomersListBox.SelectedIndex == -1)
             {
-                int indexSelectedCustomer = CustomersListBox.SelectedIndex;
-                _currentCustomer = _customers[indexSelectedCustomer];
-                FullNameTextBox.Text = _currentCustomer.Fullname;
-                IDTextBox.Text = _currentCustomer.Id.ToString();
+                if (_customers.Count > 0)
+                {
+                    CustomersListBox.SelectedIndex = 0;
+                }
+                else
+                {
+                    ClearCustomerInfo();
+                }
+                return;
             }
+            _currentCustomer = _customers[CustomersListBox.SelectedIndex];
+            UpdateCustomerInfo(_currentCustomer);
         }
 
         private void FullNameTextBox_TextChanged(object sender, EventArgs e)
@@ -81,8 +117,11 @@ namespace ObjectOrientedPractics.View.Tabs
 
             try
             {
+                FullNameTextBox.SelectionStart = FullNameTextBox.Text.Length;
                 _currentCustomer.Fullname = FullNameTextBox.Text;
-                UpdateCustomerInfo(_currentCustomer);
+                FullNameTextBox.BackColor = AppColors.NormalBackColor;
+                CustomersListBox.Items[CustomersListBox.SelectedIndex] =
+                    FullNameTextBox.Text;
             }
             catch
             {
@@ -103,20 +142,17 @@ namespace ObjectOrientedPractics.View.Tabs
         }
         private void RemoveButton_Click(object sender, EventArgs e)
         {
-            int index = CustomersListBox.SelectedIndex;
-
-            if (index == -1) return;
-
-            _customers.RemoveAt(index);
-            ClearCustomerInfo();
-
-            foreach (var Customer in _customers)
+            if (CustomersListBox.Items.Count == 0)
             {
-                CustomersListBox.Items.Add(CustomerDescription(Customer));
-                CustomersListBox.SelectedIndex = 0;
+                return;
             }
+            _customers.RemoveAt(CustomersListBox.SelectedIndex);
+            CustomersListBox.Items.RemoveAt(CustomersListBox.SelectedIndex);
+        }
 
-            UpdateCustomerInfo(_currentCustomer);
+        private void addressControl_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
