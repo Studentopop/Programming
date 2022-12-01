@@ -149,10 +149,5 @@ namespace ObjectOrientedPractics.View.Tabs
             _customers.RemoveAt(CustomersListBox.SelectedIndex);
             CustomersListBox.Items.RemoveAt(CustomersListBox.SelectedIndex);
         }
-
-        private void addressControl_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

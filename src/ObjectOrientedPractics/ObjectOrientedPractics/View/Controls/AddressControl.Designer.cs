@@ -99,6 +99,8 @@ namespace ObjectOrientedPractics.View.Controls
             // 
             // StreetTextBox
             // 
+            this.StreetTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.StreetTextBox.Location = new System.Drawing.Point(87, 102);
             this.StreetTextBox.Name = "StreetTextBox";
             this.StreetTextBox.Size = new System.Drawing.Size(446, 27);
@@ -109,7 +111,7 @@ namespace ObjectOrientedPractics.View.Controls
             // 
             this.BuildingTextBox.Location = new System.Drawing.Point(87, 135);
             this.BuildingTextBox.Name = "BuildingTextBox";
-            this.BuildingTextBox.Size = new System.Drawing.Size(125, 27);
+            this.BuildingTextBox.Size = new System.Drawing.Size(152, 27);
             this.BuildingTextBox.TabIndex = 7;
             this.BuildingTextBox.TextChanged += new System.EventHandler(this.BuildingTextBox_TextChanged);
             // 
@@ -134,7 +136,7 @@ namespace ObjectOrientedPractics.View.Controls
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(234, 138);
+            this.label7.Location = new System.Drawing.Point(289, 138);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(83, 20);
             this.label7.TabIndex = 10;
@@ -142,6 +144,8 @@ namespace ObjectOrientedPractics.View.Controls
             // 
             // CityTextBox
             // 
+            this.CityTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CityTextBox.Location = new System.Drawing.Point(378, 69);
             this.CityTextBox.Name = "CityTextBox";
             this.CityTextBox.Size = new System.Drawing.Size(155, 27);
@@ -150,7 +154,9 @@ namespace ObjectOrientedPractics.View.Controls
             // 
             // ApartmentTextBox
             // 
-            this.ApartmentTextBox.Location = new System.Drawing.Point(323, 135);
+            this.ApartmentTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ApartmentTextBox.Location = new System.Drawing.Point(378, 135);
             this.ApartmentTextBox.Name = "ApartmentTextBox";
             this.ApartmentTextBox.Size = new System.Drawing.Size(155, 27);
             this.ApartmentTextBox.TabIndex = 12;

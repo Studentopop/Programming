@@ -22,6 +22,21 @@ namespace ObjectOrientedPractics.View.Tabs
         private Item _currentItem;
 
         /// <summary>
+        /// Возвращает и задаёт список товаров.
+        /// </summary>
+        public List<Item> Items
+        {
+            get
+            {
+                return _items;
+            }
+            set
+            {
+                _items = value;
+            }
+        }
+
+        /// <summary>
         /// Создает экземпляр класса <see cref="ItemsTab"/>.
         /// </summary>
         public ItemsTab()

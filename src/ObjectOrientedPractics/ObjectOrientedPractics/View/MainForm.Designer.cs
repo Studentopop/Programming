@@ -29,6 +29,7 @@ namespace ObjectOrientedPractics.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.itemsTab1 = new ObjectOrientedPractics.View.Tabs.ItemsTab();
@@ -47,7 +48,7 @@ namespace ObjectOrientedPractics.View
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(920, 565);
+            this.tabControl1.Size = new System.Drawing.Size(961, 565);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -75,7 +76,7 @@ namespace ObjectOrientedPractics.View
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(912, 532);
+            this.tabPage2.Size = new System.Drawing.Size(953, 532);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Customers";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -85,16 +86,16 @@ namespace ObjectOrientedPractics.View
             this.customersTab1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.customersTab1.Location = new System.Drawing.Point(3, 3);
             this.customersTab1.Name = "customersTab1";
-            this.customersTab1.Size = new System.Drawing.Size(906, 526);
+            this.customersTab1.Size = new System.Drawing.Size(947, 526);
             this.customersTab1.TabIndex = 0;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 565);
+            this.ClientSize = new System.Drawing.Size(961, 565);
             this.Controls.Add(this.tabControl1);
-            this.MinimumSize = new System.Drawing.Size(938, 612);
+            this.MinimumSize = new System.Drawing.Size(979, 612);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.tabControl1.ResumeLayout(false);

@@ -148,11 +148,12 @@ namespace ObjectOrientedPractics.View.Tabs
             address1.Index = 100000;
             address1.Street = "None";
             this.addressControl.Address = address1;
+            this.addressControl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.addressControl.Location = new System.Drawing.Point(4, 110);
             this.addressControl.Name = "addressControl";
             this.addressControl.Size = new System.Drawing.Size(537, 222);
             this.addressControl.TabIndex = 8;
-            this.addressControl.Load += new System.EventHandler(this.addressControl_Load);
             // 
             // FullNameTextBox
             // 
