@@ -27,6 +27,7 @@ namespace ObjectOrientedPractics.View.Tabs
         public ItemsTab()
         {
             InitializeComponent();
+            CategoryComboBox.DataSource = Enum.GetValues(typeof(Category));
         }
 
         /// <summary>
@@ -45,6 +46,8 @@ namespace ObjectOrientedPractics.View.Tabs
             if (indexSelectedItem == -1) return;
 
             ItemsListBox.Items[indexSelectedItem] = ItemDescription(item);
+            CategoryComboBox.Text = item.Category.ToString();
+
         }
 
         /// <summary>
@@ -149,6 +152,23 @@ namespace ObjectOrientedPractics.View.Tabs
             }
 
             UpdateItemInfo(_currentItem);
+        }
+
+
+        private void CategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_currentItem == null)
+                {
+                    return;
+                }
+                _currentItem.Category = (Category)CategoryComboBox.SelectedIndex;
+            }
+            catch (Exception exception)
+            {
+                CategoryComboBox.BackColor = AppColors.ErrorBackColor;
+            }
         }
     }
 }

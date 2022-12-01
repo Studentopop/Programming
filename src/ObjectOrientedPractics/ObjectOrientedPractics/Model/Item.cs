@@ -29,6 +29,11 @@ namespace ObjectOrientedPractics.Model
 		private double _cost;
 
 		/// <summary>
+		/// Возвращает и задаёт категорию товара.
+		/// </summary>
+		public Category Category { get; set; }
+
+		/// <summary>
 		/// Все товары.
 		/// </summary>
 		private static int _allItemsCount;
