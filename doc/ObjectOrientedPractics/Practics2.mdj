@@ -2531,32 +2531,6 @@
 						},
 						{
 							"_type": "UMLNoteView",
-							"_id": "AAAAAAGEzs2KjnuJYv8=",
-							"_parent": {
-								"$ref": "AAAAAAFF+qBtyKM79qY="
-							},
-							"font": "Arial;13;0",
-							"left": 616,
-							"top": 168,
-							"width": 41,
-							"height": 25,
-							"text": "1"
-						},
-						{
-							"_type": "UMLNoteView",
-							"_id": "AAAAAAGEzs2UInvefIQ=",
-							"_parent": {
-								"$ref": "AAAAAAFF+qBtyKM79qY="
-							},
-							"font": "Arial;13;0",
-							"left": 952,
-							"top": 168,
-							"width": 41,
-							"height": 25,
-							"text": "1"
-						},
-						{
-							"_type": "UMLNoteView",
 							"_id": "AAAAAAGEzs3LxYaDlNE=",
 							"_parent": {
 								"$ref": "AAAAAAFF+qBtyKM79qY="
@@ -3335,7 +3309,7 @@
 								"reference": {
 									"$ref": "AAAAAAGEzrV6IPhzwZA="
 								},
-								"aggregation": "composite"
+								"aggregation": "shared"
 							}
 						}
 					],
@@ -3569,7 +3543,7 @@
 								"reference": {
 									"$ref": "AAAAAAGEzrV6IPhzwZA="
 								},
-								"aggregation": "composite"
+								"aggregation": "shared"
 							}
 						}
 					],
@@ -3943,7 +3917,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGEzrbJTvi0M+4="
 									},
-									"name": "get;set"
+									"name": "get;set",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -3970,7 +3945,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGEzrdcZfjK8vA="
 									},
-									"name": "get;set"
+									"name": "get;set",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -4113,7 +4089,8 @@
 									"_parent": {
 										"$ref": "AAAAAAGEzsi1uDt2XvA="
 									},
-									"name": "get;set"
+									"name": "get;set",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -4321,7 +4298,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEzs4rQZvOFUQ="
 							},
-							"name": "Xbox"
+							"name": "Xbox",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4329,7 +4307,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEzs4rQZvOFUQ="
 							},
-							"name": "PlayStation"
+							"name": "PlayStation",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4337,7 +4316,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEzs4rQZvOFUQ="
 							},
-							"name": "Laptop"
+							"name": "Laptop",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4345,7 +4325,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEzs4rQZvOFUQ="
 							},
-							"name": "Television"
+							"name": "Television",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4353,7 +4334,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEzs4rQZvOFUQ="
 							},
-							"name": "Telephone"
+							"name": "Telephone",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4361,7 +4343,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEzs4rQZvOFUQ="
 							},
-							"name": "Headphones"
+							"name": "Headphones",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4369,7 +4352,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEzs4rQZvOFUQ="
 							},
-							"name": "Lamp"
+							"name": "Lamp",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4377,7 +4361,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEzs4rQZvOFUQ="
 							},
-							"name": "Watch"
+							"name": "Watch",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -4385,7 +4370,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGEzs4rQZvOFUQ="
 							},
-							"name": "Alarm"
+							"name": "Alarm",
+							"type": ""
 						}
 					]
 				}
