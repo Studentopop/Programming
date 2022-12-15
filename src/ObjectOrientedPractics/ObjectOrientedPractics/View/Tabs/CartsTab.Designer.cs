@@ -33,7 +33,6 @@ namespace ObjectOrientedPractics.View.Tabs
             this.ClearCartButton = new System.Windows.Forms.Button();
             this.CreateOrderButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
-            this.AmountLabel = new System.Windows.Forms.Label();
             this.CartListBox = new System.Windows.Forms.ListBox();
             this.ItemsListBox = new System.Windows.Forms.ListBox();
             this.CustomerComboBox = new System.Windows.Forms.ComboBox();
@@ -43,7 +42,9 @@ namespace ObjectOrientedPractics.View.Tabs
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.AmountLabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +56,7 @@ namespace ObjectOrientedPractics.View.Tabs
             this.RemoveItemButton.TabIndex = 36;
             this.RemoveItemButton.Text = "Remove Item";
             this.RemoveItemButton.UseVisualStyleBackColor = true;
+            this.RemoveItemButton.Click += new System.EventHandler(this.RemoveItemButton_Click);
             // 
             // ClearCartButton
             // 
@@ -64,6 +66,7 @@ namespace ObjectOrientedPractics.View.Tabs
             this.ClearCartButton.TabIndex = 35;
             this.ClearCartButton.Text = "Clear Cart";
             this.ClearCartButton.UseVisualStyleBackColor = true;
+            this.ClearCartButton.Click += new System.EventHandler(this.ClearCartButton_Click);
             // 
             // CreateOrderButton
             // 
@@ -73,6 +76,7 @@ namespace ObjectOrientedPractics.View.Tabs
             this.CreateOrderButton.TabIndex = 34;
             this.CreateOrderButton.Text = "Create Order";
             this.CreateOrderButton.UseVisualStyleBackColor = true;
+            this.CreateOrderButton.Click += new System.EventHandler(this.CreateOrderButton_Click);
             // 
             // AddButton
             // 
@@ -85,23 +89,13 @@ namespace ObjectOrientedPractics.View.Tabs
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
-            // AmountLabel
-            // 
-            this.AmountLabel.AutoSize = true;
-            this.AmountLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.AmountLabel.Location = new System.Drawing.Point(897, 315);
-            this.AmountLabel.Name = "AmountLabel";
-            this.AmountLabel.Size = new System.Drawing.Size(35, 41);
-            this.AmountLabel.TabIndex = 32;
-            this.AmountLabel.Text = "0";
-            // 
             // CartListBox
             // 
             this.CartListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CartListBox.FormattingEnabled = true;
             this.CartListBox.ItemHeight = 20;
-            this.CartListBox.Location = new System.Drawing.Point(401, 87);
+            this.CartListBox.Location = new System.Drawing.Point(3, 84);
             this.CartListBox.Name = "CartListBox";
             this.CartListBox.Size = new System.Drawing.Size(538, 204);
             this.CartListBox.TabIndex = 31;
@@ -116,6 +110,7 @@ namespace ObjectOrientedPractics.View.Tabs
             this.ItemsListBox.Name = "ItemsListBox";
             this.ItemsListBox.Size = new System.Drawing.Size(385, 404);
             this.ItemsListBox.TabIndex = 30;
+            this.ItemsListBox.SelectedIndexChanged += new System.EventHandler(this.ItemsListBox_SelectedIndexChanged);
             // 
             // CustomerComboBox
             // 
@@ -183,10 +178,22 @@ namespace ObjectOrientedPractics.View.Tabs
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel2.Controls.Add(this.AmountLabel);
+            this.panel2.Controls.Add(this.CartListBox);
             this.panel2.Location = new System.Drawing.Point(398, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(551, 520);
             this.panel2.TabIndex = 38;
+            // 
+            // AmountLabel
+            // 
+            this.AmountLabel.AutoSize = true;
+            this.AmountLabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AmountLabel.Location = new System.Drawing.Point(507, 321);
+            this.AmountLabel.Name = "AmountLabel";
+            this.AmountLabel.Size = new System.Drawing.Size(27, 31);
+            this.AmountLabel.TabIndex = 40;
+            this.AmountLabel.Text = "0";
             // 
             // panel3
             // 
@@ -206,8 +213,6 @@ namespace ObjectOrientedPractics.View.Tabs
             this.Controls.Add(this.RemoveItemButton);
             this.Controls.Add(this.ClearCartButton);
             this.Controls.Add(this.CreateOrderButton);
-            this.Controls.Add(this.AmountLabel);
-            this.Controls.Add(this.CartListBox);
             this.Controls.Add(this.ItemsListBox);
             this.Controls.Add(this.CustomerComboBox);
             this.Controls.Add(this.label4);
@@ -218,7 +223,8 @@ namespace ObjectOrientedPractics.View.Tabs
             this.Controls.Add(this.panel2);
             this.Name = "CartsTab";
             this.Size = new System.Drawing.Size(955, 530);
-            this.Load += new System.EventHandler(this.CartsTab_Load);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -231,7 +237,6 @@ namespace ObjectOrientedPractics.View.Tabs
         private System.Windows.Forms.Button ClearCartButton;
         private System.Windows.Forms.Button CreateOrderButton;
         private System.Windows.Forms.Button AddButton;
-        private System.Windows.Forms.Label AmountLabel;
         private System.Windows.Forms.ListBox CartListBox;
         private System.Windows.Forms.ListBox ItemsListBox;
         private System.Windows.Forms.ComboBox CustomerComboBox;
@@ -242,5 +247,6 @@ namespace ObjectOrientedPractics.View.Tabs
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label AmountLabel;
     }
 }

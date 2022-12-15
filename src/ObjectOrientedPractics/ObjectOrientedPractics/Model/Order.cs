@@ -21,9 +21,14 @@ namespace ObjectOrientedPractics.Model
         private string _creationDate;
 
         /// <summary>
+        /// Общее количество заказов.
+        /// </summary>
+        private static int _allOrdersCount;
+
+        /// <summary>
         /// Адресс доставки.
         /// </summary>
-        private string _address;
+        private Address _address;
 
         /// <summary>
         /// Список товаров.
@@ -33,7 +38,12 @@ namespace ObjectOrientedPractics.Model
         /// <summary>
         /// Общая стоимость товаров.
         /// </summary>
-        private int _amount;
+        private double _amount;
+
+        /// <summary>
+        /// Полное имя покупателя.
+        /// </summary>
+        private string _fullname;
 
         /// <summary>
         /// Возвращает ID товара.
@@ -55,12 +65,16 @@ namespace ObjectOrientedPractics.Model
             {
                 return _creationDate;
             }
+            set
+            {
+                _creationDate = value;
+            }
         }
 
         /// <summary>
         /// Возвращает и задает адресс доставки.
         /// </summary>
-        public string Address
+        public Address Address
         {
             get
             {
@@ -90,7 +104,7 @@ namespace ObjectOrientedPractics.Model
         /// <summary>
         /// Возвращает и задает общую стоимость товаров.
         /// </summary>
-        public int Amount
+        public double Amount
         {
             get
             {
@@ -100,6 +114,53 @@ namespace ObjectOrientedPractics.Model
             {
                 _amount = value;
             }
+        }
+
+        /// <summary>
+        /// Возвращает и задает полное имя покупателя.
+        /// </summary>
+        public string Fullname
+        {
+            get
+            {
+                return _fullname;
+            }
+            set
+            {
+                _fullname = value;
+            }
+        }
+
+        /// <summary>
+        /// Возвращает и задаёт состояние заказа.
+        /// </summary>
+        public OrderStatus OrderStatus { get; set; }
+
+        /// <summary>
+        /// Создает экземпляр класса <see cref="Order"/>.
+        /// </summary>
+        public Order()
+        {
+            _id = _allOrdersCount++;
+        }
+
+        /// <summary>
+        /// Создает экземпляр класса <see cref="Order"/>.
+        /// </summary>
+        /// <param name="creationDate">Дата создания заказа.</param>
+        /// <param name="address">Адрес доставки.</param>
+        /// <param name="items">Список товаров в заказе.</param>
+        /// <param name="amount">Общая стоимость заказа.</param>
+        public Order(string creationDate, Address address,
+            List<Item> items, double amount, string fullname)
+        {
+            CreationDate = creationDate;
+            OrderStatus = OrderStatus.New;
+            Address = address;
+            Items = items;
+            Amount = amount;
+            Fullname = fullname;
+            _id = _allOrdersCount++;
         }
     }
 }
