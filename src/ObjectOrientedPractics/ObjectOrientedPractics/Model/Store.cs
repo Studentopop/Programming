@@ -66,23 +66,13 @@ namespace ObjectOrientedPractics.Model
                 _orders = value;
             }
         }   
-        /// <summary>
-        /// Создаёт экземпляр класса <see cref="Store"/>.
-        /// </summary>
-        /// <param name="items">Товар.</param>
-        /// <param name="customers">Продавец.</param>
-        public Store(List<Item> items, List<Customer> customers)
-        {
-            Items = items;
-            Customers = customers;
-        }
 
         /// <summary>
         /// Создаёт экземпляр класса <see cref="Store"/>.
-        /// </summary>
+        /// </summary>//к
         public Store()
         { 
-            _items = new List<Item>();
+            _items = new List<Item>(); 
             _customers = new List<Customer>();
         }
     }

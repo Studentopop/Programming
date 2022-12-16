@@ -59,7 +59,7 @@ namespace ObjectOrientedPractics.Model
         /// <param name="fullname">Полное имя. Длина строки должна быть 
         ///                        не больше 200 символов.</param>
         /// <param name="address">Адрес. Длина строки должна быть не больше 500 символов.</param>
-        public Customer(string fullname, Address address,Cart cart, List<Order> orders)
+        public Customer(string fullname, Address address, Cart cart, List<Order> orders)
         {
             Fullname = fullname;
             Address = address;

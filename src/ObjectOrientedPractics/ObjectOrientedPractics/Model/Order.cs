@@ -142,17 +142,15 @@ namespace ObjectOrientedPractics.Model
         public Order()
         {
             _id = _allOrdersCount++;
-            Items = new List<Item>();
-            OrderStatus = OrderStatus.New;
         }
-
+          
         /// <summary>
         /// Создает экземпляр класса <see cref="Order"/>.
         /// </summary>
         /// <param name="creationDate">Дата создания заказа.</param>
         /// <param name="address">Адрес доставки.</param>
         /// <param name="items">Список товаров в заказе.</param>
-        /// <param name="amount">Общая стоимость заказа.</param>
+        /// <param name="amount">Общая стоимость заказа.</param> ka
         public Order(string creationDate, Address address,
             List<Item> items, double amount, string fullname)
         {
