@@ -65,7 +65,7 @@ namespace ObjectOrientedPractics.Model
             {
                 _orders = value;
             }
-        }
+        }   
         /// <summary>
         /// Создаёт экземпляр класса <see cref="Store"/>.
         /// </summary>
