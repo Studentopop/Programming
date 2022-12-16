@@ -52,7 +52,7 @@ namespace ObjectOrientedPractics.Model
         {
             get
             {
-                return _id;
+                return _id + 1;
             }
         }
 
@@ -142,6 +142,8 @@ namespace ObjectOrientedPractics.Model
         public Order()
         {
             _id = _allOrdersCount++;
+            Items = new List<Item>();
+            OrderStatus = OrderStatus.New;
         }
 
         /// <summary>

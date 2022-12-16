@@ -12,7 +12,7 @@ namespace ObjectOrientedPractics.View
 {
     public partial class MainForm : Form
     {
-        private Store _store;
+        private Store _store ;
         public MainForm()
         {
             InitializeComponent();
@@ -21,21 +21,7 @@ namespace ObjectOrientedPractics.View
             CustomersTab.Customers = _store.Customers;
             CartsTab.Customers = _store.Customers;
             CartsTab.Items = _store.Items;
-
-        }
-
-        private void tabPage3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void itemsTab1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CartsTab_Load(object sender, EventArgs e)
-        {
+            OrdersTab.Customers = _store.Customers;
 
         }
 
@@ -48,6 +34,12 @@ namespace ObjectOrientedPractics.View
                         CartsTab.Customers = _store.Customers;
                         CartsTab.Items = _store.Items;
                         CartsTab.RefreshData();
+                        break;
+                    }
+                case 3:
+                    {
+                        OrdersTab.Customers = _store.Customers;
+                        OrdersTab.RefreshData();
                         break;
                     }
             }

@@ -18,6 +18,11 @@ namespace ObjectOrientedPractics.Model
         private List<Customer> _customers;
 
         /// <summary>
+        /// Данные о заказах.
+        /// </summary>
+        private List<Order> _orders;
+
+        /// <summary>
         /// Возвращает и задаёт данные о товарах.
         /// </summary>
         public List<Item> Items
@@ -45,6 +50,31 @@ namespace ObjectOrientedPractics.Model
             {
                 _customers = value;
             }
+        }
+
+        /// <summary>
+        /// Возвращает и задаёт данные о заказах.
+        /// </summary>
+        public List<Order> Orders
+        {
+            get
+            {
+                return _orders;
+            }
+            set
+            {
+                _orders = value;
+            }
+        }
+        /// <summary>
+        /// Создаёт экземпляр класса <see cref="Store"/>.
+        /// </summary>
+        /// <param name="items">Товар.</param>
+        /// <param name="customers">Продавец.</param>
+        public Store(List<Item> items, List<Customer> customers)
+        {
+            Items = items;
+            Customers = customers;
         }
 
         /// <summary>

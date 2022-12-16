@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using ObjectOrientedPractics.Services;
 
 namespace ObjectOrientedPractics.Model
@@ -58,13 +59,12 @@ namespace ObjectOrientedPractics.Model
         /// <param name="fullname">Полное имя. Длина строки должна быть 
         ///                        не больше 200 символов.</param>
         /// <param name="address">Адрес. Длина строки должна быть не больше 500 символов.</param>
-        public Customer(string fullname, int Index, string Country, string City, string Street,
-            string Building, string Apartment)
+        public Customer(string fullname, Address address,Cart cart, List<Order> orders)
         {
             Fullname = fullname;
-            Address = new Address(Index, Country, City, Street, Building, Apartment);
-            Cart = new Cart();
-            Orders = new List<Order>();
+            Address = address;
+            Cart = cart;
+            Orders = orders;
             _allCustomersCount++;
             _id = _allCustomersCount;
         }

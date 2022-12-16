@@ -16,6 +16,11 @@ namespace ObjectOrientedPractics.View.Controls
         private Address _address = new Address();
 
         /// <summary>
+        /// Только для чтения.
+        /// </summary>
+        private bool _readOnly;
+
+        /// <summary>
         /// Возращает и задает адрес.
         /// </summary>
         public Address Address
@@ -30,6 +35,33 @@ namespace ObjectOrientedPractics.View.Controls
                 UpdateAddressInfo();
             }
         }
+
+        /// <summary>
+        /// Возвращает и задаёт значение, указывающее, может ли 
+        /// пользователь изменять данные в элементе управления.
+        /// </summary>
+        public bool ReadOnly
+        {
+            get
+            {
+                return _readOnly;
+            }
+            set
+            {
+                _readOnly = value;
+
+                if (value)
+                {
+                    PostIndexTextBox.ReadOnly = true;
+                    CountryTextBox.ReadOnly = true;
+                    CityTextBox.ReadOnly = true;
+                    StreetTextBox.ReadOnly = true;
+                    BuildingTextBox.ReadOnly = true;
+                    ApartmentTextBox.ReadOnly = true;
+                }
+            }
+        }
+
 
         /// <summary>
         /// Создает экземпляр класса <see cref="AddressControl"/>.
