@@ -50,13 +50,15 @@ namespace ObjectOrientedPractics.View.Tabs
             this.OrderItemsListBox = new System.Windows.Forms.ListBox();
             this.label7 = new System.Windows.Forms.Label();
             this.AmountLabel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.OrdersDataGridView)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Location = new System.Drawing.Point(4, 1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 20);
             this.label1.TabIndex = 0;
@@ -65,7 +67,7 @@ namespace ObjectOrientedPractics.View.Tabs
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(371, 0);
+            this.label2.Location = new System.Drawing.Point(9, 1);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 20);
             this.label2.TabIndex = 1;
@@ -83,6 +85,9 @@ namespace ObjectOrientedPractics.View.Tabs
             // OrdersDataGridView
             // 
             this.OrdersDataGridView.AllowUserToAddRows = false;
+            this.OrdersDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.OrdersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.OrdersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdColumn,
@@ -171,26 +176,32 @@ namespace ObjectOrientedPractics.View.Tabs
             // 
             // IdTextBox
             // 
-            this.IdTextBox.Location = new System.Drawing.Point(483, 44);
+            this.IdTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.IdTextBox.Location = new System.Drawing.Point(94, 41);
             this.IdTextBox.Name = "IdTextBox";
-            this.IdTextBox.Size = new System.Drawing.Size(151, 27);
+            this.IdTextBox.Size = new System.Drawing.Size(174, 27);
             this.IdTextBox.TabIndex = 7;
             this.IdTextBox.TextChanged += new System.EventHandler(this.IdTextBox_TextChanged);
             // 
             // CreatedTextBox
             // 
-            this.CreatedTextBox.Location = new System.Drawing.Point(483, 77);
+            this.CreatedTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CreatedTextBox.Location = new System.Drawing.Point(94, 74);
             this.CreatedTextBox.Name = "CreatedTextBox";
-            this.CreatedTextBox.Size = new System.Drawing.Size(151, 27);
+            this.CreatedTextBox.Size = new System.Drawing.Size(174, 27);
             this.CreatedTextBox.TabIndex = 8;
             this.CreatedTextBox.TextChanged += new System.EventHandler(this.CreatedTextBox_TextChanged);
             // 
             // StatusComboBox
             // 
+            this.StatusComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.StatusComboBox.FormattingEnabled = true;
-            this.StatusComboBox.Location = new System.Drawing.Point(483, 111);
+            this.StatusComboBox.Location = new System.Drawing.Point(94, 107);
             this.StatusComboBox.Name = "StatusComboBox";
-            this.StatusComboBox.Size = new System.Drawing.Size(151, 28);
+            this.StatusComboBox.Size = new System.Drawing.Size(174, 28);
             this.StatusComboBox.TabIndex = 9;
             this.StatusComboBox.SelectedIndexChanged += new System.EventHandler(this.StatusComboBox_SelectedIndexChanged);
             // 
@@ -203,7 +214,9 @@ namespace ObjectOrientedPractics.View.Tabs
             address1.Index = 100000;
             address1.Street = "None";
             this.AddressControl.Address = address1;
-            this.AddressControl.Location = new System.Drawing.Point(368, 145);
+            this.AddressControl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddressControl.Location = new System.Drawing.Point(10, 142);
             this.AddressControl.Name = "AddressControl";
             this.AddressControl.ReadOnly = false;
             this.AddressControl.Size = new System.Drawing.Size(480, 163);
@@ -211,17 +224,21 @@ namespace ObjectOrientedPractics.View.Tabs
             // 
             // OrderItemsListBox
             // 
+            this.OrderItemsListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.OrderItemsListBox.FormattingEnabled = true;
             this.OrderItemsListBox.ItemHeight = 20;
-            this.OrderItemsListBox.Location = new System.Drawing.Point(371, 334);
+            this.OrderItemsListBox.Location = new System.Drawing.Point(10, 331);
             this.OrderItemsListBox.Name = "OrderItemsListBox";
-            this.OrderItemsListBox.Size = new System.Drawing.Size(461, 104);
+            this.OrderItemsListBox.Size = new System.Drawing.Size(464, 104);
             this.OrderItemsListBox.TabIndex = 11;
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(767, 441);
+            this.label7.Location = new System.Drawing.Point(405, 438);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(65, 20);
             this.label7.TabIndex = 12;
@@ -230,37 +247,51 @@ namespace ObjectOrientedPractics.View.Tabs
             // 
             // AmountLabel
             // 
+            this.AmountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.AmountLabel.AutoSize = true;
             this.AmountLabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.AmountLabel.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.AmountLabel.Location = new System.Drawing.Point(767, 461);
+            this.AmountLabel.Location = new System.Drawing.Point(405, 458);
             this.AmountLabel.Name = "AmountLabel";
             this.AmountLabel.Size = new System.Drawing.Size(27, 31);
             this.AmountLabel.TabIndex = 13;
             this.AmountLabel.Text = "0";
             this.AmountLabel.Click += new System.EventHandler(this.AmountLabel_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.AmountLabel);
+            this.panel1.Controls.Add(this.CreatedTextBox);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.OrderItemsListBox);
+            this.panel1.Controls.Add(this.IdTextBox);
+            this.panel1.Controls.Add(this.StatusComboBox);
+            this.panel1.Controls.Add(this.AddressControl);
+            this.panel1.Location = new System.Drawing.Point(362, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(509, 499);
+            this.panel1.TabIndex = 14;
+            // 
             // OrdersTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.AmountLabel);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.OrderItemsListBox);
-            this.Controls.Add(this.AddressControl);
-            this.Controls.Add(this.StatusComboBox);
-            this.Controls.Add(this.CreatedTextBox);
-            this.Controls.Add(this.IdTextBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.OrdersDataGridView);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.Name = "OrdersTab";
-            this.Size = new System.Drawing.Size(854, 505);
+            this.Size = new System.Drawing.Size(874, 505);
             ((System.ComponentModel.ISupportInitialize)(this.OrdersDataGridView)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -288,5 +319,6 @@ namespace ObjectOrientedPractics.View.Tabs
         private System.Windows.Forms.DataGridViewTextBoxColumn AddressColumn;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label AmountLabel;
+        private System.Windows.Forms.Panel panel1;
     }
 }

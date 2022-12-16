@@ -134,10 +134,13 @@ namespace ObjectOrientedPractics.View
             // 
             // OrdersTab
             // 
+            this.OrdersTab.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.OrdersTab.Customers = null;
             this.OrdersTab.Location = new System.Drawing.Point(6, 9);
             this.OrdersTab.Name = "OrdersTab";
-            this.OrdersTab.Size = new System.Drawing.Size(1068, 631);
+            this.OrdersTab.Size = new System.Drawing.Size(941, 515);
             this.OrdersTab.TabIndex = 0;
             // 
             // MainForm
