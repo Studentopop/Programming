@@ -110,22 +110,31 @@ namespace ObjectOrientedPractics.View.Tabs
             }
         }
 
-        private void CustomerComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        /// <summary>
+        /// Обновляет лист бокс с корзиной.
+        /// </summary>
+        /// <param name="index"></param>
+        private void UpdateCartListBox(int index)
         {
             CartListBox.Items.Clear();
-            int selectedIndex = CustomerComboBox.SelectedIndex;
-            var items = Customers[selectedIndex].Cart.Items;
 
-            if (items != null)
+            foreach (var item in _currentCustomer.Cart.Items)
             {
-                for (var i = 0; i < items.Count; i++)
-                {
-                    CartListBox.Items.Add(items[i].Name);
-                }
+                CartListBox.Items.Add(item.Name);
             }
 
-            AmountLabel.Text =
-                Customers[selectedIndex].Cart.Amount.ToString();
+            CartListBox.SelectedIndex = index;
+            AmountLabel.Text = _currentCustomer.Cart.AmountToString();
+        }
+
+        private void CustomerComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CustomerComboBox.SelectedIndex == -1)
+                return;
+
+            _currentCustomer = Customers[CustomerComboBox.SelectedIndex];
+
+            UpdateCartListBox(-1);
         }
 
         private void AddButton_Click(object sender, EventArgs e) //10

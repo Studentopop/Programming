@@ -45,5 +45,18 @@ namespace ObjectOrientedPractics.Model
                 return sum;
             }
         }
+
+        /// <summary>
+        /// Создает экземпляр объекта <see cref="Cart"/>.
+        /// </summary>
+        public Cart()
+        {
+            Items = new List<Item>();
+        }
+
+        public string AmountToString()
+        {
+            return $"{Amount}";
+        }
     }
 }

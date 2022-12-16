@@ -189,7 +189,7 @@ namespace ObjectOrientedPractics.View.Tabs
             // 
             this.AmountLabel.AutoSize = true;
             this.AmountLabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.AmountLabel.Location = new System.Drawing.Point(507, 321);
+            this.AmountLabel.Location = new System.Drawing.Point(463, 311);
             this.AmountLabel.Name = "AmountLabel";
             this.AmountLabel.Size = new System.Drawing.Size(27, 31);
             this.AmountLabel.TabIndex = 40;

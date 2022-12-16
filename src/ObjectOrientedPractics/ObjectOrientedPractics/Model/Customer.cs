@@ -48,6 +48,8 @@ namespace ObjectOrientedPractics.Model
             _id = _allCustomersCount;
             Fullname = "Name";
             Address = new Address();
+            Cart = new Cart();
+            Orders = new List<Order>();
         }
 
         /// <summary>
