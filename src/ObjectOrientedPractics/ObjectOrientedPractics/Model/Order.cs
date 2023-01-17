@@ -11,6 +11,16 @@ namespace ObjectOrientedPractics.Model
     public class Order
     {
         /// <summary>
+        /// Уникальный идентификатор для всех объектов данного класса.
+        /// </summary>
+        private readonly int _ordersId;
+
+        /// <summary>
+        /// Дата создания заказа.
+        /// </summary>
+        private readonly string _dateOfCreate;
+
+        /// <summary>
         /// Уникальный ID товара.
         /// </summary>
         private int _id;
@@ -41,10 +51,42 @@ namespace ObjectOrientedPractics.Model
         private double _amount;
 
         /// <summary>
+        /// Возвращает дату создания заказа.
+        /// </summary>
+        public string DateOfCreate
+        {
+            get
+            {
+                return _dateOfCreate;
+            }
+        }
+
+        /// <summary>
+        /// Возвращает и задает статус заказа.
+        /// </summary>
+        public OrderStatus Status { get; set; }
+
+        /// <summary>
+        /// Возвращает уникальный идентификатор заказа.
+        /// </summary>
+        public int OrdersId
+        {
+            get
+            {
+                return _ordersId;
+            }
+        }
+
+        /// <summary>
         /// Полное имя покупателя.
         /// </summary>
         private string _fullname;
         private OrderStatus status;
+
+        /// <summary>
+        /// Адрес доставки.
+        /// </summary>
+        private Address _deliveryAddress;
 
         /// <summary>
         /// Возвращает ID товара.
@@ -129,6 +171,21 @@ namespace ObjectOrientedPractics.Model
             set
             {
                 _fullname = value;
+            }
+        }
+
+        /// <summary>
+        /// Возвращает и задает адрес доставки заказа.
+        /// </summary>
+        public Address DeliveryAddress
+        {
+            get
+            {
+                return _deliveryAddress;
+            }
+            set
+            {
+                _deliveryAddress = value;
             }
         }
 
