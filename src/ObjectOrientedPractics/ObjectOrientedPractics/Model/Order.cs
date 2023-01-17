@@ -44,6 +44,7 @@ namespace ObjectOrientedPractics.Model
         /// Полное имя покупателя.
         /// </summary>
         private string _fullname;
+        private OrderStatus status;
 
         /// <summary>
         /// Возвращает ID товара.
@@ -161,6 +162,13 @@ namespace ObjectOrientedPractics.Model
             Amount = amount;
             Fullname = fullname;
             _id = _allOrdersCount++;
+        }
+
+        public Order(OrderStatus status, Address address, List<Item> items)
+        {
+            this.status = status;
+            Address = address;
+            Items = items;
         }
     }
 }

@@ -69,7 +69,7 @@ namespace ObjectOrientedPractics.Model
 
         /// <summary>
         /// Создаёт экземпляр класса <see cref="Store"/>.
-        /// </summary>//к
+        /// </summary>//
         public Store()
         { 
             _items = new List<Item>(); 
