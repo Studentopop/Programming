@@ -96,7 +96,6 @@ namespace ObjectOrientedPractics.Model.Discounts
                 CurrentPercentDiscount = 10;
             }
         }
-
     }
 }
 

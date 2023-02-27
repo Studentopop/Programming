@@ -57,7 +57,6 @@ namespace ObjectOrientedPractics.Model
                     _amount += item.Cost;
                 }
                 return _amount;
-
             }
         }
     }
