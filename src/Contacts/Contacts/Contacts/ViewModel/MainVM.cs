@@ -140,10 +140,10 @@ namespace Contacts.ViewModel
         /// <summary>
         /// Зажигает событие.
         /// </summary>
-        /// <param name="prop">Название свойства, для которого зажигается событие.</param>
-        public void OnPropertyChanged([CallerMemberName] string prop = "")
+        /// <param name="property">Название свойства, для которого зажигается событие.</param>
+        public void OnPropertyChanged([CallerMemberName] string property = "")
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(prop));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
         }
     }
 }
