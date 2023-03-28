@@ -40,7 +40,6 @@ namespace Contacts.Model
         /// <param name="name">Имя.</param>
         /// <param name="phoneNumber">Номер телефона.</param>
         /// <param name="email">Почта.</param>
-        [JsonConstructor]
         public Contact(string name, string phoneNumber, string email)
         {
             Name = name;

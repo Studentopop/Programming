@@ -7,7 +7,9 @@ using System.Windows.Input;
 
 namespace Contacts.ViewModel
 {
-    /// <inheritdoc/>
+    /// <summary>
+    /// Предоставляет реализацию интерфейса <see cref="ICommand"/> 
+    /// </summary>
     public class RelayCommand : ICommand
     {
         /// <summary>
@@ -16,30 +18,24 @@ namespace Contacts.ViewModel
         private Action<object> _execute;
 
         /// <summary>
-        /// Делегат, выполняющий проверку
-        /// может ли команда выполнится в текущий момент.
+        /// Делегат, выполняющий проверку может ли команда выполнится в текущий момент.
         /// </summary>
         private Func<object, bool> _canExecute;
 
-        /// <inheritdoc/>
+        /// <summary>
+        /// Событие, предоставляющее информацию о возможности вызове команды.
+        /// </summary>
         public event EventHandler CanExecuteChanged
         {
-            add
-            {
-                CommandManager.RequerySuggested += value;
-            }
-            remove
-            {
-                CommandManager.RequerySuggested -= value;
-            }
+            add {CommandManager.RequerySuggested += value;}   
+            remove {CommandManager.RequerySuggested -= value;}
         }
 
         /// <summary>
         /// Создает экземпляр класса <see cref="RelayCommand"/>.
         /// </summary>
         /// <param name="execute">Команда на выполнение.</param>
-        /// <param name="canExecute">Делегат проверки
-        /// возможности выполнения команды.</param>
+        /// <param name="canExecute">Делегат проверки возможности выполнения команды.</param>
         public RelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
         {
             this._execute = execute;

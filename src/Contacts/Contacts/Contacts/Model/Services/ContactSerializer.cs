@@ -27,7 +27,7 @@ namespace Contacts.Model.Services
 
         /// <summary>
         /// Проверяет, существует ли папка, указанная в свойстве Filename.
-        /// И, если папка не существует, то создает папку.
+        /// Если папка не существует, то создает папку.
         /// </summary>
         public static void CreateDirectory()
         {
@@ -41,8 +41,8 @@ namespace Contacts.Model.Services
         /// Сохраняет данные о товарах в файл.
         /// </summary>
         /// <param name="contact">Данные о контакте, которые нужно сохранить.</param>
-        /// <exception cref="Exception">Возникает, 
-        /// если произошла ошибка при сохранении.</exception>
+        /// <exception cref="Exception">Возникает, если произошла ошибка при сохранении.
+        /// </exception>
         public static void SaveToFile(Contact contact)
         {
             try
