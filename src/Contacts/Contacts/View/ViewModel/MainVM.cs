@@ -10,7 +10,7 @@ namespace View.ViewModel
     /// <summary>
     /// ViewModel для главного окна.
     /// </summary>
-    public class MainVM: ObservableObject
+    public class MainVM : ObservableObject
     {
         /// <summary>
         /// Поле, хранящее значение для свойства окна ReadOnly.
@@ -110,7 +110,7 @@ namespace View.ViewModel
         public ICommand ApplyCommand { get; }
 
         /// <summary>
-        /// Возвращает и задает значение доступностик кнопки редактирования.
+        /// Возвращает и задает значение доступа кнопки редактирования.
         /// </summary>
         public bool IsEdit
         {
@@ -125,7 +125,7 @@ namespace View.ViewModel
         }
 
         /// <summary>
-        /// Возвращает и задает значение доступности редактирования текстовых полей.
+        /// Возвращает и задает значение доступа редактирования текстовых полей.
         /// </summary>
         public bool IsReadOnly
         {
@@ -144,8 +144,8 @@ namespace View.ViewModel
         /// </summary>
         private void AddContact()
         {
-            CurrentContact = null;
             CurrentContact = new ContactVM(new Contact());
+            CurrentContact = null;
             IsReadOnly = false;
             IsEdit = false;
         }

@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using View.Model;
-using System.Windows.Input;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace View.ViewModel
