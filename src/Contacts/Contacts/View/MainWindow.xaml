@@ -82,7 +82,7 @@
                        Height="100" 
                        Margin="3"
                        VerticalAlignment="Top" 
-                       Source="Resources/user.png"/>
+                       Source="/user.png"/>
             <TextBlock Grid.Row="0" Grid.Column="1" Margin="3" Text="Name:"/>
             <StackPanel Grid.Row="1" Grid.Column="1">
                 <TextBox Margin="3" 

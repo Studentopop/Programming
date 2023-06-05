@@ -144,8 +144,9 @@ namespace View.ViewModel
         /// </summary>
         private void AddContact()
         {
-            CurrentContact = null;
-            CurrentContact = new ContactVM(new Contact());
+            var newContact = new ContactVM(new Contact());
+            Contacts.Add(newContact);
+            CurrentContact = newContact;
             IsReadOnly = false;
             IsEdit = false;
         }
