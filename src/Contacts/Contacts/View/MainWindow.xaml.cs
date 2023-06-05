@@ -16,5 +16,10 @@ namespace View
             MainVM vm = new MainVM();
             DataContext = vm;
         }
+
+        private void ListBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

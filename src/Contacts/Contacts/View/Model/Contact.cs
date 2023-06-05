@@ -49,5 +49,7 @@ namespace View.Model
         {
             return new Contact(Name, Email, Phone);
         }
+
+
     }
 }

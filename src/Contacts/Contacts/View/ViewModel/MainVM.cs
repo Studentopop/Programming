@@ -4,6 +4,8 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using View.Model;
 using View.Model.Services;
+using System.ComponentModel.DataAnnotations;
+
 
 namespace View.ViewModel
 {
