@@ -114,7 +114,6 @@
                     Content="Apply"
                     Command="{Binding ApplyCommand}" 
                     Visibility="{Binding IsReadOnly, Converter={StaticResource VisibilityConverter}}"/>
-
             </StackPanel>
         </Grid>
     </Grid>
