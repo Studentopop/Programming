@@ -21,5 +21,10 @@ namespace View
         {
 
         }
+
+        private void ContactControl_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

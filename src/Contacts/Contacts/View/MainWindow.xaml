@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:i="http://schemas.microsoft.com/xaml/behaviors" 
         xmlns:viewmodel="clr-namespace:View.ViewModel" 
-        xmlns:services="clr-namespace:View.Model.Services" xmlns:controls="clr-namespace:View.Controls"
+        xmlns:services="clr-namespace:View.Model.Services" 
+        xmlns:controls="clr-namespace:View.Controls"
+        xmlns:local="clr-namespace:View.ViewModel" 
         d:DataContext="{d:DesignInstance Type=viewmodel:MainVM}"
         mc:Ignorable="d"
         Title="Contacts" 
@@ -13,7 +15,6 @@
         Width="700px"
         MinHeight="600px"
         MinWidth="700px">
-
     <Window.Resources>
         <ResourceDictionary>
             <services:VisibilityConverter x:Key="VisibilityConverter"/>
@@ -104,15 +105,16 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="1" Grid.Column="1">
-                <controls:ContactControl SelectedContact="{Binding SelectedContact}" Validation.ErrorTemplate="{x:Null}" />
+                <controls:ContactControl SelectedContact="{Binding SelectedContact}" Validation.ErrorTemplate="{x:Null}" IsEnabled="{Binding IsApplyEnabled}" Loaded="ContactControl_Loaded" />
 
                 <Button Width="75" 
-                        Height="25" 
-                        Margin="117,3,3,0" 
-                        HorizontalAlignment="Left" 
-                        Content="Apply"
-                        Command="{Binding ApplyCommand}" 
-                        Visibility="{Binding IsReadOnly, Converter={StaticResource VisibilityConverter}}"/>
+                    Height="25" 
+                    Margin="117,3,3,0" 
+                    HorizontalAlignment="Left" 
+                    Content="Apply"
+                    Command="{Binding ApplyCommand}" 
+                    Visibility="{Binding IsReadOnly, Converter={StaticResource VisibilityConverter}}"/>
+
             </StackPanel>
         </Grid>
     </Grid>
