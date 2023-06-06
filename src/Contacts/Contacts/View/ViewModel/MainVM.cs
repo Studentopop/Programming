@@ -207,5 +207,9 @@ namespace View.ViewModel
         {
             _serializer.Save(Contacts);
         }
+
+        private object selectedContact;
+
+        public object SelectedContact { get => selectedContact; set => SetProperty(ref selectedContact, value); }
     }
 }
