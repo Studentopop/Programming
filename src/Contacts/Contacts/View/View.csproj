@@ -7,9 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="photo_placeholder_100x100.png" />
     <None Remove="Resources\user.png" />
-    <None Remove="user.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -18,9 +16,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="photo_placeholder_100x100.png" />
+    <ProjectReference Include="..\ViewModel\ViewModel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Resources\user.png" />
-    <Resource Include="user.png" />
   </ItemGroup>
 
 </Project>
