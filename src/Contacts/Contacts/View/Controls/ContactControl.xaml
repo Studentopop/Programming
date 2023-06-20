@@ -12,12 +12,15 @@
         <ResourceDictionary>
             <Color x:Key="WhiteBackgroundColor">#ffffff</Color>
             <Color x:Key="HasErrorBackgroundColor">#ffdddd</Color>
-            <SolidColorBrush x:Key="HasErrorBackgroundColorBrush" Color="{StaticResource HasErrorBackgroundColor}" />
+            <SolidColorBrush x:Key="HasErrorBackgroundColorBrush"
+                             Color="{StaticResource HasErrorBackgroundColor}" />
             <Style x:Key="ValidationStyleTextBox" TargetType="TextBox">
                 <Style.Triggers>
                     <Trigger Property="Validation.HasError" Value="True">
-                        <Setter Property="ToolTip" Value="{Binding RelativeSource={RelativeSource Self}, Path=(Validation.Errors)/ErrorContent}" />
-                        <Setter Property="Background" Value="{StaticResource HasErrorBackgroundColorBrush}" />
+                        <Setter Property="ToolTip" Value="{Binding RelativeSource={RelativeSource Self},
+                            Path=(Validation.Errors)/ErrorContent}" />
+                        <Setter Property="Background"
+                                Value="{StaticResource HasErrorBackgroundColorBrush}" />
                     </Trigger>
                 </Style.Triggers>
             </Style>
@@ -39,7 +42,7 @@
                    Height="100" 
                    Margin="3"
                    VerticalAlignment="Top" 
-                   Source="/user.png"/>
+                   Source="../Resources/user.png"/>
             <TextBlock Grid.Row="0" Grid.Column="1" Margin="3" Text="Name:"/>
             <StackPanel Grid.Row="1" Grid.Column="1">
                 <TextBox 
