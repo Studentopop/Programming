@@ -46,9 +46,11 @@
 
             <TextBlock Margin="3" Text="Phone Number:"/>
 
-            <TextBox Margin="3"
-         IsReadOnly="{Binding Path=IsReadOnly, UpdateSourceTrigger=PropertyChanged}"
-         Text="{Binding Path=CurrentContact.Phone, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}">
+            <TextBox Margin="3" 
+                     PreviewTextInput="TextBox_PreviewTextInput"
+                     DataObject.Pasting="TextBox_Pasting"
+                     IsReadOnly="{Binding Path=IsReadOnly, UpdateSourceTrigger=PropertyChanged}"
+                     Text="{Binding Path=CurrentContact.Phone, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}">
                 <TextBox.Style>
                     <Style TargetType="TextBox">
                         <Style.Triggers>

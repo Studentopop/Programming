@@ -29,7 +29,29 @@ namespace View.Controls
         public static readonly DependencyProperty SelectedContactProperty =
             DependencyProperty.Register("SelectedContact", typeof(object),
                 typeof(ContactControl), new PropertyMetadata(null));
+        private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            foreach (char c in e.Text)
+            {
+                if (!char.IsDigit(c) && c != '+' && c != '-' && !char.IsWhiteSpace(c))
+                {
+                    e.Handled = true;
+                    break;
+                }
+            }
+        }
 
+        private void TextBox_Pasting(object sender, DataObjectPastingEventArgs e)
+        {
+            string clipboardText = e.DataObject.GetData(DataFormats.Text) as string;
+            if (!string.IsNullOrEmpty(clipboardText))
+            {
+                if (clipboardText.Any(c => !char.IsDigit(c) && c != '+' && c != '-' && !char.IsWhiteSpace(c)))
+                {
+                    e.CancelCommand();
+                }
+            }
+        }
         public ContactControl()
         {
             InitializeComponent();
