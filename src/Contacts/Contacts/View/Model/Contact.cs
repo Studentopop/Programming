@@ -4,7 +4,7 @@ using System.Text;
 
 namespace View.Model
 {
-    public class Contact
+    public class Contact : ICloneable
     {
         /// <summary>
         /// Создаёт экземпляр класса <see cref="Contact"/>.

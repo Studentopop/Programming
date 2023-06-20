@@ -1,45 +1,40 @@
 ﻿using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Model.Services;
 using View.Model;
-using View.Model.Services;
-using System.ComponentModel.DataAnnotations;
-
 
 namespace View.ViewModel
 {
+
     /// <summary>
-    /// ViewModel для главного окна.
+    /// ViewModel для окна MainWindow.
     /// </summary>
-    public class MainVM: ObservableObject
+    public class MainVM : ObservableObject
     {
         /// <summary>
-        /// Поле, хранящее значение для свойства окна ReadOnly.
-        /// </summary>
-        private bool _isReadOnly;
-
-        /// <summary>
-        /// Поле, отвечающее за состояние кнопки Edit.
+        /// Хранит булевое значение доступности кнопки редактирования.
         /// </summary>
         private bool _isEdit;
 
         /// <summary>
+        /// Хранит булевое значение доступности редактирования текстовых полей.
+        /// </summary>
+        private bool _isReadOnly;
+
+        /// <summary>
         /// Текущий контакт.
         /// </summary>
-        private ContactVM _currentContact;
+        private ContactVM _selectedContact;
 
         /// <summary>
-        /// Сериализатор.
-        /// </summary>
-        private ContactSerializer _serializer = new ContactSerializer();
-
-        /// <summary>
-        /// Создает экземпляр класса <see cref="MainVM"/>.
+        /// Создаёт экземпляр класса <see cref="MainVM"/>.
         /// </summary>
         public MainVM()
         {
-            Contacts = _serializer.Load();
+            Contacts = new ObservableCollection<ContactVM>(ContactSerializer.Deserialize().Select(c => new ContactVM(c)));
             AddCommand = new RelayCommand(AddContact);
             EditCommand = new RelayCommand(EditContact);
             RemoveCommand = new RelayCommand(RemoveContact);
@@ -47,42 +42,38 @@ namespace View.ViewModel
             IsReadOnly = true;
             IsEdit = false;
         }
-        
+
+        /// <summary>
+        /// Возвращает и задаёт коллекцию контактов.
+        /// </summary>
+        public ObservableCollection<ContactVM> Contacts { get; set; }
+
         /// <summary>
         /// Возвращает и задает исходную версию редактируемого контакта.
         /// </summary>
         public ContactVM ContactClone { get; set; }
 
         /// <summary>
-        /// Возвращает и задает коллекцию контактов.
-        /// </summary>
-        public ObservableCollection<ContactVM> Contacts { get; set; }
-
-        /// <summary>
-        /// Возвращает и задает индекс текущего контакта.
-        /// </summary>
-        public int CurrentIndex { get; set; }
-
-        /// <summary>
         /// Возвращает и задает выбранный контакт.
         /// </summary>
-        public ContactVM CurrentContact
+        public ContactVM SelectedContact
         {
-            get
-            {
-                return _currentContact;
-            }
+            get => _selectedContact;
             set
             {
-                if (ContactClone != null && Contacts.IndexOf(CurrentContact) != -1)
+                if (ContactClone != null && Contacts.IndexOf(SelectedContact) != -1)
                 {
-                    Contacts[Contacts.IndexOf(CurrentContact)] = ContactClone;
+                    Contacts[Contacts.IndexOf(SelectedContact)] = ContactClone;
                     ContactClone = null;
                 }
 
-                _currentContact = value;
-                
-                if (CurrentContact != null)
+                _selectedContact = value;
+
+                if (SelectedContact == null)
+                {
+                    IsReadOnly = true;
+                }
+                else
                 {
                     IsEdit = true;
                 }
@@ -112,77 +103,77 @@ namespace View.ViewModel
         public ICommand ApplyCommand { get; }
 
         /// <summary>
-        /// Возвращает и задает значение доступностик кнопки редактирования.
-        /// </summary>
-        public bool IsEdit
-        {
-            get
-            {
-                return _isEdit;
-            }
-            set
-            {
-                SetProperty(ref _isEdit, value);
-            }
-        }
-
-        /// <summary>
-        /// Возвращает и задает значение доступности редактирования текстовых полей.
+        /// Возвращает и задаёт значение доступности редактирования текстовых полей.
         /// </summary>
         public bool IsReadOnly
         {
-            get
-            {
-                return _isReadOnly;
-            }
-            set
-            {
-                SetProperty(ref _isReadOnly, value);
-            }
+            get => _isReadOnly;
+            set => SetProperty(ref _isReadOnly, value);
         }
 
         /// <summary>
-        /// Добавляет контакт.
+        /// Возвращает и задаёт значение доступности кнопки редактирования.
+        /// </summary>
+        public bool IsEdit
+        {
+            get => _isEdit;
+            set => SetProperty(ref _isEdit, value);
+        }
+
+        /// <summary>
+        /// Вызывает редактирование нового экземпляра класса <see cref="ContactVM"/>.
         /// </summary>
         private void AddContact()
         {
-            var newContact = new ContactVM(new Contact());
-            Contacts.Add(newContact);
-            CurrentContact = newContact;
+            SelectedContact = null;
+            SelectedContact = new ContactVM(new Contact());
             IsReadOnly = false;
             IsEdit = false;
         }
 
         /// <summary>
-        /// Изменяет контакт.
+        /// Вызывает редактирование выбранного контакта.
         /// </summary>
         private void EditContact()
         {
-            ContactClone = (ContactVM)CurrentContact.Clone();
-
+            ContactClone = (ContactVM)SelectedContact.Clone();
             IsReadOnly = false;
             IsEdit = false;
         }
 
         /// <summary>
-        /// Удаляет контакт.
+        /// Удаляет выбранный контакт.
         /// </summary>
         private void RemoveContact()
         {
-            if (Contacts.Count == 1)
+            if (SelectedContact == null)
             {
-                Contacts.Remove(CurrentContact);
+                return;
             }
-            else if (CurrentIndex < Contacts.Count - 1)
+
+            int index = Contacts.IndexOf(SelectedContact);
+            Contacts.RemoveAt(index);
+
+            if (Contacts.Count == 0)
             {
-                Contacts.Remove(CurrentContact);
-                CurrentContact = Contacts[CurrentIndex];
+                SelectedContact = null;
+            }
+            else if (index == Contacts.Count)
+            {
+                SelectedContact = Contacts[index - 1];
             }
             else
             {
-                Contacts.Remove(CurrentContact);
-                CurrentContact = Contacts[CurrentIndex - 1];
+                SelectedContact = Contacts[index];
             }
+
+            ContactSerializer.Serialize(new ObservableCollection<Contact>(
+                Contacts.Select(c => new Contact
+                {
+                    Name = c.Name,
+                    Phone = c.Phone,
+                    Email = c.Email
+                })));
         }
 
         /// <summary>
@@ -190,26 +181,20 @@ namespace View.ViewModel
         /// </summary>
         private void ApplyChangesContact()
         {
-            if (!Contacts.Contains(CurrentContact))
+            if (!Contacts.Contains(SelectedContact))
             {
-                Contacts.Add(CurrentContact);
+                Contacts.Add(SelectedContact);
             }
             ContactClone = null;
             IsEdit = true;
             IsReadOnly = true;
-            _serializer.Save(Contacts);
+            ContactSerializer.Serialize(new ObservableCollection<Contact>(
+                Contacts.Select(c => new Contact
+                {
+                    Name = c.Name,
+                    Phone = c.Phone,
+                    Email = c.Email
+                })));
         }
-
-        /// <summary>
-        /// Сохраняет список контактов.
-        /// </summary>
-        public void SaveContacts()
-        {
-            _serializer.Save(Contacts);
-        }
-
-        private object selectedContact;
-
-        public object SelectedContact { get => selectedContact; set => SetProperty(ref selectedContact, value); }
     }
 }

@@ -1,24 +1,23 @@
-﻿<Window x:Class="View.MainWindow"
+﻿<Window 
+        x:Class="View.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:i="http://schemas.microsoft.com/xaml/behaviors" 
-        xmlns:viewmodel="clr-namespace:View.ViewModel" 
-        xmlns:services="clr-namespace:View.Model.Services" 
-        xmlns:controls="clr-namespace:View.Controls"
-        xmlns:local="clr-namespace:View.ViewModel" 
-        d:DataContext="{d:DesignInstance Type=viewmodel:MainVM}"
+        xmlns:services="clr-namespace:View.Converters" 
+        xmlns:controls="clr-namespace:View.Controls" 
         mc:Ignorable="d"
         Title="Contacts" 
-        Height="600px"
+        Height="650px"
         Width="700px"
-        MinHeight="600px"
+        MinHeight="650px"
         MinWidth="700px">
     <Window.Resources>
         <ResourceDictionary>
             <services:VisibilityConverter x:Key="VisibilityConverter"/>
-            <DataTemplate x:Key="contactTemplate">
+            <services:InverseVisibilityConverter x:Key="InverseVisibilityConverter"/>
+            <DataTemplate x:Key="ContactTemplate">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
@@ -27,31 +26,47 @@
                     <Image 
                         Width="48"
                         Height="48"
-                        Source="/Resources/user.png" />
-
+                        Source="user.png"/>
                     <StackPanel Grid.Column="1" Orientation="Vertical" Margin="3">
                         <TextBlock
                             FontSize="14"
-                            Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"/>
+                            FontWeight="SemiBold" 
+                            Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"
+                            Validation.ErrorTemplate="{x:Null}"/>
                         <TextBlock
                             FontSize="12" 
-                            Text="{Binding Phone, UpdateSourceTrigger=PropertyChanged}"/>
+                            Text="{Binding Phone, UpdateSourceTrigger=PropertyChanged}"
+                            Validation.ErrorTemplate="{x:Null}"/>
                     </StackPanel>
                 </Grid>
             </DataTemplate>
+            <Color x:Key="WhiteBackgroundColor">#ffffff</Color>
+            <Color x:Key="HasErrorBackgroundColor">#ffdddd</Color>
+            <Style x:Key="ValidationStyleTextBox" TargetType="TextBox">
+                <Style.Triggers>
+                    <Trigger Property="Validation.HasError" Value="True">
+                        <Setter Property="ToolTip" Value="{Binding RelativeSource={RelativeSource Self}, 
+                            Path=(Validation.Errors)[0].ErrorContent}" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.3*"/>
             <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.7*"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0" Background="#F8F8F8">
             <DockPanel Grid.Column="0" Margin="8" LastChildFill="True">
                 <DockPanel DockPanel.Dock="Top" LastChildFill="True">
-                    <TextBlock Margin="3" VerticalAlignment="Center" DockPanel.Dock="Left" Text="Find:"/>
-                    <TextBox Width="Auto" Margin="3"/>
+                    <TextBlock 
+                            Margin="3" 
+                            VerticalAlignment="Center" 
+                            DockPanel.Dock="Left" 
+                            Text="Find:"/>
+                    <TextBox Width="Auto" Margin="0 3 0 3"/>
                 </DockPanel>
                 <DockPanel LastChildFill="True">
                     <Grid DockPanel.Dock="Bottom">
@@ -61,60 +76,51 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <Button Grid.Column="0" 
-                                Height="25" 
-                                Margin="3" 
-                                Command="{Binding AddCommand}" 
-                                Content="Add" 
-                                IsEnabled="{Binding IsReadOnly}"/>
+                                    Height="25" 
+                                    Margin="0 3 3 3" 
+                                    Command="{Binding AddCommand}" 
+                                    Content="Add" 
+                                    IsEnabled="{Binding IsReadOnly}"/>
                         <Button Grid.Column="1" 
-                                Height="25" 
-                                Margin="3" 
-                                Command="{Binding EditCommand}" 
-                                Content="Edit" 
-                                IsEnabled="{Binding IsEdit}"/>
+                                    Height="25" 
+                                    Margin="3 3 3 3" 
+                                    Command="{Binding EditCommand}" 
+                                    Content="Edit" 
+                                    IsEnabled="{Binding IsEdit}"/>
                         <Button Grid.Column="2" 
-                                Height="25" 
-                                Margin="3" 
-                                Command="{Binding RemoveCommand}" 
-                                Content="Remove" 
-                                IsEnabled="{Binding IsEdit}"/>
+                                    Height="25" 
+                                    Margin="3 3 0 3" 
+                                    Command="{Binding RemoveCommand}" 
+                                    Content="Remove" 
+                                    IsEnabled="{Binding IsEdit}"/>
                     </Grid>
-                    <ListBox ItemTemplate="{StaticResource contactTemplate}"
-                    Margin="3" 
-                         DockPanel.Dock="Top" 
+                    <ListBox
+                         ItemTemplate="{StaticResource ContactTemplate}"
                          ItemsSource="{Binding Contacts}"
-                         SelectedItem="{Binding CurrentContact}"
-                         SelectionChanged="ListBox_SelectionChanged">
-                    </ListBox>
+                         SelectedItem="{Binding SelectedContact, UpdateSourceTrigger=PropertyChanged}"
+                         Validation.ErrorTemplate="{x:Null}"/>
                 </DockPanel>
             </DockPanel>
         </Grid>
-        <GridSplitter 
-            Grid.Column="1" 
-            Width="3" 
-            HorizontalAlignment="Center" 
-            ShowsPreview="False" 
-            Background="#FFFF"/>
-        <Grid Grid.Column="2" Margin="8" Background="#FFFF">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <StackPanel Grid.Row="1" Grid.Column="1">
-                <controls:ContactControl SelectedContact="{Binding SelectedContact}" Validation.ErrorTemplate="{x:Null}" IsEnabled="{Binding IsApplyEnabled}" Loaded="ContactControl_Loaded" />
-
-                <Button Width="75" 
+        <GridSplitter
+                Grid.Column="1"
+                Width="3px"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Stretch" />
+        <StackPanel
+                Grid.Column="2"
+                Margin="3"
+                Orientation="Vertical">
+            <controls:ContactControl SelectedContact="{Binding SelectedContact}" Validation.ErrorTemplate="{x:Null}" />
+            <Button 
+                    Width="75" 
                     Height="25" 
-                    Margin="117,3,3,0" 
+                    Margin="109 10 3 3" 
                     HorizontalAlignment="Left" 
                     Content="Apply"
                     Command="{Binding ApplyCommand}" 
-                    Visibility="{Binding IsReadOnly, Converter={StaticResource VisibilityConverter}}"/>
-            </StackPanel>
-        </Grid>
+                    Visibility="{Binding IsReadOnly, Converter={StaticResource VisibilityConverter}}"
+                    IsEnabled="{Binding SelectedContact.HasErrors, Converter={StaticResource InverseVisibilityConverter}}"/>
+        </StackPanel>
     </Grid>
 </Window>
