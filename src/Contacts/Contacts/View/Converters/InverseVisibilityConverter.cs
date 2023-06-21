@@ -18,9 +18,11 @@ namespace View.Converters
         /// <param name="parameter">Параметр.</param>
         /// <param name="culture">Региональная культура</param>
         /// <returns>Значение видимости элемента.</returns>
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        public object Convert(object value, Type targetType, 
+            object parameter, CultureInfo culture)
         {
-            return value is bool boolValue ? !boolValue : throw new ArgumentException("Value must be bool.");
+            return value is bool boolValue ? !boolValue :
+                throw new ArgumentException("Value must be bool.");
         }
 
         /// <summary>
@@ -31,9 +33,11 @@ namespace View.Converters
         /// <param name="parameter">Параметр.</param>
         /// <param name="culture">Региональная культура</param>
         /// <returns>Булевое значение.</returns>
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        public object ConvertBack(object value, Type targetType,
+            object parameter, CultureInfo culture)
         {
-            return value is bool boolValue ? !boolValue : throw new ArgumentException("Value must be bool.");
+            return value is bool boolValue ? !boolValue : 
+                throw new ArgumentException("Value must be bool.");
         }
     }
 }

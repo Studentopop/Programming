@@ -113,7 +113,8 @@
                 Grid.Column="2"
                 Margin="3"
                 Orientation="Vertical">
-            <controls:ContactControl SelectedContact="{Binding SelectedContact}" Validation.ErrorTemplate="{x:Null}" />
+            <controls:ContactControl SelectedContact="{Binding SelectedContact}"
+                                     Validation.ErrorTemplate="{x:Null}" />
             <Button 
                     Width="75" 
                     Height="25" 

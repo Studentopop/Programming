@@ -34,7 +34,8 @@ namespace View.ViewModel
         /// </summary>
         public MainVM()
         {
-            Contacts = new ObservableCollection<ContactVM>(ContactSerializer.Deserialize().Select(c => new ContactVM(c)));
+            Contacts = new ObservableCollection<ContactVM>
+                (ContactSerializer.Deserialize().Select(c => new ContactVM(c)));
             AddCommand = new RelayCommand(AddContact);
             EditCommand = new RelayCommand(EditContact);
             RemoveCommand = new RelayCommand(RemoveContact);
@@ -121,7 +122,7 @@ namespace View.ViewModel
         }
 
         /// <summary>
-        /// Вызывает редактирование нового экземпляра класса <see cref="ContactVM"/>.
+        /// Добавляет контакт.
         /// </summary>
         private void AddContact()
         {
@@ -132,7 +133,7 @@ namespace View.ViewModel
         }
 
         /// <summary>
-        /// Вызывает редактирование выбранного контакта.
+        /// Изменяет контакт.
         /// </summary>
         private void EditContact()
         {
@@ -142,7 +143,7 @@ namespace View.ViewModel
         }
 
         /// <summary>
-        /// Удаляет выбранный контакт.
+        /// Удаляет контакт.
         /// </summary>
         private void RemoveContact()
         {

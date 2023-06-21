@@ -22,7 +22,8 @@ namespace View.ViewModel
         public string Name
         {
             get => Contact.Name;
-            set => SetProperty(Contact.Name, value, Contact, (contact, name) => Contact.Name = name, true);
+            set => SetProperty(Contact.Name, value, Contact, 
+                (contact, name) => Contact.Name = name, true);
         }
 
         /// <summary>
@@ -46,7 +47,8 @@ namespace View.ViewModel
         public string Email
         {
             get => Contact.Email;
-            set => SetProperty(Contact.Email, value, Contact, (contact, email) => Contact.Email = email, true);
+            set => SetProperty(Contact.Email, value, Contact, 
+                (contact, email) => Contact.Email = email, true);
         }
 
         /// <summary>

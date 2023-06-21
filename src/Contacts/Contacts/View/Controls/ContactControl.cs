@@ -16,14 +16,24 @@ using System.Windows.Shapes;
 namespace View.Controls
 {
     /// <summary>
-    /// Interaction logic for ContactControl.xaml
+    /// Логика взаимодействия для ContactControl.xaml
     /// </summary>
     public partial class ContactControl : UserControl
     {
+
+        /// <summary>
+        /// Возвращает и задает выбранный контакт.
+        /// </summary>
         public object SelectedContact
         {
-            get { return GetValue(SelectedContactProperty); }
-            set { SetValue(SelectedContactProperty, value); }
+            get 
+            { 
+                return GetValue(SelectedContactProperty); 
+            }
+            set 
+            { 
+                SetValue(SelectedContactProperty, value); 
+            }
         }
 
         public static readonly DependencyProperty SelectedContactProperty =
@@ -46,7 +56,8 @@ namespace View.Controls
             string clipboardText = e.DataObject.GetData(DataFormats.Text) as string;
             if (!string.IsNullOrEmpty(clipboardText))
             {
-                if (clipboardText.Any(c => !char.IsDigit(c) && c != '+' && c != '-' && !char.IsWhiteSpace(c)))
+                if (clipboardText.Any(c => !char.IsDigit(c) && c != '+' 
+                && c != '-' && !char.IsWhiteSpace(c)))
                 {
                     e.CancelCommand();
                 }

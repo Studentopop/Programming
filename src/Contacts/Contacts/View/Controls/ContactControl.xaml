@@ -17,7 +17,8 @@
             <Style x:Key="ValidationStyleTextBox" TargetType="TextBox">
                 <Style.Triggers>
                     <Trigger Property="Validation.HasError" Value="True">
-                        <Setter Property="ToolTip" Value="{Binding RelativeSource={RelativeSource Self},
+                        <Setter Property="ToolTip"
+                                Value="{Binding RelativeSource={RelativeSource Self},
                             Path=(Validation.Errors)/ErrorContent}" />
                         <Setter Property="Background"
                                 Value="{StaticResource HasErrorBackgroundColorBrush}" />
@@ -48,14 +49,16 @@
                 <TextBox 
                     Margin="3" 
                     IsReadOnly="{Binding Path=IsReadOnly, UpdateSourceTrigger=PropertyChanged}"
-                    Text="{Binding Path=SelectedContact.Name, UpdateSourceTrigger=PropertyChanged}"
+                    Text="{Binding Path=SelectedContact.Name,
+                    UpdateSourceTrigger=PropertyChanged}"
                     Style="{StaticResource ValidationStyleTextBox}"
                     Validation.ErrorTemplate="{x:Null}"/>
                 <TextBlock Margin="3" Text="Phone Number:"/>
                 <TextBox 
                     Margin="3" 
                     IsReadOnly="{Binding Path=IsReadOnly, UpdateSourceTrigger=PropertyChanged}"
-                    Text="{Binding Path=SelectedContact.Phone, UpdateSourceTrigger=PropertyChanged}"
+                    Text="{Binding Path=SelectedContact.Phone,
+                    UpdateSourceTrigger=PropertyChanged}"
                     PreviewTextInput="TextBox_PreviewTextInput"
                     DataObject.Pasting="TextBox_Pasting"
                     Style="{StaticResource ValidationStyleTextBox}"
@@ -64,7 +67,8 @@
                 <TextBox 
                     Margin="3"                         
                     IsReadOnly="{Binding Path=IsReadOnly, UpdateSourceTrigger=PropertyChanged}"
-                    Text="{Binding Path=SelectedContact.Email, UpdateSourceTrigger=PropertyChanged}"
+                    Text="{Binding Path=SelectedContact.Email,
+                    UpdateSourceTrigger=PropertyChanged}"
                     Style="{StaticResource ValidationStyleTextBox}"
                     Validation.ErrorTemplate="{x:Null}"/>
             </StackPanel>
